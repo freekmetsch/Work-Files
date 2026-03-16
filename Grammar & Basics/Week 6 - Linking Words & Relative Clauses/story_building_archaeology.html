@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Building from Grammatical Fragments - Archaeology</title>
+    <style>
+        @page {
+            margin: 0;
+            size: A4;
+        }
+        
+        @media print {
+            body { 
+                margin: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .worksheet { 
+                width: 100%; 
+                margin: 0;
+                padding: 12mm;
+                box-sizing: border-box;
+            }
+            .print-button { display: none; }
+        }
+        
+        @media screen {
+            body {
+                background: #f0f0f0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                margin: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .worksheet {
+                background: white;
+                width: 210mm;
+                min-height: 297mm;
+                padding: 15mm;
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+                box-sizing: border-box;
+                position: relative;
+                margin-bottom: 20px;
+            }
+            .print-button {
+                position: absolute;
+                top: -45px;
+                right: 0;
+                background: #333;
+                color: white;
+                padding: 10px 24px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            .print-button:hover {
+                background: #000;
+            }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.4;
+            color: #000;
+        }
+        
+        .header {
+            background: #000;
+            color: white;
+            padding: 8px 12px;
+            text-align: center;
+            margin-bottom: 12px;
+            border-radius: 4px;
+        }
+        
+        .header h1 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        
+        .header .subtitle {
+            font-size: 11px;
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        .meta-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+        }
+        
+        .meta-field {
+            display: flex;
+            gap: 6px;
+            align-items: baseline;
+        }
+        
+        .meta-label {
+            font-weight: bold;
+            font-size: 11px;
+            white-space: nowrap;
+        }
+        
+        .meta-line {
+            flex: 1;
+            border-bottom: 1px solid #666;
+            min-height: 1px;
+        }
+        
+        .instructions-box {
+            background: #f5f5f5;
+            border: 2px solid #333;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .instructions-header {
+            font-weight: bold;
+            font-size: 12px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .instructions-text {
+            font-size: 11px;
+            line-height: 1.5;
+            margin-bottom: 4px;
+        }
+        
+        .story-section {
+            margin-bottom: 20px;
+        }
+        
+        .section-header {
+            background: #333;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        
+        .section-title {
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .section-context {
+            font-size: 10px;
+            margin-top: 3px;
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        .fragments-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .fragment-category {
+            background: white;
+            border: 1px solid #666;
+            border-radius: 3px;
+            padding: 6px;
+        }
+        
+        .category-header {
+            font-weight: bold;
+            font-size: 10px;
+            margin-bottom: 4px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid #ccc;
+            text-transform: uppercase;
+        }
+        
+        .reference-box {
+            background: #f0f0f0;
+            border: 1px solid #999;
+            border-radius: 2px;
+            padding: 3px 5px;
+            margin-bottom: 5px;
+            font-size: 8px;
+            line-height: 1.3;
+        }
+        
+        .reference-label {
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        
+        .fragment-category {
+            background: white;
+            border: 1px solid #666;
+            border-radius: 3px;
+            padding: 6px;
+        }
+        
+        .category-header {
+            font-weight: bold;
+            font-size: 10px;
+            margin-bottom: 4px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid #ccc;
+            text-transform: uppercase;
+        }
+        
+        .fragment-list {
+            font-size: 9px;
+            line-height: 1.4;
+        }
+        
+        .fragment-item {
+            margin-bottom: 2px;
+            padding-left: 12px;
+            position: relative;
+        }
+        
+        .fragment-item::before {
+            content: attr(data-num) ".";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .writing-space {
+            background: #fafafa;
+            border: 2px solid #333;
+            border-radius: 4px;
+            padding: 8px;
+        }
+        
+        .writing-header {
+            font-weight: bold;
+            font-size: 11px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .sentence-lines {
+        }
+        
+        .sentence-block {
+            margin-bottom: 10px;
+        }
+        
+        .write-line {
+            border-bottom: 1px solid #666;
+            height: 18px;
+            margin-bottom: 2px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .write-line::before {
+            content: attr(data-num) ".";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+            font-size: 10px;
+            color: #333;
+        }
+    </style>
+    <script>
+        function printPDF() {
+            window.print();
+            setTimeout(() => {
+                alert("Tip: In the print dialog:\n1. Select 'Save as PDF'\n2. Turn off 'Headers and footers'\n3. Set margins to 'None' or 'Minimum'");
+            }, 100);
+        }
+    </script>
+</head>
+<body>
+    <div class="worksheet">
+        <button class="print-button" onclick="printPDF()">📄 Print to PDF</button>
+        
+        <div class="header">
+            <h1>📖 STORY BUILDING FROM GRAMMATICAL FRAGMENTS</h1>
+            <div class="subtitle">Relative Pronouns & Linking Expression Assembly</div>
+        </div>
+        
+        <div class="meta-info">
+            <div class="meta-field">
+                <span class="meta-label">Name:</span>
+                <div class="meta-line"></div>
+            </div>
+            <div class="meta-field">
+                <span class="meta-label">Date:</span>
+                <div class="meta-line"></div>
+            </div>
+            <div class="meta-field">
+                <span class="meta-label">Class:</span>
+                <div class="meta-line"></div>
+            </div>
+        </div>
+        
+        <div class="instructions-box">
+            <div class="instructions-header">
+                📋 INSTRUCTIONS
+            </div>
+            <div class="instructions-text">
+                Build a <strong>5-sentence story</strong> by combining fragments with correct grammar. Use <strong>at least 2 fragments per sentence</strong>. You can add extra words to make your sentences flow naturally. <strong>Start your story with "Suddenly, ..."</strong>
+            </div>
+        </div>
+        
+        <!-- ARCHAEOLOGY STORY -->
+        <div class="story-section">
+            <div class="section-header">
+                <div class="section-title">
+                    🏛️ ARCHAEOLOGY TEAM — HIDDEN CHAMBER DISCOVERY
+                </div>
+                <div class="section-context">
+                    An archaeology team carefully examined ancient hieroglyphs in a hidden chamber, documenting symbols on the dusty stone walls with their equipment.
+                </div>
+            </div>
+            
+            <div class="fragments-container">
+                <div class="fragment-category">
+                    <div class="category-header">Main Clauses</div>
+                    <div class="fragment-list">
+                        <div class="fragment-item" data-num="1">The lead archaeologist stepped onto one of the pressure plates</div>
+                        <div class="fragment-item" data-num="2">One of the students noticed strange markings on the floor</div>
+                        <div class="fragment-item" data-num="3">The stone door began to slide shut</div>
+                        <div class="fragment-item" data-num="4">One of the students grabbed their camera equipment</div>
+                        <div class="fragment-item" data-num="5">The lead archaeologist called out a warning to the team</div>
+                        <div class="fragment-item" data-num="6">Pressure plates started sinking into the floor</div>
+                        <div class="fragment-item" data-num="7">One of the students ran toward the closing exit</div>
+                        <div class="fragment-item" data-num="8">The lead archaeologist examined the wall mechanisms</div>
+                    </div>
+                </div>
+                
+                <div class="fragment-category">
+                    <div class="category-header">Relative Clauses</div>
+                    <div class="reference-box">
+                        <div class="reference-label">Choose: who / which / that</div>
+                    </div>
+                    <div class="fragment-list">
+                        <div class="fragment-item" data-num="1">___ had over twenty years of field experience</div>
+                        <div class="fragment-item" data-num="2">___ was carrying the emergency lighting kit</div>
+                        <div class="fragment-item" data-num="3">___ had been hidden under centuries of dust</div>
+                        <div class="fragment-item" data-num="4">___ triggered the ancient locking mechanism</div>
+                        <div class="fragment-item" data-num="5">___ hadn't been touched in over two thousand years</div>
+                        <div class="fragment-item" data-num="6">___ caused panic among the entire team</div>
+                        <div class="fragment-item" data-num="7">___ was standing closest to the entrance</div>
+                        <div class="fragment-item" data-num="8">___ made a loud grinding sound against the stone floor</div>
+                        <div class="fragment-item" data-num="9">___ blocked their only way out of the chamber</div>
+                    </div>
+                </div>
+                
+                <div class="fragment-category">
+                    <div class="category-header">Linking Expression Fragments</div>
+                    <div class="reference-box">
+                        <div class="reference-label">Initial Words:</div>
+                        although • even though • despite • because • while • as soon as • as • like • in spite of
+                    </div>
+                    <div class="fragment-list">
+                        <div class="fragment-item" data-num="1">___ the lead archaeologist had warned everyone to stay near the walls,</div>
+                        <div class="fragment-item" data-num="2">___ the team had studied the temple layout for months,</div>
+                        <div class="fragment-item" data-num="3">___ the careful planning and preparation,</div>
+                        <div class="fragment-item" data-num="4">___ the pressure plates were part of an ancient security system,</div>
+                        <div class="fragment-item" data-num="5">___ one of the students was examining the hieroglyphs,</div>
+                        <div class="fragment-item" data-num="6">___ the stone door began moving,</div>
+                        <div class="fragment-item" data-num="7">___ a professional tomb raider would,</div>
+                        <div class="fragment-item" data-num="8">___ someone in a horror movie,</div>
+                        <div class="fragment-item" data-num="9">___ the growing danger,</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="writing-space">
+                <div class="writing-header">
+                    ✍️ YOUR STORY
+                </div>
+                <div class="sentence-lines">
+                    <div class="sentence-block">
+                        <div class="write-line" data-num="1"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                    </div>
+                    <div class="sentence-block">
+                        <div class="write-line" data-num="2"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                    </div>
+                    <div class="sentence-block">
+                        <div class="write-line" data-num="3"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                    </div>
+                    <div class="sentence-block">
+                        <div class="write-line" data-num="4"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                    </div>
+                    <div class="sentence-block">
+                        <div class="write-line" data-num="5"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

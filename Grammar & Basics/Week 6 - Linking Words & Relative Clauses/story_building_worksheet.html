@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Building from Grammatical Fragments</title>
+    <style>
+        @page {
+            margin: 0;
+            size: A4;
+        }
+        
+        @media print {
+            body { 
+                margin: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .worksheet { 
+                width: 100%; 
+                margin: 0;
+                padding: 12mm;
+                box-sizing: border-box;
+            }
+            .print-button { display: none; }
+        }
+        
+        @media screen {
+            body {
+                background: #f0f0f0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                margin: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .worksheet {
+                background: white;
+                width: 210mm;
+                min-height: 297mm;
+                padding: 15mm;
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+                box-sizing: border-box;
+                position: relative;
+                margin-bottom: 20px;
+            }
+            .print-button {
+                position: absolute;
+                top: -45px;
+                right: 0;
+                background: #333;
+                color: white;
+                padding: 10px 24px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            .print-button:hover {
+                background: #000;
+            }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.4;
+            color: #000;
+        }
+        
+        .header {
+            background: #000;
+            color: white;
+            padding: 8px 12px;
+            text-align: center;
+            margin-bottom: 12px;
+            border-radius: 4px;
+        }
+        
+        .header h1 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        
+        .header .subtitle {
+            font-size: 11px;
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        .meta-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+        }
+        
+        .meta-field {
+            display: flex;
+            gap: 6px;
+            align-items: baseline;
+        }
+        
+        .meta-label {
+            font-weight: bold;
+            font-size: 11px;
+            white-space: nowrap;
+        }
+        
+        .meta-line {
+            flex: 1;
+            border-bottom: 1px solid #666;
+            min-height: 1px;
+        }
+        
+        .instructions-box {
+            background: #f5f5f5;
+            border: 2px solid #333;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .instructions-header {
+            font-weight: bold;
+            font-size: 12px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .instructions-text {
+            font-size: 11px;
+            line-height: 1.5;
+        }
+        
+        .story-section {
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+        
+        .section-header {
+            background: #333;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        
+        .section-title {
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .section-context {
+            font-size: 10px;
+            margin-top: 3px;
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        .fragments-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .fragment-category {
+            background: white;
+            border: 1px solid #666;
+            border-radius: 3px;
+            padding: 6px;
+        }
+        
+        .category-header {
+            font-weight: bold;
+            font-size: 10px;
+            margin-bottom: 4px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid #ccc;
+            text-transform: uppercase;
+        }
+        
+        .fragment-list {
+            font-size: 9px;
+            line-height: 1.4;
+        }
+        
+        .fragment-item {
+            margin-bottom: 2px;
+            padding-left: 8px;
+            position: relative;
+        }
+        
+        .fragment-item::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .writing-space {
+            background: #fafafa;
+            border: 2px solid #333;
+            border-radius: 4px;
+            padding: 8px;
+        }
+        
+        .writing-header {
+            font-weight: bold;
+            font-size: 11px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .sentence-lines {
+            counter-reset: sentence;
+        }
+        
+        .sentence-block {
+            margin-bottom: 10px;
+        }
+        
+        .sentence-number {
+            font-weight: bold;
+            font-size: 10px;
+            margin-bottom: 3px;
+            color: #333;
+        }
+        
+        .sentence-number::before {
+            counter-increment: sentence;
+            content: "Sentence " counter(sentence) ": ";
+        }
+        
+        .write-line {
+            border-bottom: 1px solid #666;
+            height: 18px;
+            margin-bottom: 2px;
+        }
+        
+        .page-break {
+            page-break-before: always;
+        }
+    </style>
+    <script>
+        function printPDF() {
+            window.print();
+            setTimeout(() => {
+                alert("Tip: In the print dialog:\n1. Select 'Save as PDF'\n2. Turn off 'Headers and footers'\n3. Set margins to 'None' or 'Minimum'");
+            }, 100);
+        }
+    </script>
+</head>
+<body>
+    <div class="worksheet">
+        <button class="print-button" onclick="printPDF()">📄 Print to PDF</button>
+        
+        <div class="header">
+            <h1>📖 STORY BUILDING FROM GRAMMATICAL FRAGMENTS</h1>
+            <div class="subtitle">Combining Clauses & Linking Expressions</div>
+        </div>
+        
+        <div class="meta-info">
+            <div class="meta-field">
+                <span class="meta-label">Name:</span>
+                <div class="meta-line"></div>
+            </div>
+            <div class="meta-field">
+                <span class="meta-label">Date:</span>
+                <div class="meta-line"></div>
+            </div>
+            <div class="meta-field">
+                <span class="meta-label">Class:</span>
+                <div class="meta-line"></div>
+            </div>
+        </div>
+        
+        <div class="instructions-box">
+            <div class="instructions-header">
+                📋 INSTRUCTIONS
+            </div>
+            <div class="instructions-text">
+                Build a <strong>5-sentence story</strong> by combining cards with correct grammar. Use <strong>at least 2 cards per sentence</strong>. You can add extra words to make your sentences flow naturally.
+            </div>
+        </div>
+        
+        <!-- SET 1: JURASSIC PARK -->
+        <div class="story-section">
+            <div class="section-header">
+                <div class="section-title">
+                    🦖 SET 1: JURASSIC PARK — RAPTOR BREAKOUT IN THE VISITOR CENTER
+                </div>
+                <div class="section-context">
+                    Two park staff members struggle to secure the building as raptors breach the visitor center.
+                </div>
+            </div>
+            
+            <div class="fragments-container">
+                <div class="fragment-category">
+                    <div class="category-header">Main Clauses</div>
+                    <div class="fragment-list">
+                        <div class="fragment-item">The ranger slammed the emergency door shut.</div>
+                        <div class="fragment-item">The scientist checked the control screen for security breaches.</div>
+                        <div class="fragment-item">The raptors screeched from the hallway.</div>
+                        <div class="fragment-item">The security door groaned under pressure.</div>
+                        <div class="fragment-item">The ranger shoved their weight against the security door.</div>
+                        <div class="fragment-item">The scientist triggered the alert on the control screen.</div>
+                        <div class="fragment-item">The doorframe cracked as claws tore through the metal.</div>
+                        <div class="fragment-item">The control screen flashed a red override signal.</div>
+                    </div>
+                </div>
+                
+                <div class="fragment-category">
+                    <div class="category-header">Relative Clauses</div>
+                    <div class="fragment-list">
+                        <div class="fragment-item">who had survived the first breakout</div>
+                        <div class="fragment-item">who specialized in animal behavior</div>
+                        <div class="fragment-item">who refused to abandon the center</div>
+                        <div class="fragment-item">that was meant to keep the raptors out</div>
+                        <div class="fragment-item">that displayed the perimeter locks</div>
+                        <div class="fragment-item">that nobody had inspected that morning</div>
+                        <div class="fragment-item">which sent chills through everyone inside</div>
+                        <div class="fragment-item">which made the alarms blare even louder</div>
+                        <div class="fragment-item">which turned the center into a hunting ground</div>
+                    </div>
+                </div>
+                
+                <div class="fragment-category">
+                    <div class="category-header">Linking Expressions</div>
+                    <div class="fragment-list">
+                        <div class="fragment-item">although the system had passed inspection</div>
+                        <div class="fragment-item">despite the ranger's quick response</div>
+                        <div class="fragment-item">because the override was triggered remotely</div>
+                        <div class="fragment-item">even though the locks were reinforced</div>
+                        <div class="fragment-item">while the raptors prowled outside</div>
+                        <div class="fragment-item">in spite of their training</div>
+                        <div class="fragment-item">as soon as the override signal appeared</div>
+                        <div class="fragment-item">as a trained ranger would in a crisis</div>
+                        <div class="fragment-item">like prey trapped in their own enclosure</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="writing-space">
+                <div class="writing-header">
+                    ✍️ YOUR STORY
+                </div>
+                <div class="sentence-lines">
+                    <div class="sentence-block">
+                        <div class="sentence-number"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                    </div>
+                    <div class="sentence-block">
+                        <div class="sentence-number"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                    </div>
+                    <div class="sentence-block">
+                        <div class="sentence-number"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                    </div>
+                    <div class="sentence-block">
+                        <div class="sentence-number"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                    </div>
+                    <div class="sentence-block">
+                        <div class="sentence-number"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- PAGE 2 -->
+    <div class="worksheet page-break">
+        <button class="print-button" onclick="printPDF()">📄 Print to PDF</button>
+        
+        <div class="header">
+            <h1>📖 STORY BUILDING FROM GRAMMATICAL FRAGMENTS</h1>
+            <div class="subtitle">Combining Clauses & Linking Expressions</div>
+        </div>
+        
+        <div class="meta-info">
+            <div class="meta-field">
+                <span class="meta-label">Name:</span>
+                <div class="meta-line"></div>
+            </div>
+            <div class="meta-field">
+                <span class="meta-label">Date:</span>
+                <div class="meta-line"></div>
+            </div>
+            <div class="meta-field">
+                <span class="meta-label">Class:</span>
+                <div class="meta-line"></div>
+            </div>
+        </div>
+        
+        <!-- SET 2: LORD OF THE RINGS -->
+        <div class="story-section">
+            <div class="section-header">
+                <div class="section-title">
+                    🔥 SET 2: BRIDGE OF KHAZAD-DÛM COLLAPSE
+                </div>
+                <div class="section-context">
+                    Gandalf and Aragorn try to cross the ancient bridge as the Balrog approaches.
+                </div>
+            </div>
+            
+            <div class="fragments-container">
+                <div class="fragment-category">
+                    <div class="category-header">Main Clauses</div>
+                    <div class="fragment-list">
+                        <div class="fragment-item">Gandalf raised his staff toward the Balrog.</div>
+                        <div class="fragment-item">Aragorn urged the others to run across the bridge.</div>
+                        <div class="fragment-item">The bridge cracked under the force of the impact.</div>
+                        <div class="fragment-item">The Balrog roared from the shadows.</div>
+                        <div class="fragment-item">Gandalf planted his staff firmly on the stone.</div>
+                        <div class="fragment-item">Aragorn drew his sword to defend the rear.</div>
+                        <div class="fragment-item">The bridge began to crumble beneath their feet.</div>
+                        <div class="fragment-item">The flames grew brighter as the Balrog advanced.</div>
+                    </div>
+                </div>
+                
+                <div class="fragment-category">
+                    <div class="category-header">Relative Clauses</div>
+                    <div class="fragment-list">
+                        <div class="fragment-item">who had fought many battles before</div>
+                        <div class="fragment-item">who refused to leave Gandalf behind</div>
+                        <div class="fragment-item">who stood firm against the darkness</div>
+                        <div class="fragment-item">that spanned the chasm of Khazad-dûm</div>
+                        <div class="fragment-item">that connected the hall to the outer gate</div>
+                        <div class="fragment-item">that no one had crossed in centuries</div>
+                        <div class="fragment-item">which sent rocks tumbling into the abyss</div>
+                        <div class="fragment-item">which made the company quicken their pace</div>
+                        <div class="fragment-item">which turned the escape into a desperate stand</div>
+                    </div>
+                </div>
+                
+                <div class="fragment-category">
+                    <div class="category-header">Linking Expressions</div>
+                    <div class="fragment-list">
+                        <div class="fragment-item">although the bridge was ancient</div>
+                        <div class="fragment-item">despite Aragorn's warnings</div>
+                        <div class="fragment-item">because the Balrog struck the stone</div>
+                        <div class="fragment-item">even though the path was narrow</div>
+                        <div class="fragment-item">while echoes filled the cavern</div>
+                        <div class="fragment-item">in spite of their fear</div>
+                        <div class="fragment-item">as soon as the flames surged</div>
+                        <div class="fragment-item">as heroes would in a final stand</div>
+                        <div class="fragment-item">like figures out of legend</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="writing-space">
+                <div class="writing-header">
+                    ✍️ YOUR STORY
+                </div>
+                <div class="sentence-lines">
+                    <div class="sentence-block">
+                        <div class="sentence-number"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                    </div>
+                    <div class="sentence-block">
+                        <div class="sentence-number"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                    </div>
+                    <div class="sentence-block">
+                        <div class="sentence-number"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                    </div>
+                    <div class="sentence-block">
+                        <div class="sentence-number"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                    </div>
+                    <div class="sentence-block">
+                        <div class="sentence-number"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                        <div class="write-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

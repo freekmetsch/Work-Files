@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar Jeopardy</title>
+    <style>
+        :root {
+            --jeopardy-blue: #060CE9;
+            --jeopardy-yellow: #FFCC00;
+            --dark-bg: #000000;
+            --card-bg: #060CE9;
+            --text-color: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* --- Setup Screen --- */
+        #setup-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            background: linear-gradient(135deg, #0b1158, #000);
+            z-index: 100;
+        }
+
+        .input-group {
+            margin: 10px 0;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button.start-btn, button.control-btn {
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            background-color: var(--jeopardy-yellow);
+            color: var(--jeopardy-blue);
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            text-transform: uppercase;
+            border-radius: 5px;
+        }
+
+        button.start-btn:hover {
+            background-color: #e6b800;
+        }
+
+        /* --- Game Board --- */
+        #game-board {
+            display: none; /* Hidden until start */
+            grid-template-columns: repeat(5, 1fr); /* 5 Categories */
+            grid-template-rows: auto repeat(4, 1fr); /* Header + 4 values */
+            gap: 5px;
+            padding: 10px;
+            flex-grow: 1;
+            height: 70vh;
+        }
+
+        .category-header {
+            background-color: var(--jeopardy-blue);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-shadow: 2px 2px 0 #000;
+            text-transform: uppercase;
+            padding: 15px;
+            border: 2px solid white;
+        }
+
+        .card {
+            background-color: var(--jeopardy-blue);
+            color: var(--jeopardy-yellow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: 2px solid white;
+            transition: transform 0.1s;
+        }
+
+        .card:hover {
+            background-color: #2a30f5;
+        }
+
+        .card.disabled {
+            background-color: #030675;
+            color: #555;
+            pointer-events: none;
+            cursor: default;
+        }
+
+        /* --- Footer / Scoreboard --- */
+        #scoreboard {
+            display: none;
+            background-color: #111;
+            padding: 15px;
+            justify-content: space-around;
+            border-top: 3px solid var(--jeopardy-yellow);
+            height: 15vh;
+        }
+
+        .team-score {
+            text-align: center;
+            font-size: 1.2rem;
+            border: 1px solid #333;
+            padding: 10px;
+            min-width: 150px;
+            border-radius: 8px;
+            background: #222;
+        }
+
+        .team-name { display: block; color: var(--jeopardy-yellow); font-weight: bold; margin-bottom: 5px; }
+        .score-value { font-size: 2rem; }
+
+        /* --- Modal (The Question) --- */
+        #question-modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.95);
+            z-index: 50;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #modal-content {
+            width: 80%;
+            text-align: center;
+            color: white;
+        }
+
+        #question-text {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            line-height: 1.4;
+            font-weight: 500;
+        }
+
+        #answer-text {
+            font-size: 1.8rem;
+            color: var(--jeopardy-yellow);
+            margin-top: 20px;
+            display: none;
+            border-top: 2px solid #555;
+            padding-top: 20px;
+        }
+
+        .modal-controls {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .award-btn {
+            background-color: #008000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        .close-btn {
+            background-color: #888;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .reveal-btn {
+            background-color: var(--jeopardy-yellow);
+            color: black;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* --- Timer Bar --- */
+        #timer-container {
+            width: 80%;
+            height: 10px;
+            background-color: #333;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        #timer-bar {
+            height: 100%;
+            width: 100%;
+            background-color: var(--jeopardy-yellow);
+            transition: width 1s linear;
+        }
+
+        /* --- End Game Overlay --- */
+        #end-game-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.98);
+            z-index: 200;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #end-game-results {
+            font-size: 3rem;
+            color: var(--jeopardy-yellow);
+            margin-bottom: 20px;
+        }
+
+        .winner-text {
+            font-size: 4rem;
+            animation: pop 0.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes pop {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="setup-screen">
+        <h1 style="color: var(--jeopardy-yellow); font-size: 3rem; text-shadow: 2px 2px #000;">CLASSROOM JEOPARDY</h1>
+        <div style="margin-bottom: 20px; color: #ccc;">Enter Team Names:</div>
+        <div id="team-inputs">
+            <div class="input-group"><input type="text" placeholder="Team 1 Name" value="Team A"></div>
+            <div class="input-group"><input type="text" placeholder="Team 2 Name" value="Team B"></div>
+        </div>
+        <button onclick="addTeamInput()" style="background:#444; color:white; border:none; padding:5px 10px; cursor:pointer; margin-bottom:10px;">+ Add Team</button>
+        <button class="start-btn" onclick="startGame()">Start Game</button>
+    </div>
+
+    <div id="game-board">
+        </div>
+
+    <div id="scoreboard">
+        </div>
+    <div style="text-align:center; background:#111; padding:5px;">
+        <button onclick="endGame()" style="background:#b30000; color:white; border:none; padding:5px 10px; cursor:pointer;">End Game</button>
+    </div>
+
+    <div id="question-modal">
+        <div id="timer-container"><div id="timer-bar"></div></div>
+        <div id="modal-content">
+            <div id="question-text">Loading...</div>
+            <button class="reveal-btn" onclick="revealAnswer()">Show Analysis</button>
+            <div id="answer-text">Loading...</div>
+            
+            <div class="modal-controls" id="award-buttons">
+                </div>
+            <div class="modal-controls">
+                <button class="close-btn" onclick="closeModal()">Close (No Points)</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="end-game-overlay">
+        <h1>GAME OVER</h1>
+        <div id="end-game-results"></div>
+        <button class="start-btn" onclick="location.reload()">Play Again</button>
+    </div>
+
+    <script>
+        // --- GAME DATA ---
+        // I have inferred the Grammar Rules (Answers) based on your inputs.
+        const categories = ["Past", "Present", "Future", "Negatives", "Questions"];
+        const data = {
+            "Past": [
+                { value: 100, q: "“So far I have tried to be very patient with you.”", a: "Present Perfect (Unfinished Past / Duration)" },
+                { value: 200, q: "“Last October my family and I visited Toronto.”", a: "Past Simple (Definite Time)" },
+                { value: 300, q: "“I saw that film at the cinema a few years back.”", a: "Past Simple (Time expression)" },
+                { value: 400, q: "“In my entire life I have never witnessed such chaos.”", a: "Present Perfect (Experience)" }
+            ],
+            "Present": [
+                { value: 100, q: "“In general we eat low-carb meals.”", a: "Present Simple (General Truth/Habit)" },
+                { value: 200, q: "“She always wakes up early in the morning.”", a: "Present Simple (Routine/Adverb of frequency)" },
+                { value: 300, q: "“Right now Tim has a terrible headache.”", a: "Present Simple (Stative / Current State)" },
+                { value: 400, q: "“Sorry, but I am running a bit late.”", a: "Present Continuous (Happening Now)" }
+            ],
+            "Future": [
+                { value: 100, q: "“From the looks of this traffic jam, I can see that it is going to take another hour to get home.”", a: "Going To Future (Prediction based on evidence)" },
+                { value: 200, q: "“Excuse me, my Coke has a fly in it.” <br>“Oh, sorry. I will bring / ’ll bring you another one right away.”", a: "Future Simple (Spontaneous Decision/Offer)" },
+                { value: 300, q: "“We are seeing / are going to see Les Mis tonight at the Winston Theatre.”", a: "Present Continuous (Arrangement) or Going To (Plan)" },
+                { value: 400, q: "“Most likely, this mess will be sorted out before tomorrow.”", a: "Future Passive (Prediction)" }
+            ],
+            "Negatives": [
+                { value: 100, q: "“I do not think / don’t think she’ll show up tonight.”", a: "Opinion (Mental Verb Negative)" },
+                { value: 200, q: "“Tracy does not like / doesn’t like it when people waste her time.”", a: "Present Simple Negative (Fact/Preference)" },
+                { value: 300, q: "“We do not ever spend / don’t ever spend money on frivolous activities.”", a: "Emphatic Negative (Frequency)" },
+                { value: 400, q: "“We do not disagree / don’t disagree very often.”", a: "Litotes / Double Negative meaning agreement" }
+            ],
+            "Questions": [
+                { value: 100, q: "“Do you think this is a good idea?”", a: "Yes/No Question (Opinion)" },
+                { value: 200, q: "“Why do you always ask me that question?”", a: "Wh- Question (Habit/Complaint)" },
+                { value: 300, q: "“Do I look like I’m enjoying this?!”", a: "Rhetorical Question" },
+                { value: 400, q: "“Do you need a red pen to mark your papers?”", a: "Auxiliary 'Do' + Need (Main Verb)" }
+            ]
+        };
+
+        // --- STATE ---
+        let teams = [];
+        let scores = [];
+        let currentQuestionValue = 0;
+        let timerInterval;
+        const TIMER_SECONDS = 15; // Set pressure duration here
+
+        // --- SETUP ---
+        function addTeamInput() {
+            const container = document.getElementById('team-inputs');
+            const div = document.createElement('div');
+            div.className = 'input-group';
+            div.innerHTML = `<input type="text" placeholder="Team Name">`;
+            container.appendChild(div);
+        }
+
+        function startGame() {
+            // Get teams
+            const inputs = document.querySelectorAll('#team-inputs input');
+            teams = [];
+            inputs.forEach(input => {
+                if(input.value.trim() !== "") teams.push(input.value.trim());
+            });
+
+            if (teams.length === 0) {
+                alert("Please enter at least one team.");
+                return;
+            }
+
+            // Init scores
+            scores = new Array(teams.length).fill(0);
+
+            // Switch screens
+            document.getElementById('setup-screen').style.display = 'none';
+            document.getElementById('game-board').style.display = 'grid';
+            document.getElementById('scoreboard').style.display = 'flex';
+
+            renderBoard();
+            renderScoreboard();
+        }
+
+        // --- RENDER ---
+        function renderBoard() {
+            const board = document.getElementById('game-board');
+            board.innerHTML = '';
+
+            // Headers
+            categories.forEach(cat => {
+                const header = document.createElement('div');
+                header.className = 'category-header';
+                header.innerText = cat;
+                board.appendChild(header);
+            });
+
+            // Cards (Row by Row to match grid flow)
+            for (let i = 0; i < 4; i++) { // 4 rows
+                categories.forEach(cat => {
+                    const cardData = data[cat][i];
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerText = `$${cardData.value}`;
+                    card.id = `card-${cat}-${i}`;
+                    card.onclick = () => openQuestion(cat, i, cardData);
+                    board.appendChild(card);
+                });
+            }
+        }
+
+        function renderScoreboard() {
+            const sb = document.getElementById('scoreboard');
+            sb.innerHTML = '';
+            teams.forEach((team, index) => {
+                const div = document.createElement('div');
+                div.className = 'team-score';
+                div.innerHTML = `
+                    <span class="team-name">${team}</span>
+                    <span class="score-value">$${scores[index]}</span>
+                `;
+                sb.appendChild(div);
+            });
+        }
+
+        // --- GAMEPLAY ---
+        function openQuestion(cat, index, cardData) {
+            const card = document.getElementById(`card-${cat}-${index}`);
+            if (card.classList.contains('disabled')) return;
+
+            card.classList.add('disabled'); // Mark as played
+            card.style.opacity = '0.3';
+            currentQuestionValue = cardData.value;
+
+            // Populate Modal
+            document.getElementById('question-text').innerHTML = cardData.q;
+            document.getElementById('answer-text').innerText = cardData.a;
+            document.getElementById('answer-text').style.display = 'none';
+            document.querySelector('.reveal-btn').style.display = 'inline-block';
+
+            // Generate "Award Points" buttons for each team
+            const awardContainer = document.getElementById('award-buttons');
+            awardContainer.innerHTML = '';
+            teams.forEach((team, tIndex) => {
+                const btn = document.createElement('button');
+                btn.className = 'award-btn';
+                btn.innerText = `${team} (+$${currentQuestionValue})`;
+                btn.onclick = () => awardPoints(tIndex);
+                awardContainer.appendChild(btn);
+            });
+
+            document.getElementById('question-modal').style.display = 'flex';
+            startTimer();
+        }
+
+        function startTimer() {
+            const bar = document.getElementById('timer-bar');
+            bar.style.width = '100%';
+            bar.style.transition = 'none'; // Reset instantly
+            
+            // Force reflow
+            void bar.offsetWidth;
+
+            // Start animation
+            bar.style.transition = `width ${TIMER_SECONDS}s linear`;
+            bar.style.width = '0%';
+        }
+
+        function revealAnswer() {
+            document.getElementById('answer-text').style.display = 'block';
+            document.querySelector('.reveal-btn').style.display = 'none';
+        }
+
+        function awardPoints(teamIndex) {
+            scores[teamIndex] += currentQuestionValue;
+            renderScoreboard();
+            closeModal();
+        }
+
+        function closeModal() {
+            document.getElementById('question-modal').style.display = 'none';
+        }
+
+        function endGame() {
+            const overlay = document.getElementById('end-game-overlay');
+            const results = document.getElementById('end-game-results');
+            
+            // Find winner(s)
+            let maxScore = -Infinity;
+            scores.forEach(s => { if(s > maxScore) maxScore = s; });
+
+            let winners = [];
+            scores.forEach((s, i) => {
+                if(s === maxScore) winners.push(teams[i]);
+            });
+
+            overlay.style.display = 'flex';
+            results.innerHTML = `<div class="winner-text">🏆 ${winners.join(' & ')} Win! 🏆</div><div>Score: $${maxScore}</div>`;
+        }
+    </script>
+</body>
+</html>

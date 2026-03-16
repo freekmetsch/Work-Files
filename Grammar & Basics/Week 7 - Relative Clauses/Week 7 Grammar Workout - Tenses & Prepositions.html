@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 Grammar Workout — Tenses & Prepositions</title>
+    <style>
+        @page {
+            margin: 10mm 10mm 5mm 10mm;
+            size: A4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.45;
+            color: #000;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .worksheet {
+                width: 100%;
+                padding: 0;
+            }
+            .print-button { display: none; }
+            .block-start { break-before: page; }
+            .block-start:first-child { break-before: auto; }
+            .section {
+                break-inside: avoid;
+            }
+            .section-header,
+            .section-title,
+            .theory-box-header,
+            .exercise-label,
+            .exercise-subtitle,
+            .pitfalls-header,
+            .section-framing,
+            .activity-header {
+                break-after: avoid;
+            }
+        }
+
+        @media screen {
+            body {
+                background: #f0f0f0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+            .worksheet {
+                background: white;
+                width: 210mm;
+                padding: 12mm;
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+                position: relative;
+                margin-bottom: 20px;
+            }
+            .print-button {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #333;
+                color: white;
+                padding: 10px 24px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: bold;
+                z-index: 100;
+            }
+            .print-button:hover { background: #000; }
+        }
+
+        /* ── Page Header ── */
+        .page-header {
+            border-bottom: 3px solid #333;
+            padding-bottom: 6px;
+            margin-bottom: 10px;
+        }
+        .page-header h1 {
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+        .page-header .subtitle {
+            font-size: 10px;
+            color: #555;
+            margin-top: 2px;
+        }
+        .page-tag {
+            display: inline-block;
+            border: 1.5px solid #333;
+            border-radius: 3px;
+            padding: 1px 8px;
+            font-size: 9px;
+            font-weight: bold;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        /* ── Theory Boxes ── */
+        .theory-box {
+            border: 1.5px solid #333;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .theory-box-header {
+            background: #e8e8e8;
+            padding: 5px 10px;
+            font-weight: bold;
+            font-size: 11px;
+            border-bottom: 1px solid #999;
+        }
+        .theory-box-content {
+            padding: 8px 10px;
+            font-size: 10px;
+            line-height: 1.5;
+        }
+
+        .rule-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 6px;
+            align-items: flex-start;
+        }
+        .rule-label {
+            font-weight: bold;
+            min-width: 130px;
+            font-size: 10px;
+        }
+        .rule-detail {
+            flex: 1;
+            font-size: 10px;
+        }
+
+        .example-correct {
+            color: #000;
+            font-style: italic;
+        }
+        .example-incorrect {
+            text-decoration: line-through;
+            color: #666;
+            font-style: italic;
+        }
+        .key-word {
+            font-weight: bold;
+        }
+
+        .rule-note {
+            background: #f5f5f5;
+            border: 1px solid #999;
+            border-radius: 3px;
+            padding: 4px 8px;
+            font-size: 9px;
+            margin-top: 4px;
+            line-height: 1.4;
+        }
+
+        /* ── Comparison Tables ── */
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 9.5px;
+            margin-bottom: 6px;
+        }
+        .compare-table th {
+            background: #e8e8e8;
+            border: 1px solid #999;
+            padding: 4px 6px;
+            text-align: left;
+            font-size: 9px;
+        }
+        .compare-table td {
+            border: 1px solid #999;
+            padding: 4px 6px;
+            vertical-align: top;
+        }
+        .compare-table .type-label {
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        /* ── L1 Pitfalls ── */
+        .pitfalls-panel {
+            border: 1.5px solid #333;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .pitfalls-header {
+            background: #e8e8e8;
+            padding: 4px 10px;
+            font-weight: bold;
+            font-size: 10px;
+            border-bottom: 1px solid #999;
+        }
+        .pitfalls-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0;
+        }
+        .pitfall-col {
+            padding: 6px 8px;
+            font-size: 9px;
+            line-height: 1.4;
+            border-right: 1px solid #ccc;
+        }
+        .pitfall-col:last-child {
+            border-right: none;
+        }
+        .pitfall-lang {
+            font-weight: bold;
+            font-size: 9px;
+            margin-bottom: 3px;
+        }
+
+        /* ── Section Headers (Exercises) ── */
+        .section-header {
+            background: #333;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 3px;
+            margin-bottom: 8px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .section-framing {
+            font-size: 10px;
+            color: #444;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        /* ── Exercise Items ── */
+        .exercise-list {
+            list-style: none;
+            padding: 0;
+        }
+        .exercise-item {
+            margin-bottom: 8px;
+            font-size: 10.5px;
+            line-height: 1.6;
+            padding-left: 22px;
+            position: relative;
+        }
+        .exercise-item::before {
+            content: attr(data-num) ".";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .blank {
+            display: inline-block;
+            border-bottom: 1px solid #000;
+            min-width: 100px;
+            text-align: center;
+        }
+        .blank-short {
+            min-width: 60px;
+        }
+        .blank-long {
+            min-width: 140px;
+        }
+
+        /* ── Writing Lines ── */
+        .write-line {
+            border-bottom: 1px solid #666;
+            height: 20px;
+            margin-bottom: 2px;
+        }
+
+        /* ── Activity Grid (Find Someone Who) ── */
+        .activity-header {
+            background: #e8e8e8;
+            padding: 5px 10px;
+            font-weight: bold;
+            font-size: 11px;
+            border: 1.5px solid #333;
+            border-bottom: none;
+            border-radius: 4px 4px 0 0;
+        }
+        .fsw-grid {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10px;
+        }
+        .fsw-grid td {
+            border: 1px solid #999;
+            padding: 6px 8px;
+            vertical-align: top;
+            width: 33.33%;
+            height: 60px;
+        }
+        .fsw-prompt {
+            font-size: 9.5px;
+            margin-bottom: 4px;
+        }
+        .fsw-name-line {
+            border-bottom: 1px solid #999;
+            height: 14px;
+            margin-top: 8px;
+            font-size: 8px;
+            color: #888;
+        }
+
+        /* ── Describe & Draw ── */
+        .draw-box {
+            border: 1.5px solid #333;
+            border-radius: 4px;
+            min-height: 90px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #bbb;
+            font-size: 10px;
+            font-style: italic;
+        }
+
+        /* ── Situation Box ── */
+        .situation-box {
+            background: #f5f5f5;
+            border: 1px solid #999;
+            border-radius: 3px;
+            padding: 5px 8px;
+            font-size: 10px;
+            margin-bottom: 4px;
+        }
+
+        /* ── Answer Key ── */
+        .answer-key-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            font-size: 9px;
+            line-height: 1.5;
+        }
+        .ak-section {
+            margin-bottom: 6px;
+        }
+        .ak-section-title {
+            font-weight: bold;
+            font-size: 10px;
+            border-bottom: 1px solid #333;
+            margin-bottom: 3px;
+            padding-bottom: 2px;
+        }
+        .ak-item {
+            margin-bottom: 2px;
+        }
+
+        /* ── Scene Description Box ── */
+        .scene-box {
+            border: 1.5px solid #333;
+            border-radius: 4px;
+            padding: 8px 10px;
+            margin-bottom: 8px;
+            font-size: 10px;
+            line-height: 1.5;
+        }
+        .scene-label {
+            font-weight: bold;
+            font-size: 9px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 2px;
+        }
+
+        /* ── Utility ── */
+        .mt-6 { margin-top: 6px; }
+        .mt-10 { margin-top: 10px; }
+        .mb-4 { margin-bottom: 4px; }
+        .mb-8 { margin-bottom: 8px; }
+        .mb-10 { margin-bottom: 10px; }
+        .text-center { text-align: center; }
+        .small { font-size: 9px; }
+        .bold { font-weight: bold; }
+        .exercise-label {
+            font-weight: bold;
+            font-size: 11px;
+            margin-bottom: 4px;
+            border-left: 4px solid #333;
+            padding-left: 8px;
+        }
+        .exercise-subtitle {
+            font-size: 10px;
+            color: #444;
+            margin-bottom: 6px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button" onclick="window.print()">Print / Save PDF</button>
+
+    <div class="worksheet">
+
+        <!-- ════════════════════════════════════════════════════ -->
+        <!-- THEORY SHEET T1: TENSES                            -->
+        <!-- ════════════════════════════════════════════════════ -->
+        <section class="block-start" id="theory-tenses">
+            <div class="page-header">
+                <span class="page-tag">Theory Sheet</span>
+                <h1>English Tenses — Overview</h1>
+                <div class="subtitle">Grammar & Basics — Week 7 Catch-Up (Weeks 1 & 2 material)</div>
+            </div>
+
+            <!-- PRESENT TENSES -->
+            <div class="theory-box">
+                <div class="theory-box-header">Present Simple vs. Present Continuous</div>
+                <div class="theory-box-content">
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th style="width:50%">Present Simple</th>
+                                <th style="width:50%">Present Continuous</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Use:</strong> things true in general, habits, facts<br>
+                                    <em>I <strong>work</strong> at Hogeschool Utrecht.</em><br>
+                                    <em>Water <strong>boils</strong> at 100°C.</em><br>
+                                    <strong>Signal words:</strong> every day, usually, always, often, never
+                                </td>
+                                <td>
+                                    <strong>Use:</strong> actions happening now, temporary situations<br>
+                                    <em>He <strong>is getting</strong> dressed right now.</em><br>
+                                    <em>I <strong>am working</strong> at a pizza place this summer.</em><br>
+                                    <strong>Signal words:</strong> (right) now, at the moment, look!, today, this week
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="rule-note">
+                        <strong>Side by side:</strong> <em>It <strong>rains</strong> a lot in this country.</em> (= general truth) vs. <em>It <strong>is raining</strong> now. Let's stay in.</em> (= happening right now)
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAST SIMPLE vs PRESENT PERFECT -->
+            <div class="theory-box">
+                <div class="theory-box-header">Past Simple vs. Present Perfect</div>
+                <div class="theory-box-content">
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th style="width:50%">Past Simple — finished</th>
+                                <th style="width:50%">Present Perfect — not finished / result now</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Completed action in the past<br>
+                                    <em>I <strong>lived</strong> in Groningen for 8 years.</em> (= not anymore)<br>
+                                    <em>Shakespeare <strong>died</strong> in 1616.</em><br>
+                                    <strong>Signal words:</strong> yesterday, ago, last..., in (+ past time), when...
+                                </td>
+                                <td>
+                                    Action from past until now, OR past action with result now<br>
+                                    <em>I <strong>have lived</strong> in Utrecht for 6 years.</em> (= still true)<br>
+                                    <em>She <strong>has lost</strong> her key.</em> (= she still doesn't have it)<br>
+                                    <strong>Signal words:</strong> since (+ moment), for (+ duration), yet, already, ever, never
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="rule-note">
+                        <strong>Key test:</strong> Is it finished and over? → Past Simple. Is it still true now or does it have a result now? → Present Perfect.<br>
+                        <strong>But:</strong> <em>She <strong>lost</strong> her key, but she found it again.</em> (= over, so Past Simple even though it sounds recent)
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAST PERFECT & PAST CONTINUOUS -->
+            <div class="theory-box">
+                <div class="theory-box-header">Past Perfect & Past Continuous — Two Events in the Past</div>
+                <div class="theory-box-content">
+                    <div class="rule-row">
+                        <div class="rule-label">Past Perfect<br><span class="small">had + past participle</span></div>
+                        <div class="rule-detail">
+                            One event happened <strong>before</strong> another. The earlier event uses Past Perfect.<br>
+                            <span class="example-correct">He <strong>arrived</strong> after I <strong>had left</strong>.</span> (= I left first, then he arrived)<br>
+                            <span class="example-correct">When the police arrived, the thieves <strong>had left</strong> the building.</span> (= thieves left before police came)
+                        </div>
+                    </div>
+                    <div class="rule-row">
+                        <div class="rule-label">Past Continuous<br><span class="small">was/were + -ing</span></div>
+                        <div class="rule-detail">
+                            A longer background action <strong>interrupted</strong> by a shorter one. Or two things happening <strong>at the same time</strong>.<br>
+                            <span class="example-correct">While I <strong>was having</strong> a bath, the phone <strong>rang</strong>.</span><br>
+                            <span class="example-correct">At 5 o'clock I <strong>was cycling</strong> home.</span> (= in the middle of the action)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FUTURE TENSES -->
+            <div class="theory-box">
+                <div class="theory-box-header">Future Tenses — Four Ways to Talk About the Future</div>
+                <div class="theory-box-content">
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th style="width:22%">Form</th>
+                                <th style="width:28%">Use</th>
+                                <th style="width:50%">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="type-label">will + verb</td>
+                                <td>Predictions, spontaneous decisions</td>
+                                <td><em>I <strong>will travel</strong> to New York some day.</em><br><em>[Phone ringing] I<strong>'ll get</strong> it!</em></td>
+                            </tr>
+                            <tr>
+                                <td class="type-label">going to + verb</td>
+                                <td>Plans/intentions, signs of something happening</td>
+                                <td><em>I<strong>'m going to buy</strong> a new car.</em><br><em>Look at the clouds. It<strong>'s going to rain</strong>.</em></td>
+                            </tr>
+                            <tr>
+                                <td class="type-label">present continuous</td>
+                                <td>Arrangements already made</td>
+                                <td><em>We <strong>are flying</strong> to Australia tomorrow.</em><br><em>I <strong>am seeing</strong> my dentist next Tuesday.</em></td>
+                            </tr>
+                            <tr>
+                                <td class="type-label">present simple</td>
+                                <td>Fixed timetables/schedules</td>
+                                <td><em>The train <strong>leaves</strong> at 15:00.</em><br><em>The autumn break <strong>starts</strong> on October 20th.</em></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- L1 PITFALLS: TENSES -->
+            <div class="pitfalls-panel">
+                <div class="pitfalls-header">Watch Out! — Common Tense Mistakes by Language Background</div>
+                <div class="pitfalls-grid">
+                    <div class="pitfall-col">
+                        <div class="pitfall-lang">If you speak Dutch...</div>
+                        <strong>Present perfect overuse:</strong> Dutch uses the present perfect (<em>ik heb gedaan</em>) where English uses Past Simple.<br>
+                        <span class="example-incorrect">I have seen him yesterday.</span><br>
+                        <span class="example-correct">I saw him yesterday.</span><br><br>
+                        <strong>"Since" vs "for":</strong> Dutch <em>sinds</em> covers both, but English distinguishes them.<br>
+                        <span class="example-incorrect">I live here since 5 years.</span><br>
+                        <span class="example-correct">I have lived here for 5 years.</span><br>
+                        <span class="example-correct">I have lived here since 2021.</span>
+                    </div>
+                    <div class="pitfall-col">
+                        <div class="pitfall-lang">If you speak Spanish...</div>
+                        <strong>Present continuous overuse:</strong> Spanish <em>estoy haciendo</em> is used more broadly than English present continuous.<br>
+                        <span class="example-incorrect">I am knowing the answer.</span><br>
+                        <span class="example-correct">I know the answer.</span><br><br>
+                        <strong>"Going to" vs "will":</strong> Spanish <em>ir a</em> maps onto "going to," but English also needs "will" for predictions and spontaneous decisions.
+                    </div>
+                    <div class="pitfall-col">
+                        <div class="pitfall-lang">If you speak Polish...</div>
+                        <strong>No articles + missing auxiliaries:</strong> Polish has no "have/has" auxiliary, so present perfect feels unnatural.<br>
+                        <span class="example-incorrect">I already finish my homework.</span><br>
+                        <span class="example-correct">I have already finished my homework.</span><br><br>
+                        <strong>Aspect confusion:</strong> Polish aspect (perfective/imperfective) doesn't map directly onto English tense distinctions. Use signal words and context to choose.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════ -->
+        <!-- THEORY SHEET T2: PREPOSITIONS                      -->
+        <!-- ════════════════════════════════════════════════════ -->
+        <section class="block-start" id="theory-prepositions">
+            <div class="page-header">
+                <span class="page-tag">Theory Sheet</span>
+                <h1>Prepositions — Time, Position & Movement</h1>
+                <div class="subtitle">Grammar & Basics — Week 7 Catch-Up (Week 5 material)</div>
+            </div>
+
+            <!-- TIME PREPOSITIONS -->
+            <div class="theory-box">
+                <div class="theory-box-header">Prepositions of Time: In, On, At</div>
+                <div class="theory-box-content">
+                    <div class="rule-row">
+                        <div class="rule-label">in</div>
+                        <div class="rule-detail">
+                            Months, years, seasons, parts of the day, future time spans<br>
+                            <span class="example-correct"><strong>in</strong> September &bull; <strong>in</strong> 2024 &bull; <strong>in</strong> the morning &bull; <strong>in</strong> one year's time</span>
+                        </div>
+                    </div>
+                    <div class="rule-row">
+                        <div class="rule-label">on</div>
+                        <div class="rule-detail">
+                            Days and dates<br>
+                            <span class="example-correct"><strong>on</strong> Monday &bull; <strong>on</strong> 25 December &bull; <strong>on</strong> my birthday</span>
+                        </div>
+                    </div>
+                    <div class="rule-row">
+                        <div class="rule-label">at</div>
+                        <div class="rule-detail">
+                            Specific times, mealtimes, festivals<br>
+                            <span class="example-correct"><strong>at</strong> 9 o'clock &bull; <strong>at</strong> lunch &bull; <strong>at</strong> Christmas &bull; <strong>at</strong> the weekend</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- POSITION & MOVEMENT -->
+            <div class="theory-box">
+                <div class="theory-box-header">Position vs. Movement</div>
+                <div class="theory-box-content">
+                    <div class="rule-row">
+                        <div class="rule-label">in vs. into</div>
+                        <div class="rule-detail">
+                            <strong>In</strong> = position (already there). <strong>Into</strong> = movement (going there).<br>
+                            <span class="example-correct">I'm <strong>in</strong> the bathroom.</span> vs. <span class="example-correct">He walked <strong>into</strong> the bathroom.</span><br>
+                            Opposite of <em>into</em> = <strong>out of</strong>: <em>I told him to get <strong>out of</strong> the bathroom.</em>
+                        </div>
+                    </div>
+                    <div class="rule-row">
+                        <div class="rule-label">to vs. till</div>
+                        <div class="rule-detail">
+                            <strong>To</strong> = movement/direction. <strong>Till</strong> = time (= until).<br>
+                            <span class="example-correct">We drove <strong>to</strong> Paris.</span> vs. <span class="example-correct">My wife drove <strong>till</strong> 7:00, then I took over.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONFUSING PAIRS -->
+            <div class="theory-box">
+                <div class="theory-box-header">Confusing Pairs</div>
+                <div class="theory-box-content">
+                    <div class="rule-row">
+                        <div class="rule-label">during vs. for</div>
+                        <div class="rule-detail">
+                            <strong>During</strong> = when (+ noun). <strong>For</strong> = how long (+ duration).<br>
+                            <span class="example-correct">I fell asleep <strong>during</strong> the movie. I slept <strong>for</strong> half an hour.</span>
+                        </div>
+                    </div>
+                    <div class="rule-row">
+                        <div class="rule-label">off vs. of</div>
+                        <div class="rule-detail">
+                            <strong>Off</strong> = opposite of "on." <strong>Of</strong> = all other cases (usually Dutch <em>van</em>).<br>
+                            <span class="example-correct">The book fell <strong>off</strong> the table.</span> &bull; <span class="example-correct">He is the head <strong>of</strong> our department.</span>
+                        </div>
+                    </div>
+                    <div class="rule-row">
+                        <div class="rule-label">as vs. like</div>
+                        <div class="rule-detail">
+                            <strong>As</strong> = job/function (the real thing). <strong>Like</strong> = similarity (not the real thing).<br>
+                            <span class="example-correct">He works <strong>as</strong> a clown. (= he IS a clown)</span> &bull; <span class="example-correct">He acted <strong>like</strong> a clown. (= he is NOT a clown)</span>
+                        </div>
+                    </div>
+                    <div class="rule-row">
+                        <div class="rule-label">before vs. in front of</div>
+                        <div class="rule-detail">
+                            <strong>Before</strong> = time. <strong>In front of</strong> = position.<br>
+                            <span class="example-correct">Shall we meet <strong>before</strong> 7:00?</span> &bull; <span class="example-correct">I'll wait <strong>in front of</strong> the restaurant.</span>
+                        </div>
+                    </div>
+                    <div class="rule-row">
+                        <div class="rule-label">in time vs. on time</div>
+                        <div class="rule-detail">
+                            <strong>In time</strong> = early enough. <strong>On time</strong> = at the scheduled time.<br>
+                            <span class="example-correct">I was <strong>in time</strong> for the announcement.</span> &bull; <span class="example-correct">The show started <strong>on time</strong>.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- L1 PITFALLS: PREPOSITIONS -->
+            <div class="pitfalls-panel">
+                <div class="pitfalls-header">Watch Out! — Common Preposition Mistakes by Language Background</div>
+                <div class="pitfalls-grid">
+                    <div class="pitfall-col">
+                        <div class="pitfall-lang">If you speak Dutch...</div>
+                        <strong>"good in" → good at:</strong><br>
+                        <span class="example-incorrect">I'm not good in English.</span><br>
+                        <span class="example-correct">I'm not good at English.</span><br><br>
+                        <strong>"with the train" → by train:</strong><br>
+                        <span class="example-incorrect">I go to school with the train.</span><br>
+                        <span class="example-correct">I go to school by train.</span><br><br>
+                        <strong>"behind the computer" → at:</strong><br>
+                        <span class="example-incorrect">I was sitting behind the computer.</span><br>
+                        <span class="example-correct">I was sitting at the computer.</span><br><br>
+                        <strong>"since" vs "for":</strong> Dutch <em>sinds</em> covers both.<br>
+                        <span class="example-incorrect">He has worked here since two months.</span><br>
+                        <span class="example-correct">He has worked here for two months.</span>
+                    </div>
+                    <div class="pitfall-col">
+                        <div class="pitfall-lang">If you speak Spanish...</div>
+                        <strong>"en" does too much:</strong> Spanish <em>en</em> = in, on, at. English distinguishes between them.<br>
+                        <span class="example-correct">I'm <strong>at</strong> school.</span> (= the place)<br>
+                        <span class="example-correct">I'm <strong>in</strong> the classroom.</span> (= inside)<br>
+                        <span class="example-correct">The book is <strong>on</strong> the table.</span> (= surface)<br><br>
+                        <strong>"para" vs "por" ≠ for:</strong> English "for" is simpler, but the preposition after verbs often differs from Spanish.<br>
+                        <span class="example-correct">I'm good <strong>at</strong> maths.</span> (not "for")
+                    </div>
+                    <div class="pitfall-col">
+                        <div class="pitfall-lang">If you speak Polish...</div>
+                        <strong>Cases instead of prepositions:</strong> Polish uses case endings where English uses prepositions. You may forget the preposition entirely.<br>
+                        <span class="example-incorrect">I go school every day.</span><br>
+                        <span class="example-correct">I go <strong>to</strong> school every day.</span><br><br>
+                        <strong>"na" ≠ "on":</strong> Polish <em>na</em> sometimes = "at" or "in" in English.<br>
+                        <span class="example-incorrect">I'm on the university.</span><br>
+                        <span class="example-correct">I'm at the university.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════ -->
+        <!-- EXERCISES: TENSES                                  -->
+        <!-- ════════════════════════════════════════════════════ -->
+        <section class="block-start" id="exercises-tenses">
+            <div class="page-header">
+                <span class="page-tag">Exercises</span>
+                <h1>Part A — Tenses</h1>
+                <div class="subtitle">Grammar & Basics — Week 7</div>
+            </div>
+
+            <!-- EXERCISE 1 -->
+            <div class="section mb-10">
+                <div class="exercise-label">Exercise 1 — Present Simple vs. Present Continuous</div>
+                <div class="exercise-subtitle">Fill in the correct form of the verb in brackets. Use context and signal words to decide which tense to use.</div>
+                <ol class="exercise-list">
+                    <li class="exercise-item" data-num="1">John <span class="blank blank-short">&nbsp;</span> (PLAY) football at the moment.</li>
+                    <li class="exercise-item" data-num="2">We often <span class="blank blank-short">&nbsp;</span> (TAKE) tests at our school.</li>
+                    <li class="exercise-item" data-num="3">I <span class="blank blank-short">&nbsp;</span> (TALK) to my teacher right now.</li>
+                    <li class="exercise-item" data-num="4">Every Monday, Sally <span class="blank blank-short">&nbsp;</span> (DRIVE) her kids to football practice.</li>
+                    <li class="exercise-item" data-num="5">Usually, I <span class="blank blank-short">&nbsp;</span> (WORK) as a secretary at ABT, but this summer I <span class="blank blank-short">&nbsp;</span> (STUDY) French at a language school in Paris.</li>
+                    <li class="exercise-item" data-num="6">Don't forget to take your umbrella. It <span class="blank blank-short">&nbsp;</span> (RAIN).</li>
+                    <li class="exercise-item" data-num="7">What <span class="blank blank-short">&nbsp;</span> (she / THINK) of this situation?</li>
+                </ol>
+            </div>
+
+            <!-- EXERCISE 2 -->
+            <div class="section mb-10">
+                <div class="exercise-label">Exercise 2 — Past Simple vs. Present Perfect</div>
+                <div class="exercise-subtitle">Choose the correct form. Think: is the action finished and over, or is it still relevant now?</div>
+                <ol class="exercise-list">
+                    <li class="exercise-item" data-num="1">Peter <strong>played / has played</strong> football yesterday.</li>
+                    <li class="exercise-item" data-num="2">They <strong>cleaned / have cleaned</strong> the car. It looks new again.</li>
+                    <li class="exercise-item" data-num="3">They <strong>bought / have bought</strong> the car in 2011.</li>
+                    <li class="exercise-item" data-num="4">Last year we <strong>went / have gone</strong> to Italy.</li>
+                    <li class="exercise-item" data-num="5">I haven't seen Paul since I <strong>arrived / have arrived</strong>.</li>
+                    <li class="exercise-item" data-num="6">I <strong>never visited / have never visited</strong> Greece.</li>
+                    <li class="exercise-item" data-num="7">I <strong>saw / have seen</strong> my friend two days ago.</li>
+                    <li class="exercise-item" data-num="8">I <strong>lost / have lost</strong> my key, so I can't open the door.</li>
+                </ol>
+            </div>
+
+            <!-- EXERCISE 3 -->
+            <div class="section mb-10">
+                <div class="exercise-label">Exercise 3 — Mixed Past Tenses Story</div>
+                <div class="exercise-subtitle">Fill in the correct form, choosing from past simple, past continuous, or past perfect.</div>
+                <ol class="exercise-list">
+                    <li class="exercise-item" data-num="1">I <span class="blank blank-short">&nbsp;</span> (WATCH) a cookery programme on TV when I <span class="blank blank-short">&nbsp;</span> (REALIZE) how hungry I was.</li>
+                    <li class="exercise-item" data-num="2">That was because I <span class="blank blank-long">&nbsp;</span> (not / EAT) anything since lunch.</li>
+                    <li class="exercise-item" data-num="3">I <span class="blank blank-short">&nbsp;</span> (GO) into the kitchen, <span class="blank blank-short">&nbsp;</span> (OPEN) the fridge and <span class="blank blank-short">&nbsp;</span> (CHECK) what was inside.</li>
+                    <li class="exercise-item" data-num="4">While I <span class="blank blank-short">&nbsp;</span> (LOOK) for something good, my stomach <span class="blank blank-short">&nbsp;</span> (GROWL).</li>
+                    <li class="exercise-item" data-num="5">I <span class="blank blank-short">&nbsp;</span> (CRAVE) the leftovers from yesterday, but somebody <span class="blank blank-long">&nbsp;</span> (TAKE) them.</li>
+                    <li class="exercise-item" data-num="6">I <span class="blank blank-short">&nbsp;</span> (SETTLE) for some fruit, but as I <span class="blank blank-short">&nbsp;</span> (EAT) it, I <span class="blank blank-short">&nbsp;</span> (SEE) the leftovers in the trash.</li>
+                    <li class="exercise-item" data-num="7">My brother <span class="blank blank-short">&nbsp;</span> (COME) in and <span class="blank blank-short">&nbsp;</span> (CONFESS) he <span class="blank blank-long">&nbsp;</span> (THROW) them away.</li>
+                </ol>
+            </div>
+
+            <!-- EXERCISE 4 -->
+            <div class="section mb-10">
+                <div class="exercise-label">Exercise 4 — All Tenses Mixed</div>
+                <div class="exercise-subtitle">Fill in the correct tense. This paragraph uses present, past, and future — use context clues to decide.</div>
+                <div class="situation-box" style="font-size: 10px; line-height: 1.7;">
+                    Next month I <span class="blank blank-short">&nbsp;</span> (MOVE) to a new flat and I <span class="blank blank-long">&nbsp;</span> (ALREADY / BUY) the furniture. I can't wait! Let me tell you more about the flat: there are two big rooms, a kitchenette and a small bathroom. Last weekend I <span class="blank blank-short">&nbsp;</span> (GET) a very nice lamp for the living room, but unfortunately I <span class="blank blank-short">&nbsp;</span> (BREAK) it when I <span class="blank blank-short">&nbsp;</span> (CLEAN) the flat. Luckily it <span class="blank blank-long">&nbsp;</span> (not / COST) much, I <span class="blank blank-long">&nbsp;</span> (PROBABLY / BUY) another one next Saturday.
+                    <br><br>
+                    By the way, I have some news: while I <span class="blank blank-short">&nbsp;</span> (LOOK) for the flat, I <span class="blank blank-short">&nbsp;</span> (MEET) a very nice estate agent: his name is Jamie. We <span class="blank blank-short">&nbsp;</span> (BE) out for dinner twice and tomorrow we <span class="blank blank-long">&nbsp;</span> (HAVE) lunch together. He <span class="blank blank-short">&nbsp;</span> (WORK) near here.
+                    <br><br>
+                    Now I <span class="blank blank-short">&nbsp;</span> (WAIT) for my sister. We <span class="blank blank-short">&nbsp;</span> (GO) to a party together later and I <span class="blank blank-long">&nbsp;</span> (not / KNOW) what to wear.
+                </div>
+            </div>
+
+            <!-- EXERCISE 5 -->
+            <div class="section mb-10">
+                <div class="exercise-label">Exercise 5 — Questions & Negatives (Do-Support)</div>
+                <div class="exercise-subtitle">Rewrite each sentence as a question OR as a negative, as indicated. Remember: use do/does/did only when there is no other helping verb.</div>
+                <ol class="exercise-list">
+                    <li class="exercise-item" data-num="1">She plays tennis on Saturdays. → <strong>Question:</strong><br><div class="write-line"></div></li>
+                    <li class="exercise-item" data-num="2">They went to the cinema last night. → <strong>Negative:</strong><br><div class="write-line"></div></li>
+                    <li class="exercise-item" data-num="3">He is working at the moment. → <strong>Question:</strong><br><div class="write-line"></div></li>
+                    <li class="exercise-item" data-num="4">She has visited Paris three times. → <strong>Negative:</strong><br><div class="write-line"></div></li>
+                    <li class="exercise-item" data-num="5">The children like chocolate. → <strong>Question:</strong><br><div class="write-line"></div></li>
+                    <li class="exercise-item" data-num="6">He called you yesterday. → <strong>Question (with "who" as subject):</strong><br><div class="write-line"></div></li>
+                    <li class="exercise-item" data-num="7">You can speak French. → <strong>Negative:</strong><br><div class="write-line"></div></li>
+                    <li class="exercise-item" data-num="8">Somebody broke the window. → <strong>Question (with "who" as subject):</strong><br><div class="write-line"></div></li>
+                </ol>
+            </div>
+
+            <!-- EXERCISE 6 -->
+            <div class="section mb-10">
+                <div class="exercise-label">Exercise 6 — Subject-Verb Agreement</div>
+                <div class="exercise-subtitle">Choose the correct verb form. Think: is the subject singular or plural? Watch out for tricky cases.</div>
+                <ol class="exercise-list">
+                    <li class="exercise-item" data-num="1">The police <strong>has / have</strong> the right to search people.</li>
+                    <li class="exercise-item" data-num="2">Mathematics <strong>gives / give</strong> me headaches.</li>
+                    <li class="exercise-item" data-num="3">Those trousers <strong>makes / make</strong> you look great.</li>
+                    <li class="exercise-item" data-num="4">The Netherlands <strong>has / have</strong> two neighbouring countries.</li>
+                    <li class="exercise-item" data-num="5">A number of people <strong>is / are</strong> already there.</li>
+                    <li class="exercise-item" data-num="6">Ten miles <strong>is / are</strong> too far to walk.</li>
+                    <li class="exercise-item" data-num="7">Our family <strong>is / are</strong> unable to plan a holiday. (UK English)</li>
+                    <li class="exercise-item" data-num="8">Water <strong>flows / flow</strong> through the pipes.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════ -->
+        <!-- COMMUNICATIVE: FIND SOMEONE WHO                    -->
+        <!-- ════════════════════════════════════════════════════ -->
+        <section class="block-start" id="activity-fsw">
+            <div class="page-header">
+                <span class="page-tag">Speaking Activity</span>
+                <h1>Find Someone at Your Table Who...</h1>
+                <div class="subtitle">Grammar & Basics — Week 7</div>
+            </div>
+
+            <div class="section-framing">
+                <strong>Instructions:</strong> Each box describes a situation. <strong>Form your own question</strong> in the correct tense, then ask the people at your table. Write down your question, the person's name, and one extra detail. Try to get a different name in each box.
+            </div>
+
+            <table class="fsw-grid">
+                <tr>
+                    <td>
+                        <div class="fsw-prompt">3+ countries visited (lifetime total)</div>
+                        <div class="fsw-name-line" style="font-size: 8px; color: #888;">Q: _________________________________</div>
+                        <div class="fsw-name-line">Name: __________ Detail: __________</div>
+                    </td>
+                    <td>
+                        <div class="fsw-prompt">Fun plans for this weekend</div>
+                        <div class="fsw-name-line" style="font-size: 8px; color: #888;">Q: _________________________________</div>
+                        <div class="fsw-name-line">Name: __________ Detail: __________</div>
+                    </td>
+                    <td>
+                        <div class="fsw-prompt">Late-night studying (last night)</div>
+                        <div class="fsw-name-line" style="font-size: 8px; color: #888;">Q: _________________________________</div>
+                        <div class="fsw-name-line">Name: __________ Detail: __________</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="fsw-prompt">Currently reading a good book</div>
+                        <div class="fsw-name-line" style="font-size: 8px; color: #888;">Q: _________________________________</div>
+                        <div class="fsw-name-line">Name: __________ Detail: __________</div>
+                    </td>
+                    <td>
+                        <div class="fsw-prompt">Never tried sushi (lifetime)</div>
+                        <div class="fsw-name-line" style="font-size: 8px; color: #888;">Q: _________________________________</div>
+                        <div class="fsw-name-line">Name: __________ Detail: __________</div>
+                    </td>
+                    <td>
+                        <div class="fsw-prompt">Activity at exactly 8pm yesterday evening (a series?)</div>
+                        <div class="fsw-name-line" style="font-size: 8px; color: #888;">Q: _________________________________</div>
+                        <div class="fsw-name-line">Name: __________ Detail: __________</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="fsw-prompt">Prediction: they expect to become a teacher</div>
+                        <div class="fsw-name-line" style="font-size: 8px; color: #888;">Q: _________________________________</div>
+                        <div class="fsw-name-line">Name: __________ Detail: __________</div>
+                    </td>
+                    <td>
+                        <div class="fsw-prompt">Another language before English (prior learning)</div>
+                        <div class="fsw-name-line" style="font-size: 8px; color: #888;">Q: _________________________________</div>
+                        <div class="fsw-name-line">Name: __________ Detail: __________</div>
+                    </td>
+                    <td>
+                        <div class="fsw-prompt">Daily habit: walks or cycles to school</div>
+                        <div class="fsw-name-line" style="font-size: 8px; color: #888;">Q: _________________________________</div>
+                        <div class="fsw-name-line">Name: __________ Detail: __________</div>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="mt-10 mb-8">
+                <div class="exercise-label">Follow-up: Report Back</div>
+                <div class="exercise-subtitle">Choose two interesting findings and write a sentence about each person using the <strong>third person</strong>. Pay attention to tense.</div>
+                <div class="write-line"></div>
+                <div class="write-line"></div>
+                <div class="write-line"></div>
+                <div class="write-line"></div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════ -->
+        <!-- EXERCISES: PREPOSITIONS                            -->
+        <!-- ════════════════════════════════════════════════════ -->
+        <section class="block-start" id="exercises-prepositions">
+            <div class="page-header">
+                <span class="page-tag">Exercises</span>
+                <h1>Part B — Prepositions</h1>
+                <div class="subtitle">Grammar & Basics — Week 7</div>
+            </div>
+
+            <!-- EXERCISE 5 -->
+            <div class="section mb-10">
+                <div class="exercise-label">Exercise 7 — Spot and Correct the Preposition Error</div>
+                <div class="exercise-subtitle">Each sentence contains one preposition error. Rewrite the sentence with the correct preposition. Some sentences may need a preposition removed entirely.</div>
+                <ol class="exercise-list">
+                    <li class="exercise-item" data-num="1">She is engaged <u>with</u> David.<br><div class="write-line"></div></li>
+                    <li class="exercise-item" data-num="2">She entered <u>into</u> the room.<br><div class="write-line"></div></li>
+                    <li class="exercise-item" data-num="3">He is intelligent, but he lacks <u>of</u> experience.<br><div class="write-line"></div></li>
+                    <li class="exercise-item" data-num="4"><u>On</u> October, we went for a skiing vacation in Switzerland.<br><div class="write-line"></div></li>
+                    <li class="exercise-item" data-num="5">Every summer I fly to Brazil and sit <u>in</u> the beach.<br><div class="write-line"></div></li>
+                    <li class="exercise-item" data-num="6">He told <u>to</u> me that he liked it.<br><div class="write-line"></div></li>
+                </ol>
+            </div>
+
+            <!-- EXERCISE 6 -->
+            <div class="section mb-10">
+                <div class="exercise-label">Exercise 8 — Confusing Pairs</div>
+                <div class="exercise-subtitle">Fill in the correct preposition. Choose from the pair given in brackets.</div>
+                <ol class="exercise-list">
+                    <li class="exercise-item" data-num="1">I fell asleep <span class="blank blank-short">&nbsp;</span> the movie. I slept <span class="blank blank-short">&nbsp;</span> half an hour. (during / for)</li>
+                    <li class="exercise-item" data-num="2">I'm <span class="blank blank-short">&nbsp;</span> the bathroom. Don't walk <span class="blank blank-short">&nbsp;</span> the bathroom without knocking! (in / into)</li>
+                    <li class="exercise-item" data-num="3">She works <span class="blank blank-short">&nbsp;</span> a nurse at the hospital. Her brother looks <span class="blank blank-short">&nbsp;</span> a doctor, but he's actually a musician. (as / like)</li>
+                    <li class="exercise-item" data-num="4">Shall we meet <span class="blank blank-short">&nbsp;</span> 7:00? I'll be waiting <span class="blank blank-short">&nbsp;</span> the restaurant. (before / in front of)</li>
+                    <li class="exercise-item" data-num="5">The show started right <span class="blank blank-short">&nbsp;</span> time. We almost didn't arrive <span class="blank blank-short">&nbsp;</span> time. (on time / in time)</li>
+                    <li class="exercise-item" data-num="6">I'm so bad <span class="blank blank-short">&nbsp;</span> organizing my day. I go to school <span class="blank blank-short">&nbsp;</span> train. (at / by)</li>
+                </ol>
+            </div>
+
+            <!-- EXERCISE 7 -->
+            <div class="section mb-10">
+                <div class="exercise-label">Exercise 9 — Gap-Fill Paragraph</div>
+                <div class="exercise-subtitle">Fill in the correct preposition in each gap. There is no word bank — use the theory sheet if needed.</div>
+                <div class="situation-box" style="font-size: 10.5px; line-height: 1.9;">
+                    1. <span class="blank blank-short">&nbsp;</span> 10 o'clock PM, <span class="blank blank-short">&nbsp;</span> the latest, I will have handed in my essay.
+                    <br>
+                    2. <span class="blank blank-short">&nbsp;</span> one year's time, I will be receiving my diploma!
+                    <br>
+                    3. I arrived so early that the main doors weren't even open yet. So I just stood there <span class="blank blank-short">&nbsp;</span> the building until I was allowed in. <span class="blank blank-short">&nbsp;</span> a moment I considered walking <span class="blank blank-short">&nbsp;</span> the building to the back door. But <span class="blank blank-short">&nbsp;</span> course, I knew it would be locked as well.
+                    <br>
+                    4. I'm so bad <span class="blank blank-short">&nbsp;</span> organizing my day. I hardly even wake up <span class="blank blank-short">&nbsp;</span> time to eat a proper breakfast. But then again, I have noticed that my 9:00 lecture never seems to start <span class="blank blank-short">&nbsp;</span> time. My professor is usually five minutes late. I hear she's been doing this <span class="blank blank-short">&nbsp;</span> many years. I probably arrive <span class="blank blank-short">&nbsp;</span> school even before she does! Well maybe not, but I'm certainly <span class="blank blank-short">&nbsp;</span> the classroom, <span class="blank blank-short">&nbsp;</span> my desk, first. <span class="blank blank-short">&nbsp;</span> least, most <span class="blank blank-short">&nbsp;</span> the time.
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════ -->
+        <!-- COMMUNICATIVE: SPOT THE ERRORS                     -->
+        <!-- ════════════════════════════════════════════════════ -->
+        <section class="block-start" id="activity-errors">
+            <div class="page-header">
+                <span class="page-tag">Pair Activity</span>
+                <h1>Spot the Preposition Errors</h1>
+                <div class="subtitle">Grammar & Basics — Week 7</div>
+            </div>
+
+            <div class="section-framing">
+                <strong>Instructions:</strong> The email below was written by a fictional international student. It contains <strong>12 preposition errors</strong> — mistakes that are typical for Dutch, Spanish, and Polish speakers of English. Work in pairs: underline each error and write the correction above it. When you're done, compare your answers with another pair and discuss any disagreements.
+            </div>
+
+            <div class="section">
+                <div class="scene-box" style="line-height: 2.0; font-size: 11px;">
+                    <div class="scene-label">Email from "Alex" to a friend</div>
+                    Hi Sam,<br><br>
+
+                    How are you? I'm writing to tell you about my new life on university. I moved in Utrecht in September and I've been here since almost six months now. I'm not very good in organising my schedule yet, so I often arrive late.<br><br>
+
+                    Every morning I go with the bus to school. The bus stop is right before my flat, so that's convenient. The ride takes about 20 minutes, and during the ride I usually listen to music.<br><br>
+
+                    Yesterday I was sitting behind the computer working on an essay when my flatmate walked in my room without knocking. He told to me that there was a package for me downstairs. I ran down the stairs and found it in the doorstep — it was a birthday present of my parents!<br><br>
+
+                    I hope you can visit me soon. I look forward on hearing from you!<br>
+                    Alex
+                </div>
+            </div>
+
+            <div class="section mt-10">
+                <div class="exercise-label">Write your corrections</div>
+                <div class="exercise-subtitle">List the 12 errors and their corrections below.</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px 20px; font-size: 10px;">
+                    <div>1. <span class="blank">&nbsp;</span> → <span class="blank">&nbsp;</span></div>
+                    <div>7. <span class="blank">&nbsp;</span> → <span class="blank">&nbsp;</span></div>
+                    <div>2. <span class="blank">&nbsp;</span> → <span class="blank">&nbsp;</span></div>
+                    <div>8. <span class="blank">&nbsp;</span> → <span class="blank">&nbsp;</span></div>
+                    <div>3. <span class="blank">&nbsp;</span> → <span class="blank">&nbsp;</span></div>
+                    <div>9. <span class="blank">&nbsp;</span> → <span class="blank">&nbsp;</span></div>
+                    <div>4. <span class="blank">&nbsp;</span> → <span class="blank">&nbsp;</span></div>
+                    <div>10. <span class="blank">&nbsp;</span> → <span class="blank">&nbsp;</span></div>
+                    <div>5. <span class="blank">&nbsp;</span> → <span class="blank">&nbsp;</span></div>
+                    <div>11. <span class="blank">&nbsp;</span> → <span class="blank">&nbsp;</span></div>
+                    <div>6. <span class="blank">&nbsp;</span> → <span class="blank">&nbsp;</span></div>
+                    <div>12. <span class="blank">&nbsp;</span> → <span class="blank">&nbsp;</span></div>
+                </div>
+            </div>
+
+            <div class="section mt-10">
+                <div class="exercise-label">Discussion</div>
+                <div class="exercise-subtitle">Compare with another pair. Were there any errors you disagreed on? Which L1 background do you think caused each error?</div>
+                <div class="write-line"></div>
+                <div class="write-line"></div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════ -->
+        <!-- ANSWER KEY                                         -->
+        <!-- ════════════════════════════════════════════════════ -->
+        <section class="block-start" id="answer-key">
+            <div class="page-header">
+                <span class="page-tag">Answer Key</span>
+                <h1>Week 7 — Tenses & Prepositions</h1>
+            </div>
+
+            <div class="answer-key-grid">
+                <div>
+                    <div class="ak-section">
+                        <div class="ak-section-title">Exercise 1 — Present Simple vs. Continuous</div>
+                        <div class="ak-item">1. is playing</div>
+                        <div class="ak-item">2. take</div>
+                        <div class="ak-item">3. am talking</div>
+                        <div class="ak-item">4. drives</div>
+                        <div class="ak-item">5. work / am studying</div>
+                        <div class="ak-item">6. is raining</div>
+                        <div class="ak-item">7. does she think</div>
+                    </div>
+
+                    <div class="ak-section">
+                        <div class="ak-section-title">Exercise 2 — Past Simple vs. Present Perfect</div>
+                        <div class="ak-item">1. played (yesterday)</div>
+                        <div class="ak-item">2. have cleaned (result now)</div>
+                        <div class="ak-item">3. bought (in 2011)</div>
+                        <div class="ak-item">4. went (last year)</div>
+                        <div class="ak-item">5. arrived</div>
+                        <div class="ak-item">6. have never visited (still true)</div>
+                        <div class="ak-item">7. saw (two days ago)</div>
+                        <div class="ak-item">8. have lost (result now)</div>
+                    </div>
+
+                    <div class="ak-section">
+                        <div class="ak-section-title">Exercise 3 — Mixed Past Tenses</div>
+                        <div class="ak-item">1. was watching / realized</div>
+                        <div class="ak-item">2. had not eaten</div>
+                        <div class="ak-item">3. went / opened / checked</div>
+                        <div class="ak-item">4. was looking / growled (or: was growling)</div>
+                        <div class="ak-item">5. was craving / had taken</div>
+                        <div class="ak-item">6. settled / was eating / saw</div>
+                        <div class="ak-item">7. came / confessed / had thrown</div>
+                    </div>
+
+                    <div class="ak-section">
+                        <div class="ak-section-title">Exercise 4 — All Tenses Mixed</div>
+                        <div class="ak-item">am moving / have already bought</div>
+                        <div class="ak-item">got / broke / was cleaning</div>
+                        <div class="ak-item">didn't cost / will probably buy</div>
+                        <div class="ak-item">was looking / met</div>
+                        <div class="ak-item">have been / are having / works</div>
+                        <div class="ak-item">am waiting / are going / don't know</div>
+                    </div>
+
+                    <div class="ak-section">
+                        <div class="ak-section-title">Exercise 5 — Questions & Negatives</div>
+                        <div class="ak-item">1. Does she play tennis on Saturdays?</div>
+                        <div class="ak-item">2. They didn't go to the cinema last night.</div>
+                        <div class="ak-item">3. Is he working at the moment?</div>
+                        <div class="ak-item">4. She hasn't visited Paris three times.</div>
+                        <div class="ak-item">5. Do the children like chocolate?</div>
+                        <div class="ak-item">6. Who called you yesterday? (no "did")</div>
+                        <div class="ak-item">7. You can't speak French. / You cannot speak French.</div>
+                        <div class="ak-item">8. Who broke the window? (no "did")</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="ak-section">
+                        <div class="ak-section-title">Exercise 6 — Subject-Verb Agreement</div>
+                        <div class="ak-item">1. have (police = always plural)</div>
+                        <div class="ak-item">2. gives (uncountable = singular)</div>
+                        <div class="ak-item">3. make (two-part item = plural)</div>
+                        <div class="ak-item">4. has (country name = singular)</div>
+                        <div class="ak-item">5. are ("a number of" = plural)</div>
+                        <div class="ak-item">6. is (measurement = singular)</div>
+                        <div class="ak-item">7. are (UK: collective noun = plural)</div>
+                        <div class="ak-item">8. flows (uncountable = singular)</div>
+                    </div>
+
+                    <div class="ak-section">
+                        <div class="ak-section-title">Exercise 7 — Correct the Preposition</div>
+                        <div class="ak-item">1. engaged <strong>to</strong></div>
+                        <div class="ak-item">2. entered the room (no prep)</div>
+                        <div class="ak-item">3. lacks experience (no prep)</div>
+                        <div class="ak-item">4. <strong>In</strong> October</div>
+                        <div class="ak-item">5. sit <strong>on/at</strong> the beach</div>
+                        <div class="ak-item">6. told me (no "to")</div>
+                    </div>
+
+                    <div class="ak-section">
+                        <div class="ak-section-title">Exercise 8 — Confusing Pairs</div>
+                        <div class="ak-item">1. during / for</div>
+                        <div class="ak-item">2. in / into</div>
+                        <div class="ak-item">3. as / like</div>
+                        <div class="ak-item">4. before / in front of</div>
+                        <div class="ak-item">5. on time / in time</div>
+                        <div class="ak-item">6. at / by</div>
+                    </div>
+
+                    <div class="ak-section">
+                        <div class="ak-section-title">Exercise 9 — Gap-Fill Paragraph</div>
+                        <div class="ak-item">1. <strong>By</strong> 10 o'clock, <strong>at</strong> the latest</div>
+                        <div class="ak-item">2. <strong>In</strong> one year's time</div>
+                        <div class="ak-item">3. <strong>in front of</strong> the building / <strong>For</strong> a moment / <strong>around</strong> the building / <strong>of</strong> course</div>
+                        <div class="ak-item">4. bad <strong>at</strong> / <strong>in</strong> time / <strong>on</strong> time / <strong>for</strong> many years / <strong>at</strong> school / <strong>in</strong> the classroom / <strong>at</strong> my desk / <strong>At</strong> least / most <strong>of</strong></div>
+                    </div>
+
+                    <div class="ak-section">
+                        <div class="ak-section-title">Spot the Errors — Email (12 errors)</div>
+                        <div class="ak-item">1. <strong>on</strong> university → <strong>at</strong> university</div>
+                        <div class="ak-item">2. moved <strong>in</strong> Utrecht → moved <strong>to</strong> Utrecht</div>
+                        <div class="ak-item">3. <strong>since</strong> almost six months → <strong>for</strong> almost six months</div>
+                        <div class="ak-item">4. good <strong>in</strong> organising → good <strong>at</strong> organising</div>
+                        <div class="ak-item">5. go <strong>with</strong> the bus → go <strong>by</strong> bus</div>
+                        <div class="ak-item">6. right <strong>before</strong> my flat → right <strong>in front of</strong> my flat</div>
+                        <div class="ak-item">7. <strong>behind</strong> the computer → <strong>at</strong> the computer</div>
+                        <div class="ak-item">8. walked <strong>in</strong> my room → walked <strong>into</strong> my room</div>
+                        <div class="ak-item">9. told <strong>to</strong> me → told me (no "to")</div>
+                        <div class="ak-item">10. <strong>in</strong> the doorstep → <strong>on</strong> the doorstep</div>
+                        <div class="ak-item">11. present <strong>of</strong> my parents → present <strong>from</strong> my parents</div>
+                        <div class="ak-item">12. look forward <strong>on</strong> → look forward <strong>to</strong></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

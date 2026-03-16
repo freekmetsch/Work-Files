@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 Grammar Workout — Linking Words, Relative Clauses & Conditionals</title>
+    <style>
+        @page {
+            margin: 10mm 10mm 5mm 10mm;
+            size: A4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.45;
+            color: #000;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .worksheet {
+                width: 100%;
+                padding: 0;
+            }
+            .print-button { display: none; }
+            .block-start { break-before: page; }
+            .block-start:first-child { break-before: auto; }
+            .section {
+                break-inside: avoid;
+            }
+            .section-header,
+            .section-title,
+            .theory-box-header,
+            .exercise-label,
+            .exercise-subtitle,
+            .pitfalls-header {
+                break-after: avoid;
+            }
+        }
+
+        @media screen {
+            body {
+                background: #f0f0f0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+            .worksheet {
+                background: white;
+                width: 210mm;
+                padding: 12mm;
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+                position: relative;
+                margin-bottom: 20px;
+            }
+            .print-button {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #333;
+                color: white;
+                padding: 10px 24px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: bold;
+                z-index: 100;
+            }
+            .print-button:hover { background: #000; }
+        }
+
+        /* ── Page Header ── */
+        .page-header {
+            border-bottom: 3px solid #333;
+            padding-bottom: 6px;
+            margin-bottom: 10px;
+        }
+        .page-header h1 {
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+        .page-header .subtitle {
+            font-size: 10px;
+            color: #555;
+            margin-top: 2px;
+        }
+        .page-tag {
+            display: inline-block;
+            border: 1.5px solid #333;
+            border-radius: 3px;
+            padding: 1px 8px;
+            font-size: 9px;
+            font-weight: bold;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        /* ── Theory Boxes ── */
+        .theory-box {
+            border: 1.5px solid #333;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .theory-box-header {
+            background: #e8e8e8;
+            padding: 5px 10px;
+            font-weight: bold;
+            font-size: 11px;
+            border-bottom: 1px solid #999;
+        }
+        .theory-box-content {
+            padding: 8px 10px;
+            font-size: 10px;
+            line-height: 1.5;
+        }
+
+        .rule-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 6px;
+            align-items: flex-start;
+        }
+        .rule-label {
+            font-weight: bold;
+            min-width: 130px;
+            font-size: 10px;
+        }
+        .rule-detail {
+            flex: 1;
+            font-size: 10px;
+        }
+
+        .example-correct {
+            color: #000;
+            font-style: italic;
+        }
+        .example-incorrect {
+            text-decoration: line-through;
+            color: #666;
+            font-style: italic;
+        }
+        .key-word {
+            font-weight: bold;
+        }
+
+        .rule-note {
+            background: #f5f5f5;
+            border: 1px solid #999;
+            border-radius: 3px;
+            padding: 4px 8px;
+            font-size: 9px;
+            margin-top: 4px;
+            line-height: 1.4;
+        }
+
+        /* ── L1 Pitfalls ── */
+        .pitfalls-panel {
+            border: 1.5px solid #333;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .pitfalls-header {
+            background: #e8e8e8;
+            padding: 4px 10px;
+            font-weight: bold;
+            font-size: 10px;
+            border-bottom: 1px solid #999;
+        }
+        .pitfalls-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0;
+        }
+        .pitfall-col {
+            padding: 6px 8px;
+            font-size: 9px;
+            line-height: 1.4;
+            border-right: 1px solid #ccc;
+        }
+        .pitfall-col:last-child {
+            border-right: none;
+        }
+        .pitfall-lang {
+            font-weight: bold;
+            font-size: 9px;
+            margin-bottom: 3px;
+        }
+
+        /* ── Conditionals Table ── */
+        .cond-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 9.5px;
+            margin-bottom: 6px;
+        }
+        .cond-table th {
+            background: #e8e8e8;
+            border: 1px solid #999;
+            padding: 4px 6px;
+            text-align: left;
+            font-size: 9px;
+        }
+        .cond-table td {
+            border: 1px solid #999;
+            padding: 4px 6px;
+            vertical-align: top;
+        }
+        .cond-table .type-label {
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        /* ── Section Headers (Exercises) ── */
+        .section-header {
+            background: #333;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 3px;
+            margin-bottom: 8px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .section-framing {
+            font-size: 10px;
+            color: #444;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        /* ── Exercise Items ── */
+        .exercise-list {
+            list-style: none;
+            padding: 0;
+        }
+        .exercise-item {
+            margin-bottom: 8px;
+            font-size: 10.5px;
+            line-height: 1.6;
+            padding-left: 22px;
+            position: relative;
+        }
+        .exercise-item::before {
+            content: attr(data-num) ".";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .blank {
+            display: inline-block;
+            border-bottom: 1px solid #000;
+            min-width: 100px;
+            text-align: center;
+        }
+        .blank-short {
+            min-width: 60px;
+        }
+        .blank-long {
+            min-width: 140px;
+        }
+
+        /* ── Writing Lines ── */
+        .write-line {
+            border-bottom: 1px solid #666;
+            height: 20px;
+            margin-bottom: 2px;
+        }
+        .write-line-pair {
+            margin-bottom: 8px;
+        }
+
+        /* ── Situation Box ── */
+        .situation-box {
+            background: #f5f5f5;
+            border: 1px solid #999;
+            border-radius: 3px;
+            padding: 5px 8px;
+            font-size: 10px;
+            margin-bottom: 4px;
+        }
+        .situation-label {
+            font-weight: bold;
+            font-size: 9px;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        /* ── Checklist ── */
+        .checklist {
+            list-style: none;
+            padding: 0;
+            font-size: 10px;
+        }
+        .checklist li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 3px;
+        }
+        .checklist li::before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+        }
+
+        /* ── Answer Key ── */
+        .answer-key-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            font-size: 9px;
+            line-height: 1.5;
+        }
+        .ak-section {
+            margin-bottom: 6px;
+        }
+        .ak-section-title {
+            font-weight: bold;
+            font-size: 10px;
+            border-bottom: 1px solid #333;
+            margin-bottom: 3px;
+            padding-bottom: 2px;
+        }
+        .ak-item {
+            margin-bottom: 2px;
+        }
+
+        /* ── Utility ── */
+        .mt-6 { margin-top: 6px; }
+        .mt-10 { margin-top: 10px; }
+        .mb-4 { margin-bottom: 4px; }
+        .mb-8 { margin-bottom: 8px; }
+        .text-center { text-align: center; }
+        .small { font-size: 9px; }
+        .bold { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <button class="print-button" onclick="window.print()">Print / Save PDF</button>
+
+    <div class="worksheet">
+
+        <!-- ════════════════════════════════════════════════════ -->
+        <!-- THEORY SHEET T1: LINKING WORDS & RELATIVE CLAUSES  -->
+        <!-- ════════════════════════════════════════════════════ -->
+        <section class="block-start" id="theory-1">
+            <div class="page-header">
+                <span class="page-tag">Theory Sheet</span>
+                <h1>Linking Words & Relative Clauses</h1>
+            </div>
+
+            <!-- LINKING WORDS: Although vs Despite -->
+            <div class="theory-box">
+                <div class="theory-box-header">Although / Though / Even Though vs. Despite / In Spite Of</div>
+                <div class="theory-box-content">
+                    <p class="mb-4">Both express a <strong>contrast</strong> — something happened even though you wouldn't expect it. But they work differently in how you build the sentence.</p>
+
+                    <div class="rule-row">
+                        <div class="rule-label">although / even though</div>
+                        <div class="rule-detail">
+                            Followed by a <strong>sentence with a subject + verb</strong>.<br>
+                            <span class="example-correct"><span class="key-word">Although</span> <strong>it rained</strong> a lot, we enjoyed our holiday.</span><br>
+                            <span class="example-correct"><span class="key-word">Even though</span> <strong>she was</strong> tired, she couldn't sleep.</span><br>
+                            <span class="example-incorrect">Although the bad weather, we went out.</span> — wrong: no verb after "although"
+                        </div>
+                    </div>
+
+                    <div class="rule-row">
+                        <div class="rule-label">despite / in spite of</div>
+                        <div class="rule-detail">
+                            Followed by a <strong>noun</strong> or <strong>-ing form</strong> (NOT a subject + verb).<br>
+                            <span class="example-correct"><span class="key-word">Despite</span> <strong>the rain</strong>, we enjoyed our holiday.</span><br>
+                            <span class="example-correct"><span class="key-word">In spite of</span> <strong>being</strong> very tired, she couldn't sleep.</span><br>
+                            <span class="example-incorrect">Despite she was tired, she continued.</span> — wrong: clause after "despite"
+                        </div>
+                    </div>
+
+                    <div class="rule-note">
+                        <strong>Quick test:</strong> Look at what follows. Is there a <strong>subject + verb</strong> (e.g., "she was tired")? → use <em>although / even though</em>. Is there just a <strong>noun</strong> or <strong>-ing form</strong> (e.g., "the rain" / "being tired")? → use <em>despite / in spite of</em>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- LINKING WORDS: As vs Like -->
+            <div class="theory-box">
+                <div class="theory-box-header">As vs. Like</div>
+                <div class="theory-box-content">
+                    <div class="rule-row">
+                        <div class="rule-label">like + noun</div>
+                        <div class="rule-detail">
+                            Means <strong>"similar to"</strong> — a comparison (not the real thing).<br>
+                            <span class="example-correct">He acted <span class="key-word">like</span> a clown in class today. (= he is NOT a clown)</span><br>
+                            <span class="example-correct">That house looks <span class="key-word">like</span> a palace.</span>
+                        </div>
+                    </div>
+                    <div class="rule-row">
+                        <div class="rule-label">as + noun</div>
+                        <div class="rule-detail">
+                            Means <strong>"in the role of"</strong> — the actual function or job.<br>
+                            <span class="example-correct">He performs <span class="key-word">as</span> a clown at children's parties. (= he IS a clown)</span><br>
+                            <span class="example-correct">She works <span class="key-word">as</span> a nurse at the hospital.</span>
+                        </div>
+                    </div>
+                    <div class="rule-row">
+                        <div class="rule-label">as + subject + verb</div>
+                        <div class="rule-detail">
+                            Means <strong>"in the same way as"</strong> when followed by a sentence.<br>
+                            <span class="example-correct">You should do it <span class="key-word">as</span> I showed you.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RELATIVE CLAUSES -->
+            <div class="theory-box">
+                <div class="theory-box-header">Relative Clauses — Who, Which, That</div>
+                <div class="theory-box-content">
+                    <div class="rule-row">
+                        <div class="rule-label">who</div>
+                        <div class="rule-detail">Refers to <strong>people</strong>. <span class="example-correct">The student <span class="key-word">who</span> sits next to me is from Germany.</span></div>
+                    </div>
+                    <div class="rule-row">
+                        <div class="rule-label">which</div>
+                        <div class="rule-detail">Refers to <strong>things</strong>. <span class="example-correct">The book <span class="key-word">which</span> I borrowed was very helpful.</span></div>
+                    </div>
+                    <div class="rule-row">
+                        <div class="rule-label">that</div>
+                        <div class="rule-detail">Can replace <em>who</em> or <em>which</em> — but <strong>ONLY when the information is essential</strong> to identify who/what you mean (see "defining" below).</div>
+                    </div>
+
+                    <div class="rule-note mt-6">
+                        <strong>Defining</strong> — the information tells you <em>which person or thing</em> you mean. It is essential. No commas. <em>That</em> is OK.<br>
+                        <span class="example-correct">The woman <strong>who/that</strong> lives next door is a doctor.</span> — Which woman? The one next door.<br><br>
+
+                        <strong>Non-defining</strong> — the information is <em>extra</em>. You already know who/what is meant. Use commas. <em>That</em> is NOT OK.<br>
+                        <span class="example-correct">My neighbour<strong>,</strong> <strong>who</strong> has a lot of dogs<strong>,</strong> is a great guy.</span> — We already know which neighbour.<br>
+                        <span class="example-incorrect">My neighbour, <strong>that</strong> has a lot of dogs, is a great guy.</span> — wrong: no "that" with commas<br><br>
+
+                        <strong>"Which" for a whole idea</strong> (NOT "what" or "that"):<br>
+                        <span class="example-correct">He failed the exam, <strong>which</strong> surprised everyone.</span><br>
+                        <span class="example-incorrect">He failed the exam, <strong>what</strong> surprised everyone.</span> — wrong<br>
+                        <span class="example-incorrect">He failed the exam, <strong>that</strong> surprised everyone.</span> — wrong
+                    </div>
+                </div>
+            </div>
+
+            <!-- L1 PITFALLS: Linking Words & Relative Clauses -->
+            <div class="pitfalls-panel">
+                <div class="pitfalls-header">Watch Out! — Common Mistakes by Language Background</div>
+                <div class="pitfalls-grid">
+                    <div class="pitfall-col">
+                        <div class="pitfall-lang">If you speak Dutch...</div>
+                        <strong>hoewel / ondanks:</strong> Dutch has the same split, but many Dutch speakers mix them up in English.<br>
+                        <span class="example-incorrect">Although the rain, we went out.</span><br>
+                        <span class="example-correct">Despite the rain, we went out.</span><br>
+                        <span class="example-correct">Although it rained, we went out.</span><br><br>
+                        <strong>"wat" ≠ "what":</strong> Dutch <em>"wat"</em> = English <strong>which</strong> (not "what") when referring back to a whole idea.<br>
+                        <span class="example-incorrect">He quit his job, what surprised me.</span><br>
+                        <span class="example-correct">He quit his job, which surprised me.</span><br><br>
+                        <strong>"als" does too much:</strong> Dutch <em>als</em> = as, like, and if. English keeps these separate.<br>
+                        <span class="example-correct">She works <strong>as</strong> a nurse. (= her job)</span><br>
+                        <span class="example-correct">He acts <strong>like</strong> a child. (= not really a child)</span>
+                    </div>
+                    <div class="pitfall-col">
+                        <div class="pitfall-lang">If you speak Spanish...</div>
+                        <strong>"aunque" covers everything:</strong> English splits this into <em>although</em> (+ sentence) and <em>despite</em> (+ noun / -ing). Since Spanish uses <em>aunque</em> for both, you may pick the wrong English word.<br>
+                        <span class="example-correct">Although it was raining... (sentence after "although")</span><br>
+                        <span class="example-correct">Despite the rain... (noun after "despite")</span><br>
+                        <span class="example-incorrect">Despite it was raining...</span> <span class="example-incorrect">Although the rain...</span><br><br>
+                        <strong>"que" is not always "that":</strong> In Spanish, <em>que</em> works for everything. English splits it: <em>who</em> (people), <em>which</em> (things).<br>
+                        <span class="example-incorrect">My teacher, that is very kind, helped me.</span><br>
+                        <span class="example-correct">My teacher, who is very kind, helped me.</span><br><br>
+                        <strong>"como" splits into two:</strong><br>
+                        <span class="example-correct">He works <strong>as</strong> a waiter. (= his job)</span><br>
+                        <span class="example-correct">He eats <strong>like</strong> a horse. (= comparison)</span>
+                    </div>
+                    <div class="pitfall-col">
+                        <div class="pitfall-lang">If you speak Polish...</div>
+                        <strong>chociaż / mimo że:</strong> The split exists in Polish too, but <em>despite</em> in English is simpler — just add a noun or -ing form.<br>
+                        <span class="example-incorrect">Despite she was late, we waited.</span><br>
+                        <span class="example-correct">Despite being late, we waited.</span><br>
+                        <span class="example-correct">Although she was late, we waited.</span><br><br>
+                        <strong>który/która/które → who/which:</strong> English is simpler (no gender), but has a rule Polish doesn't: no <em>that</em> between commas.<br>
+                        <span class="example-incorrect">Warsaw, that is the capital, is large.</span><br>
+                        <span class="example-correct">Warsaw, which is the capital, is large.</span><br><br>
+                        <strong>jak / jako:</strong> Polish <em>jak</em> covers both "as" and "like."<br>
+                        <span class="example-correct">He works <strong>as</strong> a chef. (= his job)</span><br>
+                        <span class="example-correct">He cooks <strong>like</strong> a chef. (= not really a chef)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════ -->
+        <!-- THEORY SHEET T2: CONDITIONALS                      -->
+        <!-- ════════════════════════════════════════════════════ -->
+        <section id="theory-2">
+            <div class="page-header">
+                <h1>Conditionals — Types 0, 1, 2 & 3</h1>
+            </div>
+
+            <div class="theory-box">
+                <div class="theory-box-header">Conditional Types at a Glance</div>
+                <div class="theory-box-content" style="padding: 4px 6px;">
+                    <table class="cond-table">
+                        <thead>
+                            <tr>
+                                <th style="width:8%">Type</th>
+                                <th style="width:16%">Use</th>
+                                <th style="width:20%">If-part</th>
+                                <th style="width:22%">Result part</th>
+                                <th style="width:34%">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="type-label">Type 0</td>
+                                <td>General truths, facts</td>
+                                <td>if + <strong>present simple</strong></td>
+                                <td><strong>present simple</strong></td>
+                                <td><em>If you heat water to 100°C, it boils.</em><br><em>If you press this button, the door opens.</em></td>
+                            </tr>
+                            <tr>
+                                <td class="type-label">Type 1</td>
+                                <td>Real future possibility</td>
+                                <td>if + <strong>present simple</strong></td>
+                                <td><strong>will</strong> + verb</td>
+                                <td><em>If it rains tomorrow, I will stay home.</em><br><em>If you study hard, you will pass.</em></td>
+                            </tr>
+                            <tr>
+                                <td class="type-label">Type 2</td>
+                                <td>Imaginary present / future</td>
+                                <td>if + <strong>past simple</strong></td>
+                                <td><strong>would</strong> + verb</td>
+                                <td><em>If I had more time, I would travel more.</em><br><em>If I were rich, I would buy a boat.</em></td>
+                            </tr>
+                            <tr>
+                                <td class="type-label">Type 3</td>
+                                <td>Imaginary past (too late now)</td>
+                                <td>if + <strong>past perfect</strong><br><span class="small">(had + done/gone/been...)</span></td>
+                                <td><strong>would have</strong> + past form<br><span class="small">(e.g., gone, studied, been)</span></td>
+                                <td><em>If she had studied harder, she would have passed.</em><br><em>If I had known, I would have helped.</em></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="theory-box">
+                <div class="theory-box-header">Key Rules</div>
+                <div class="theory-box-content">
+                    <div class="rule-row">
+                        <div class="rule-label" style="min-width:160px">No "will" in the if-part</div>
+                        <div class="rule-detail">
+                            <span class="example-correct">If it <strong>rains</strong> tomorrow, we will cancel.</span><br>
+                            <span class="example-incorrect">If it <strong>will rain</strong> tomorrow, we will cancel.</span>
+                        </div>
+                    </div>
+                    <div class="rule-row">
+                        <div class="rule-label" style="min-width:160px">Type 2: use "were," not "was"</div>
+                        <div class="rule-detail">
+                            <span class="example-correct">If I <strong>were</strong> you, I would accept the offer.</span> — standard / formal<br>
+                            <span class="small">"If I <em>was</em> you..." is common in spoken English but "were" is preferred in writing.</span>
+                        </div>
+                    </div>
+                    <div class="rule-row">
+                        <div class="rule-label" style="min-width:160px">No "would" in the if-part</div>
+                        <div class="rule-detail">
+                            <span class="example-correct">If I <strong>had known</strong>, I would have come.</span> (Type 3)<br>
+                            <span class="example-incorrect">If I <strong>would have known</strong>, I would have come.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="theory-box">
+                <div class="theory-box-header">Quick Comparison — Same Situation, Different Types</div>
+                <div class="theory-box-content">
+                    <div class="rule-row">
+                        <div class="rule-label">Type 1 (real)</div>
+                        <div class="rule-detail"><em>If she <strong>studies</strong> hard, she <strong>will pass</strong> the exam.</em> — It's possible and likely.</div>
+                    </div>
+                    <div class="rule-row">
+                        <div class="rule-label">Type 2 (imaginary)</div>
+                        <div class="rule-detail"><em>If she <strong>studied</strong> hard, she <strong>would pass</strong> the exam.</em> — She's not studying hard (but imagine if she did).<br>
+                        <span class="small"><strong>If my grandma had wheels, she would be a bike.</strong> — Yes, that's a Type 2 conditional!</span></div>
+                    </div>
+                    <div class="rule-row">
+                        <div class="rule-label">Type 3 (past, too late)</div>
+                        <div class="rule-detail"><em>If she <strong>had studied</strong> hard, she <strong>would have passed</strong> the exam.</em> — She didn't study. The exam is over.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="theory-box">
+                <div class="theory-box-header">Mixed Conditionals</div>
+                <div class="theory-box-content">
+                    <p class="mb-4">Sometimes the if-clause and result clause refer to <strong>different time frames</strong>.</p>
+                    <div class="rule-row">
+                        <div class="rule-label" style="min-width:160px">Past → Present<br><span class="small">(Type 3 if + Type 2 result)</span></div>
+                        <div class="rule-detail">
+                            <em>If I <strong>had accepted</strong> that job, I <strong>would be</strong> living in London now.</em><br>
+                            <span class="small">The past decision affects the present situation.</span>
+                        </div>
+                    </div>
+                    <div class="rule-row">
+                        <div class="rule-label" style="min-width:160px">Present → Past<br><span class="small">(Type 2 if + Type 3 result)</span></div>
+                        <div class="rule-detail">
+                            <em>If I <strong>spoke</strong> French, I <strong>would have applied</strong> for that job last month.</em><br>
+                            <span class="small">Something that is always true about you affected a past opportunity.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- L1 PITFALLS: Conditionals -->
+            <div class="pitfalls-panel">
+                <div class="pitfalls-header">Watch Out! — Common Mistakes by Language Background</div>
+                <div class="pitfalls-grid">
+                    <div class="pitfall-col">
+                        <div class="pitfall-lang">If you speak Dutch...</div>
+                        <strong>Don't put "zou" in the if-part:</strong><br>
+                        <span class="example-incorrect">If I would win the lottery, I would buy a house.</span><br>
+                        <span class="example-correct">If I won the lottery, I would buy a house.</span><br><br>
+                        <strong>Type 2 and 3 feel the same:</strong> Dutch uses similar forms for both.<br>
+                        <span class="example-correct"><em>Now:</em> If I <strong>had</strong> more money, I would travel.</span><br>
+                        <span class="example-correct"><em>Back then:</em> If I <strong>had had</strong> more money, I would have travelled.</span><br>
+                        Ask yourself: am I imagining now, or regretting the past?
+                    </div>
+                    <div class="pitfall-col">
+                        <div class="pitfall-lang">If you speak Spanish...</div>
+                        <strong>Don't translate the subjunctive directly:</strong> Focus on the English pattern.<br>
+                        <span class="example-correct">Type 2: If I <strong>had</strong> time... (past simple)</span><br>
+                        <span class="example-correct">Type 3: If I <strong>had had</strong> time... (past perfect)</span><br><br>
+                        <strong>"would had" does not exist:</strong><br>
+                        <span class="example-incorrect">If she had called, I would had come.</span><br>
+                        <span class="example-correct">If she had called, I would <strong>have</strong> come.</span><br><br>
+                        <strong>No "will" in the if-part:</strong><br>
+                        <span class="example-incorrect">If it will rain, we will stay inside.</span><br>
+                        <span class="example-correct">If it rains, we will stay inside.</span>
+                    </div>
+                    <div class="pitfall-col">
+                        <div class="pitfall-lang">If you speak Polish...</div>
+                        <strong>"gdyby" covers Type 2 AND 3:</strong> English forces you to choose — this is a new distinction.<br>
+                        <span class="example-correct"><em>Now:</em> If I <strong>knew</strong> the answer... (past simple)</span><br>
+                        <span class="example-correct"><em>Back then:</em> If I <strong>had known</strong> the answer... (past perfect)</span><br>
+                        Ask: am I imagining now, or regretting the past?<br><br>
+                        <strong>Word order is stricter:</strong><br>
+                        <span class="example-correct">If I had a car, I would drive to work.</span><br>
+                        <span class="example-correct">I would drive to work if I had a car.</span><br>
+                        <span class="example-incorrect">A car if I had, to work I would drive.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════ -->
+        <!-- EXERCISES PAGE E1: LINKING WORDS & RELATIVE CLAUSES -->
+        <!-- ════════════════════════════════════════════════════ -->
+        <section class="block-start" id="exercises-1">
+            <div class="page-header">
+                <span class="page-tag">Exercises</span>
+                <h1>Linking Words & Relative Clauses</h1>
+            </div>
+
+            <!-- WARM-UP -->
+            <div class="section mb-8">
+                <div class="section-header">Warm-up — Spot the Mistake</div>
+                <div class="section-framing">Each sentence contains <strong>one</strong> grammar mistake. Find the error and write the corrected sentence on the line.</div>
+
+                <ol class="exercise-list">
+                    <li class="exercise-item" data-num="1">
+                        <em>Although the rain, we went out.</em>
+                        <div class="write-line" style="margin-top: 4px;"></div>
+                    </li>
+                    <li class="exercise-item" data-num="2">
+                        <em>My teacher, that is very kind, helped me.</em>
+                        <div class="write-line" style="margin-top: 4px;"></div>
+                    </li>
+                    <li class="exercise-item" data-num="3">
+                        <em>If I would be rich, I would buy a house.</em>
+                        <div class="write-line" style="margin-top: 4px;"></div>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- SECTION A -->
+            <div class="section mb-8">
+                <div class="section-header">Section A — Choose the Right Connector</div>
+                <div class="section-framing">Can you tell the difference between although (+ subject + verb) and despite (+ noun or -ing)?<br>Fill in <strong>although, even though, despite,</strong> or <strong>in spite of</strong>. The last two items test <strong>as</strong> vs. <strong>like</strong>.</div>
+
+                <ol class="exercise-list">
+                    <li class="exercise-item" data-num="1"><span class="blank blank-short">&nbsp;</span> the heavy traffic, we arrived at the university on time.</li>
+                    <li class="exercise-item" data-num="2"><span class="blank blank-short">&nbsp;</span> she had revised all week, she still found the exam difficult.</li>
+                    <li class="exercise-item" data-num="3">He kept working on his thesis <span class="blank blank-short">&nbsp;</span> being completely exhausted.</li>
+                    <li class="exercise-item" data-num="4"><span class="blank blank-short">&nbsp;</span> the course was challenging, most students passed with good grades.</li>
+                    <li class="exercise-item" data-num="5"><span class="blank blank-short">&nbsp;</span> all the preparation, the group presentation didn't go as planned.</li>
+                    <li class="exercise-item" data-num="6">She finished the project on time <span class="blank blank-short">&nbsp;</span> having very little support from her team.</li>
+                    <li class="exercise-item" data-num="7">He works <span class="blank blank-short">&nbsp;</span> a teaching assistant at the Faculty of Education. <span class="small">(as / like)</span></li>
+                    <li class="exercise-item" data-num="8">Stop acting <span class="blank blank-short">&nbsp;</span> a child and take responsibility for your project. <span class="small">(as / like)</span></li>
+                </ol>
+            </div>
+
+            <!-- SECTION B -->
+            <div class="section mb-8">
+                <div class="section-header">Section B — Relative Pronouns</div>
+                <div class="section-framing">Fill in <strong>who, which,</strong> or <strong>that</strong>. Add commas where they are needed. Remember: you cannot use "that" when the information is just extra detail (with commas).</div>
+
+                <ol class="exercise-list">
+                    <li class="exercise-item" data-num="1">The professor <span class="blank blank-short">&nbsp;</span> teaches Academic Writing is retiring next year.</li>
+                    <li class="exercise-item" data-num="2">Utrecht <span class="blank blank-short">&nbsp;</span> is the fourth-largest city in the Netherlands has a beautiful old centre.</li>
+                    <li class="exercise-item" data-num="3">The student <span class="blank blank-short">&nbsp;</span> submitted the essay late received a lower grade.</li>
+                    <li class="exercise-item" data-num="4">My internship supervisor <span class="blank blank-short">&nbsp;</span> has worked in the field for 20 years gave me great advice.</li>
+                    <li class="exercise-item" data-num="5">The laptop <span class="blank blank-short">&nbsp;</span> I bought last month has already broken down.</li>
+                    <li class="exercise-item" data-num="6">She didn't pass the resit, <span class="blank blank-short">&nbsp;</span> really surprised everyone.</li>
+                    <li class="exercise-item" data-num="7">The building <span class="blank blank-short">&nbsp;</span> houses the university library was built in the 19th century.</li>
+                    <li class="exercise-item" data-num="8">He decided to drop the minor, <span class="blank blank-short">&nbsp;</span> I thought was a mistake.</li>
+                </ol>
+            </div>
+
+            <!-- SECTION C -->
+            <div class="section">
+                <div class="section-header">Section C — Defining or Non-Defining?</div>
+                <div class="section-framing">Write <strong>D</strong> (defining — the info tells you <em>which</em> person/thing) or <strong>ND</strong> (non-defining — the info is just <em>extra</em>) next to each sentence. For ND sentences: add the missing commas and cross out "that" if it has been used incorrectly.</div>
+
+                <ol class="exercise-list">
+                    <li class="exercise-item" data-num="1"><span class="blank blank-short">&nbsp;</span> Students who submit their work late will lose marks.</li>
+                    <li class="exercise-item" data-num="2"><span class="blank blank-short">&nbsp;</span> Professor de Vries who has been teaching here for 30 years announced his retirement.</li>
+                    <li class="exercise-item" data-num="3"><span class="blank blank-short">&nbsp;</span> The course that I enjoyed most was Intercultural Communication.</li>
+                    <li class="exercise-item" data-num="4"><span class="blank blank-short">&nbsp;</span> The Jaarbeurs that hosts many events is next to Utrecht Centraal station.</li>
+                    <li class="exercise-item" data-num="5"><span class="blank blank-short">&nbsp;</span> The cafe that is next to the university is always crowded.</li>
+                    <li class="exercise-item" data-num="6"><span class="blank blank-short">&nbsp;</span> The final presentation that we had been preparing for weeks went really well.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════ -->
+        <!-- EXERCISES PAGE E2: CONDITIONALS                     -->
+        <!-- ════════════════════════════════════════════════════ -->
+        <section class="block-start" id="exercises-2">
+            <div class="page-header">
+                <span class="page-tag">Exercises</span>
+                <h1>Conditionals</h1>
+            </div>
+
+            <!-- SECTION D -->
+            <div class="section mb-8">
+                <div class="section-header">Section D — Identify the Type</div>
+                <div class="section-framing">Read each sentence and write <strong>Type 0, 1, 2,</strong> or <strong>3</strong> in the blank.</div>
+
+                <ol class="exercise-list">
+                    <li class="exercise-item" data-num="1"><span class="blank blank-short">&nbsp;</span> If you heat ice, it melts.</li>
+                    <li class="exercise-item" data-num="2"><span class="blank blank-short">&nbsp;</span> If she finishes her essay today, she will have time to revise it tomorrow.</li>
+                    <li class="exercise-item" data-num="3"><span class="blank blank-short">&nbsp;</span> If I spoke fluent Japanese, I would apply for that job in Tokyo.</li>
+                    <li class="exercise-item" data-num="4"><span class="blank blank-short">&nbsp;</span> If they had left earlier, they would have caught the train.</li>
+                    <li class="exercise-item" data-num="5"><span class="blank blank-short">&nbsp;</span> If it rains this afternoon, we will cancel the barbecue.</li>
+                    <li class="exercise-item" data-num="6"><span class="blank blank-short">&nbsp;</span> If I were the prime minister, I would invest more in education.</li>
+                </ol>
+            </div>
+
+            <!-- SECTION E -->
+            <div class="section mb-8">
+                <div class="section-header">Section E — Complete the Sentence</div>
+                <div class="section-framing">Put the verb in brackets into the correct form. Refer to your theory sheet if needed.</div>
+
+                <ol class="exercise-list">
+                    <li class="exercise-item" data-num="1">If you <span class="blank blank-short">&nbsp;</span> (mix) red and blue, you <span class="blank blank-short">&nbsp;</span> (get) purple.</li>
+                    <li class="exercise-item" data-num="2">If she <span class="blank blank-short">&nbsp;</span> (not/hurry), she <span class="blank blank-short">&nbsp;</span> (miss) the bus.</li>
+                    <li class="exercise-item" data-num="3">We <span class="blank blank-short">&nbsp;</span> (go) to the beach if the weather <span class="blank blank-short">&nbsp;</span> (be) nice tomorrow.</li>
+                    <li class="exercise-item" data-num="4">If I <span class="blank blank-short">&nbsp;</span> (have) more free time, I <span class="blank blank-short">&nbsp;</span> (learn) to play the guitar.</li>
+                    <li class="exercise-item" data-num="5">She <span class="blank blank-short">&nbsp;</span> (travel) the world if she <span class="blank blank-short">&nbsp;</span> (not/have) so many responsibilities.</li>
+                    <li class="exercise-item" data-num="6">If he <span class="blank blank-short">&nbsp;</span> (study) harder, he <span class="blank blank-short">&nbsp;</span> (pass) the exam last week.</li>
+                    <li class="exercise-item" data-num="7">I <span class="blank blank-short">&nbsp;</span> (not/be) late yesterday if I <span class="blank blank-short">&nbsp;</span> (set) my alarm.</li>
+                    <li class="exercise-item" data-num="8">If I <span class="blank blank-short">&nbsp;</span> (be) you, I <span class="blank blank-short">&nbsp;</span> (accept) that internship offer.</li>
+                    <li class="exercise-item" data-num="9">If she <span class="blank blank-short">&nbsp;</span> (not/miss) the deadline last month, she <span class="blank blank-short">&nbsp;</span> (not/be) in trouble now. <span class="small">(mixed)</span></li>
+                    <li class="exercise-item" data-num="10">If we <span class="blank blank-short">&nbsp;</span> (leave) now, we <span class="blank blank-short">&nbsp;</span> (arrive) before dark.</li>
+                </ol>
+            </div>
+
+            <!-- SECTION F -->
+            <div class="section">
+                <div class="section-header">Section F — Write the Conditional</div>
+                <div class="section-framing">Read the situation. Write a full conditional sentence using the type shown.</div>
+
+                <div class="mb-8">
+                    <div class="situation-box">
+                        <div class="situation-label">1. Situation (Type 3)</div>
+                        You didn't bring an umbrella. You got completely soaked.
+                    </div>
+                    <div class="write-line"></div>
+                    <div class="write-line"></div>
+                </div>
+
+                <div class="mb-8">
+                    <div class="situation-box">
+                        <div class="situation-label">2. Situation (Type 2)</div>
+                        You want to study abroad, but you don't have enough savings.
+                    </div>
+                    <div class="write-line"></div>
+                    <div class="write-line"></div>
+                </div>
+
+                <div class="mb-8">
+                    <div class="situation-box">
+                        <div class="situation-label">3. Situation (Type 1)</div>
+                        Your friend might call you tonight. If so, you'll tell them the news.
+                    </div>
+                    <div class="write-line"></div>
+                    <div class="write-line"></div>
+                </div>
+
+                <div class="mb-8">
+                    <div class="situation-box">
+                        <div class="situation-label">4. Situation (Type 3)</div>
+                        You didn't check the timetable. You went to the wrong classroom.
+                    </div>
+                    <div class="write-line"></div>
+                    <div class="write-line"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════ -->
+        <!-- EXERCISES PAGE E3: MIXED PRACTICE                   -->
+        <!-- ════════════════════════════════════════════════════ -->
+        <section class="block-start" id="exercises-3">
+            <div class="page-header">
+                <span class="page-tag">Exercises</span>
+                <h1>Mixed Practice — All Three Topics</h1>
+            </div>
+
+            <!-- SECTION G -->
+            <div class="section mb-8">
+                <div class="section-header">Section G — Error Correction</div>
+                <div class="section-framing">Each sentence contains <strong>one</strong> error. Underline the error and write the <strong>corrected word or phrase</strong> on the line.</div>
+
+                <ol class="exercise-list">
+                    <li class="exercise-item" data-num="1">Although the bad weather, the outdoor event was a success.<br><span class="small">Correction:</span> <span class="blank blank-long">&nbsp;</span></li>
+                    <li class="exercise-item" data-num="2">Despite she was very nervous, she gave an excellent presentation.<br><span class="small">Correction:</span> <span class="blank blank-long">&nbsp;</span></li>
+                    <li class="exercise-item" data-num="3">He works like a freelance designer for several companies.<br><span class="small">Correction:</span> <span class="blank blank-long">&nbsp;</span></li>
+                    <li class="exercise-item" data-num="4">The new library, that was built last year, has already become very popular.<br><span class="small">Correction:</span> <span class="blank blank-long">&nbsp;</span></li>
+                    <li class="exercise-item" data-num="5">He failed his driving test, what really disappointed his parents.<br><span class="small">Correction:</span> <span class="blank blank-long">&nbsp;</span></li>
+                    <li class="exercise-item" data-num="6">The student which won the essay competition is in my class.<br><span class="small">Correction:</span> <span class="blank blank-long">&nbsp;</span></li>
+                    <li class="exercise-item" data-num="7">If I will see her tomorrow, I will give her your message.<br><span class="small">Correction:</span> <span class="blank blank-long">&nbsp;</span></li>
+                    <li class="exercise-item" data-num="8">If I would have known about the meeting, I would have attended.<br><span class="small">Correction:</span> <span class="blank blank-long">&nbsp;</span></li>
+                    <li class="exercise-item" data-num="9">If you will heat water to 100 degrees, it boils.<br><span class="small">Correction:</span> <span class="blank blank-long">&nbsp;</span></li>
+                    <li class="exercise-item" data-num="10">If I was you, I would talk to the teacher about it.<br><span class="small">Correction:</span> <span class="blank blank-long">&nbsp;</span></li>
+                </ol>
+            </div>
+
+            <!-- SECTION H -->
+            <div class="section mb-8">
+                <div class="section-header">Section H — Sentence Transformation</div>
+                <div class="section-framing">Rewrite each sentence using the word or structure given in brackets. The meaning must stay the same.</div>
+
+                <ol class="exercise-list">
+                    <li class="exercise-item" data-num="1">Although it was expensive, she bought the textbook. (DESPITE)<br><div class="write-line mt-6"></div></li>
+                    <li class="exercise-item" data-num="2">The man lives next door. He is a doctor. (WHO — one sentence)<br><div class="write-line mt-6"></div></li>
+                    <li class="exercise-item" data-num="3">I didn't study for the test. I failed. (IF — Type 3 conditional)<br><div class="write-line mt-6"></div></li>
+                    <li class="exercise-item" data-num="4">Despite being very tired, she finished the assignment. (EVEN THOUGH)<br><div class="write-line mt-6"></div></li>
+                    <li class="exercise-item" data-num="5">The university is in the centre of town. It was founded in 1636. (WHICH — one sentence)<br><div class="write-line mt-6"></div></li>
+                    <li class="exercise-item" data-num="6">She doesn't have a car. She takes the bus to work. (IF — Type 2 conditional)<br><div class="write-line mt-6"></div></li>
+                    <li class="exercise-item" data-num="7">My roommate isn't a chef, but he cooks in the same way a professional would. (LIKE)<br><div class="write-line mt-6"></div></li>
+                    <li class="exercise-item" data-num="8">He completed the project ahead of schedule. This impressed his supervisor. (WHICH — one sentence)<br><div class="write-line mt-6"></div></li>
+                </ol>
+            </div>
+
+            <!-- SECTION I -->
+            <div class="section">
+                <div class="section-header">Section I — Integrated Writing</div>
+                <div class="section-framing">You are an HU student who has just been offered a six-month internship in Barcelona. Think about the decision, the challenges, and what might happen. Write <strong>6 sentences</strong> that include all of the following:</div>
+
+                <ul class="checklist mb-8">
+                    <li>At least 1 sentence with <strong>although</strong> or <strong>even though</strong></li>
+                    <li>At least 1 sentence with <strong>despite</strong> or <strong>in spite of</strong></li>
+                    <li>At least 1 <strong>defining</strong> relative clause — tells you which person/thing (who/which/that, no commas)</li>
+                    <li>At least 1 <strong>non-defining</strong> relative clause — adds extra info (who/which + commas)</li>
+                    <li>At least 1 <strong>Type 2</strong> conditional (imaginary present/future — "If I had...")</li>
+                    <li>At least 1 <strong>Type 3</strong> conditional (imaginary past — "If I had known...")</li>
+                </ul>
+
+                <div class="write-line" style="margin-top: 2px;"></div>
+                <div class="write-line"></div>
+                <div class="write-line"></div>
+                <div class="write-line"></div>
+                <div class="write-line"></div>
+                <div class="write-line"></div>
+                <div class="write-line"></div>
+                <div class="write-line"></div>
+                <div class="write-line"></div>
+                <div class="write-line"></div>
+                <div class="write-line"></div>
+                <div class="write-line"></div>
+                <div class="write-line"></div>
+                <div class="write-line"></div>
+                <div class="write-line"></div>
+                <div class="write-line"></div>
+                <div class="write-line"></div>
+                <div class="write-line"></div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════ -->
+        <!-- ANSWER KEY                                          -->
+        <!-- ════════════════════════════════════════════════════ -->
+        <section class="block-start" id="answer-key">
+            <div class="page-header">
+                <span class="page-tag">Answer Key</span>
+                <h1>Week 6 Grammar Workout — Answers</h1>
+                <div class="subtitle">Check your work. For Sections F and I, compare with the examples below — other correct versions are possible.</div>
+            </div>
+
+            <div class="answer-key-grid">
+                <!-- LEFT COLUMN -->
+                <div>
+                    <div class="ak-section">
+                        <div class="ak-section-title">Warm-up — Spot the Mistake</div>
+                        <div class="ak-item"><strong>1.</strong> Although the rain → <strong>Despite</strong> the rain (or: <strong>Although it rained</strong>)</div>
+                        <div class="ak-item"><strong>2.</strong> My teacher, <strong>that</strong> → My teacher, <strong>who</strong> (no "that" with commas)</div>
+                        <div class="ak-item"><strong>3.</strong> If I <strong>would be</strong> → If I <strong>were</strong> rich (no "would" in the if-part)</div>
+                    </div>
+
+                    <div class="ak-section">
+                        <div class="ak-section-title">Section A — Choose the Connector</div>
+                        <div class="ak-item"><strong>1.</strong> <strong>Despite / In spite of</strong> the heavy traffic</div>
+                        <div class="ak-item"><strong>2.</strong> <strong>Although / Even though</strong> she had revised</div>
+                        <div class="ak-item"><strong>3.</strong> <strong>despite / in spite of</strong> being exhausted</div>
+                        <div class="ak-item"><strong>4.</strong> <strong>Although / Even though</strong> the course was</div>
+                        <div class="ak-item"><strong>5.</strong> <strong>Despite / In spite of</strong> all the preparation</div>
+                        <div class="ak-item"><strong>6.</strong> <strong>despite / in spite of</strong> having very little</div>
+                        <div class="ak-item"><strong>7.</strong> <strong>as</strong> (he IS a teaching assistant)</div>
+                        <div class="ak-item"><strong>8.</strong> <strong>like</strong> (not actually a child)</div>
+                    </div>
+
+                    <div class="ak-section">
+                        <div class="ak-section-title">Section B — Relative Pronouns</div>
+                        <div class="ak-item"><strong>1.</strong> <strong>who/that</strong> — defining, no commas</div>
+                        <div class="ak-item"><strong>2.</strong> Utrecht<strong>,</strong> <strong>which</strong> is the fourth-largest...<strong>,</strong> has — ND, commas needed</div>
+                        <div class="ak-item"><strong>3.</strong> <strong>who/that</strong> — defining, no commas</div>
+                        <div class="ak-item"><strong>4.</strong> supervisor<strong>,</strong> <strong>who</strong> has worked...<strong>,</strong> gave — ND, commas needed</div>
+                        <div class="ak-item"><strong>5.</strong> <strong>which/that</strong> — defining, no commas</div>
+                        <div class="ak-item"><strong>6.</strong> resit<strong>,</strong> <strong>which</strong> really surprised — ND, "which" refers back to the whole idea</div>
+                        <div class="ak-item"><strong>7.</strong> <strong>which/that</strong> — defining, no commas</div>
+                        <div class="ak-item"><strong>8.</strong> minor<strong>,</strong> <strong>which</strong> I thought was — ND, "which" refers back to the whole idea</div>
+                    </div>
+
+                    <div class="ak-section">
+                        <div class="ak-section-title">Section C — Defining or Non-Defining?</div>
+                        <div class="ak-item"><strong>1.</strong> <strong>D</strong> — no changes needed</div>
+                        <div class="ak-item"><strong>2.</strong> <strong>ND</strong> — Professor de Vries<strong>,</strong> who...<strong>,</strong> announced</div>
+                        <div class="ak-item"><strong>3.</strong> <strong>D</strong> — no changes needed</div>
+                        <div class="ak-item"><strong>4.</strong> <strong>ND</strong> — The Jaarbeurs<strong>,</strong> which...<strong>,</strong> is (that → which, add commas)</div>
+                        <div class="ak-item"><strong>5.</strong> <strong>D</strong> — no changes needed</div>
+                        <div class="ak-item"><strong>6.</strong> <strong>ND</strong> — presentation<strong>,</strong> which...<strong>,</strong> went (that → which, add commas — "the final" already tells us which one, so the clause is extra info)</div>
+                    </div>
+
+                    <div class="ak-section">
+                        <div class="ak-section-title">Section D — Identify the Type</div>
+                        <div class="ak-item"><strong>1.</strong> Type 0 &nbsp; <strong>2.</strong> Type 1 &nbsp; <strong>3.</strong> Type 2</div>
+                        <div class="ak-item"><strong>4.</strong> Type 3 &nbsp; <strong>5.</strong> Type 1 &nbsp; <strong>6.</strong> Type 2</div>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN -->
+                <div>
+                    <div class="ak-section">
+                        <div class="ak-section-title">Section E — Complete the Sentence</div>
+                        <div class="ak-item"><strong>1.</strong> mix / get (Type 0)</div>
+                        <div class="ak-item"><strong>2.</strong> doesn't hurry / will miss (Type 1)</div>
+                        <div class="ak-item"><strong>3.</strong> will go / is (Type 1)</div>
+                        <div class="ak-item"><strong>4.</strong> had / would learn (Type 2)</div>
+                        <div class="ak-item"><strong>5.</strong> would travel / didn't have (Type 2)</div>
+                        <div class="ak-item"><strong>6.</strong> had studied / would have passed (Type 3)</div>
+                        <div class="ak-item"><strong>7.</strong> wouldn't have been / had set (Type 3)</div>
+                        <div class="ak-item"><strong>8.</strong> were / would accept (Type 2)</div>
+                        <div class="ak-item"><strong>9.</strong> hadn't missed / wouldn't be (Mixed: past if-part + present result)</div>
+                        <div class="ak-item"><strong>10.</strong> leave / will arrive (Type 1)</div>
+                    </div>
+
+                    <div class="ak-section">
+                        <div class="ak-section-title">Section F — Example Answers</div>
+                        <div class="ak-item"><strong>1.</strong> If I had brought an umbrella, I wouldn't have got soaked.</div>
+                        <div class="ak-item"><strong>2.</strong> If I had enough savings, I would study abroad.</div>
+                        <div class="ak-item"><strong>3.</strong> If my friend calls me tonight, I will tell them the news.</div>
+                        <div class="ak-item"><strong>4.</strong> If I had checked the timetable, I wouldn't have gone to the wrong classroom.</div>
+                    </div>
+
+                    <div class="ak-section">
+                        <div class="ak-section-title">Section G — Error Correction</div>
+                        <div class="ak-item"><strong>1.</strong> Although → <strong>Despite</strong> (or: Although the bad weather → Although the weather was bad)</div>
+                        <div class="ak-item"><strong>2.</strong> Despite → <strong>Although</strong> (or: Despite she was → Despite being)</div>
+                        <div class="ak-item"><strong>3.</strong> like → <strong>as</strong> (he IS a freelance designer)</div>
+                        <div class="ak-item"><strong>4.</strong> that → <strong>which</strong> (extra info with commas — use "which," not "that")</div>
+                        <div class="ak-item"><strong>5.</strong> what → <strong>which</strong> ("which" refers back to the whole idea)</div>
+                        <div class="ak-item"><strong>6.</strong> which → <strong>who</strong> (person, not thing)</div>
+                        <div class="ak-item"><strong>7.</strong> will see → <strong>see</strong> (no "will" in the if-part)</div>
+                        <div class="ak-item"><strong>8.</strong> would have known → <strong>had known</strong> (no "would" in the if-part)</div>
+                        <div class="ak-item"><strong>9.</strong> will heat → <strong>heat</strong> (no "will" in the if-part, Type 0)</div>
+                        <div class="ak-item"><strong>10.</strong> was → <strong>were</strong> (standard form in Type 2 "If I were you...")</div>
+                    </div>
+
+                    <div class="ak-section">
+                        <div class="ak-section-title">Section H — Example Answers</div>
+                        <div class="ak-item"><strong>1.</strong> Despite the high price / Despite it being expensive, she bought the textbook.</div>
+                        <div class="ak-item"><strong>2.</strong> The man who lives next door is a doctor.</div>
+                        <div class="ak-item"><strong>3.</strong> If I had studied for the test, I wouldn't have failed.</div>
+                        <div class="ak-item"><strong>4.</strong> Even though she was very tired, she finished the assignment.</div>
+                        <div class="ak-item"><strong>5.</strong> The university, which was founded in 1636, is in the centre of town.</div>
+                        <div class="ak-item"><strong>6.</strong> If she had a car, she wouldn't take the bus to work.</div>
+                        <div class="ak-item"><strong>7.</strong> My roommate cooks like a professional, but he isn't a chef.</div>
+                        <div class="ak-item"><strong>8.</strong> He completed the project ahead of schedule, which impressed his supervisor.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rule-note mt-10">
+                <strong>Section I:</strong> No single correct answer. Check that each sentence uses the required grammar structure correctly. Look for: correct clause/phrase after although vs. despite, commas in non-defining clauses, correct verb forms in conditionals.
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
