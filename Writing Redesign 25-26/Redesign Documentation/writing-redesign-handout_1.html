@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing Course Redesign — Team Consultation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 10pt;
+      line-height: 1.4;
+      color: #333;
+      background: #fff;
+    }
+    
+    @page {
+      size: A4;
+      margin: 10mm;
+    }
+    
+    .page {
+      width: 190mm;
+      min-height: 277mm;
+      padding: 0;
+      page-break-after: always;
+    }
+    
+    .page:last-child {
+      page-break-after: avoid;
+    }
+    
+    /* Header */
+    .header {
+      border-bottom: 3px solid #333;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+    
+    .header h1 {
+      font-size: 18pt;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    
+    .header .subtitle {
+      font-size: 10pt;
+      font-style: italic;
+      color: #555;
+    }
+    
+    /* Section markers */
+    .section {
+      margin-bottom: 14px;
+    }
+    
+    .section-title {
+      font-size: 11pt;
+      font-weight: 600;
+      padding: 4px 8px;
+      background: #333;
+      color: #fff;
+      border-radius: 3px;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+    
+    /* Context box */
+    .context-box {
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+      border-left: 4px solid #333;
+      padding: 10px 12px;
+      margin-bottom: 14px;
+    }
+    
+    .context-box p {
+      margin-bottom: 6px;
+    }
+    
+    .context-box p:last-child {
+      margin-bottom: 0;
+    }
+    
+    .context-box strong {
+      color: #111;
+    }
+    
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+      font-size: 9pt;
+    }
+    
+    th {
+      background: #e8e8e8;
+      font-weight: 600;
+      text-align: left;
+      padding: 6px 8px;
+      border: 1px solid #ccc;
+    }
+    
+    td {
+      padding: 5px 8px;
+      border: 1px solid #ccc;
+      vertical-align: top;
+    }
+    
+    .outcome-num {
+      width: 24px;
+      text-align: center;
+      font-weight: 600;
+    }
+    
+    .course-col {
+      width: 60px;
+      font-weight: 600;
+      background: #f9f9f9;
+    }
+    
+    /* Highlighted text */
+    .highlight {
+      background: #fff3cd;
+      padding: 1px 3px;
+      border-radius: 2px;
+    }
+    
+    /* Assessment blocks */
+    .assessment-block {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    
+    .assessment-header {
+      background: #333;
+      color: #fff;
+      padding: 6px 10px;
+      font-weight: 600;
+      font-size: 10pt;
+    }
+    
+    .assessment-header .time {
+      float: right;
+      font-weight: normal;
+      opacity: 0.9;
+    }
+    
+    .assessment-content {
+      padding: 10px;
+    }
+    
+    .assessment-content h4 {
+      font-size: 9pt;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: #333;
+    }
+    
+    .assessment-content p {
+      margin-bottom: 6px;
+    }
+    
+    .assessment-content ul {
+      margin-left: 16px;
+      margin-bottom: 6px;
+    }
+    
+    .assessment-content li {
+      margin-bottom: 2px;
+    }
+    
+    /* Rubric styling */
+    .rubric-label {
+      font-size: 9pt;
+      font-weight: 600;
+      color: #555;
+      margin-bottom: 4px;
+      margin-top: 8px;
+    }
+    
+    .rubric-table th {
+      background: #4a4a4a;
+      color: #fff;
+    }
+    
+    .rubric-table .criterion-col {
+      width: 28%;
+    }
+    
+    .rubric-table .outcome-col {
+      width: 18%;
+      text-align: center;
+    }
+    
+    /* Decision points box */
+    .decision-box {
+      border: 2px solid #333;
+      border-radius: 4px;
+      padding: 10px 12px;
+      background: #fffef5;
+    }
+    
+    .decision-box h3 {
+      font-size: 11pt;
+      margin-bottom: 8px;
+    }
+    
+    .decision-box ol {
+      margin-left: 18px;
+    }
+    
+    .decision-box li {
+      margin-bottom: 6px;
+    }
+    
+    .decision-box .options {
+      font-style: italic;
+      color: #555;
+      margin-left: 4px;
+    }
+    
+    /* Admissibility check */
+    .admissibility {
+      background: #f0f0f0;
+      border: 1px dashed #999;
+      padding: 8px 10px;
+      margin-top: 8px;
+      border-radius: 3px;
+    }
+    
+    .admissibility h4 {
+      font-size: 9pt;
+      margin-bottom: 4px;
+    }
+    
+    /* Compact overview table */
+    .overview-table td {
+      font-size: 8.5pt;
+    }
+    
+    .overview-table .course-header {
+      background: #333;
+      color: #fff;
+      font-weight: 600;
+    }
+    
+    .note {
+      font-size: 8pt;
+      color: #666;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    
+    /* Print button */
+    .print-btn {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 8px 16px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 10pt;
+    }
+    
+    .print-btn:hover {
+      background: #555;
+    }
+    
+    @media print {
+      .print-btn {
+        display: none;
+      }
+      
+      body {
+        background: #fff;
+      }
+      
+      .page {
+        width: 100%;
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">🖨️ Print</button>
+
+  <!-- PAGE 1 -->
+  <div class="page">
+    <div class="header">
+      <h1>Writing Course Redesign</h1>
+      <div class="subtitle">Team Consultation — January 2026</div>
+    </div>
+
+    <!-- Kennisbasis Requirements -->
+    <div class="section">
+      <div class="section-title">📚 Kennisbasis 2.2 — Productive Skills</div>
+      <div class="context-box" style="margin-top: 0; padding: 8px 12px;">
+        <p><strong>Core Concept:</strong> The starting teacher produces various forms of language output in the target language at <span class="highlight">an average C2 level</span> of the CEFR. This concerns:</p>
+        <p style="margin-top: 6px; margin-bottom: 4px;"><strong>2.2.1</strong> Clear and coherent speaking and writing in the target language appropriate to the <strong>communicative purpose</strong>, <strong>target audience</strong>, and <strong>context</strong></p>
+        <p style="margin-bottom: 4px;"><strong>2.2.2</strong> Deploying <strong>productive strategies</strong>, including:</p>
+        <ul style="margin-left: 16px; margin-bottom: 0; font-size: 9pt;">
+          <li>Speaking and writing about <strong>familiar and unfamiliar topics</strong></li>
+          <li>Deploying appropriate <strong>writing and speaking strategies</strong> to improve the quality of both informal and formal production</li>
+          <li>Deploying <strong>conventions appropriate to the genre</strong> concerned</li>
+          <li>Demonstrating <strong>consistent and accurate grammatical control</strong>, including in complex language forms. Errors are virtually absent and relate only to rarely used forms.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Learning Outcomes Table -->
+    <div class="section">
+      <div class="section-title">📋 Learning Outcomes (All Courses)</div>
+      <table>
+        <thead>
+          <tr>
+            <th class="outcome-num">#</th>
+            <th>Writing 1 (B1/B2)</th>
+            <th>Writing 2 (B2/C1)</th>
+            <th>Writing 3 (C1/C2)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="outcome-num">1</td>
+            <td>Can <strong>author</strong> texts on familiar and unfamiliar topics <strong>considering</strong> communicative purpose, audience, and genre conventions</td>
+            <td>Can <strong>author</strong> texts <strong>consciously adapting to</strong> communicative purpose, audience, and genre conventions</td>
+            <td>Can <strong>author</strong> texts on familiar and unfamiliar topics <strong>strategically adapting to</strong> communicative purpose, audience, and genre conventions</td>
+          </tr>
+          <tr>
+            <td class="outcome-num">2</td>
+            <td>Can <strong>integrate sources</strong> using APA referencing</td>
+            <td>Can demonstrate <strong>stylistic control and diction</strong> appropriate to genre</td>
+            <td>Can <strong>integrate sources</strong> using APA referencing</td>
+          </tr>
+          <tr>
+            <td class="outcome-num">3</td>
+            <td>Can <strong>apply and justify</strong> writing strategies appropriate to the text</td>
+            <td>Can <strong>consciously apply and justify</strong> writing strategies appropriate to the text</td>
+            <td>Can <strong>strategically apply and justify</strong> writing strategies appropriate to complex tasks</td>
+          </tr>
+          <tr>
+            <td class="outcome-num">4</td>
+            <td>Can write at <strong>CEFR level B1/B2</strong></td>
+            <td>Can write at <strong>CEFR level B2/C1</strong></td>
+            <td>Can write at <strong>CEFR level C1/C2</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="note">Note progression in Outcome 3: "apply" → "consciously apply" → "strategically apply"</p>
+    </div>
+
+    <!-- W1 Timed Test -->
+    <div class="section">
+      <div class="section-title">✍️ Writing 1 — Timed Test</div>
+      <div class="assessment-block">
+        <div class="assessment-header">
+          Timed Test <span class="time">60 minutes, supervised</span>
+        </div>
+        <div class="assessment-content">
+          <h4>Part A: Familiar Genre (15–20 min)</h4>
+          <p>Professional communication in a known context. Students select one prompt from options such as:</p>
+          <ul>
+            <li><strong>Administrative email:</strong> Respond to a parent inquiry about a student's progress or classroom policy</li>
+            <li><strong>Colleague memo:</strong> Inform team members about a schedule change or upcoming event</li>
+            <li><strong>Professional request:</strong> Email to administration requesting resources or proposing a minor change</li>
+          </ul>
+          <p>Genre is familiar from teacher training; tests ability to produce appropriate register and tone under time pressure.</p>
+          
+          <h4>Part B: Unfamiliar Topic with Sources (40 min)</h4>
+          <p>Expository paragraph on a provided topic using 1–2 given sources.</p>
+          <ul>
+            <li>Must include: 1 direct quote (grammatically integrated) + 1 paraphrase</li>
+            <li>APA in-text citations required</li>
+            <li>Topic requires engaging with source material (cannot answer from prior knowledge alone)</li>
+          </ul>
+          
+          <div class="rubric-label">Rubric: Timed Test (3 criteria)</div>
+          <table class="rubric-table">
+            <thead>
+              <tr>
+                <th class="criterion-col">Criterion</th>
+                <th class="outcome-col">Validates</th>
+                <th>What It Captures</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Source Integration</strong></td>
+                <td>Outcome 2</td>
+                <td>Quotes grammatically integrated, paraphrases accurate, APA formatting correct</td>
+              </tr>
+              <tr>
+                <td><strong>Communicative Effectiveness</strong></td>
+                <td>Outcome 1 (partial)</td>
+                <td>Does the text achieve its purpose for the intended audience?</td>
+              </tr>
+              <tr>
+                <td><strong>Language Level</strong></td>
+                <td>Outcome 4</td>
+                <td>Vocabulary range, grammatical accuracy, fluency at B1/B2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page">
+    <!-- W1 Take-Home + P+Q&A -->
+    <div class="section">
+      <div class="section-title">✍️ Writing 1 — Take-Home + Presentation + Q&A</div>
+      
+      <div class="assessment-block">
+        <div class="assessment-header">
+          Take-Home Assignment
+        </div>
+        <div class="assessment-content">
+          <h4>Article for Semi-Formal Teacher Journal</h4>
+          <p>A personal, argumentative piece written for a professional audience of fellow teachers. Students take a stance on a topic relevant to education and support it with evidence and reasoning.</p>
+          <ul>
+            <li><strong>Audience:</strong> Fellow teachers (not academic examiners)</li>
+            <li><strong>Tone:</strong> Professional but personal; voice and perspective encouraged</li>
+            <li><strong>Structure:</strong> More freedom than traditional expository essay; can use subheadings, anecdotes, rhetorical questions</li>
+            <li><strong>Sources:</strong> Must integrate at least 2 sources using APA</li>
+          </ul>
+          
+          <div class="admissibility">
+            <h4>⚡ Admissibility Check (Go/No-Go before Presentation + Q&A)</h4>
+            <ul>
+              <li><strong>Formatting:</strong> Document properly formatted</li>
+              <li><strong>Language level:</strong> Passes B2 "gut check" (no glaring errors)</li>
+              <li><strong>APA reference list:</strong> Present for sources used</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="assessment-block">
+        <div class="assessment-header">
+          Presentation + Q&A <span class="time">12.5 + 12.5 + 5 buffer = 30 min</span>
+        </div>
+        <div class="assessment-content">
+          <p>Student presents their take-home article, explaining their choices. Followed by examiner questions probing authorship, process, and decision-making.</p>
+          
+          <h4>Presentation Elements (12.5 min)</h4>
+          <p>Students address these elements (structured conversation, not rigid order):</p>
+          <ol style="margin-left: 16px; margin-bottom: 8px; font-size: 9pt;">
+            <li><strong>Communicative Purpose:</strong> What is the article trying to do? Who is the audience? How does the text achieve its purpose?</li>
+            <li><strong>Writing Process:</strong> Overall approach, preparation, tools used</li>
+            <li><strong>Genre Conventions — Content:</strong> Source selection (why these, why not others), quote vs. paraphrase choices with examples</li>
+            <li><strong>Genre Conventions — Structure:</strong> Topic sentence choices, argument selection, organizational decisions</li>
+            <li><strong>Detailed Writing Strategies:</strong> Specific strategies used (using terminology), concrete examples from text, how strategies serve genre conventions</li>
+          </ol>
+          
+          <div class="rubric-label">Rubric: Presentation + Q&A (2 criteria)</div>
+          <table class="rubric-table">
+            <thead>
+              <tr>
+                <th class="criterion-col">Criterion</th>
+                <th class="outcome-col">Validates</th>
+                <th>What It Captures</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Genre Awareness</strong></td>
+                <td>Outcome 1</td>
+                <td>Can articulate communicative purpose, target audience (teachers), and genre conventions (content + structure)</td>
+              </tr>
+              <tr>
+                <td><strong>Strategy Application</strong></td>
+                <td>Outcome 3</td>
+                <td>Can explain high-level writing process and name specific strategies with examples from their text</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="note">Authorship is not a separate criterion — if students can articulate genre awareness and strategies, they've demonstrated authorship. The format itself validates it.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- W2 & W3 Overview -->
+    <div class="section">
+      <div class="section-title">📊 Writing 2 & 3 — Assessment Overview</div>
+      <table class="overview-table">
+        <thead>
+          <tr>
+            <th style="width: 80px;">Course</th>
+            <th>Timed Test</th>
+            <th>Take-Home</th>
+            <th>Presentation + Q&A</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="course-header">Writing 2<br>(B2/C1)</td>
+            <td><strong>None</strong><br>Language validated via W1 and W3</td>
+            <td><strong>Creative mimicry piece</strong><br>No APA required</td>
+            <td>Heavy focus on genre awareness, diction choices, writing strategies.<br><em>Higher bar for articulation since no timed test.</em></td>
+          </tr>
+          <tr>
+            <td class="course-header">Writing 3<br>(C1/C2)</td>
+            <td><strong>90 minutes</strong><br>3 paragraphs, 3 sources, C1/C2 complexity</td>
+            <td><strong>Choice:</strong> Proposal OR Creative piece (Murderless Mystery / Personal Essay)</td>
+            <td>4-criteria framework; outcomes general enough to apply to both proposal and creative options</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="note"><strong>Concentric change:</strong> W2 is no longer concentric (passing W2 does not grant W1 exemption). W3 remains concentric (passing W3 grants exemptions for W1 & W2).</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

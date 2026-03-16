@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing Courses Redesign | Team Leader Presentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            padding: 60px 80px;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .slide-container.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            color: #00d4ff;
+            font-weight: 300;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #00d4ff;
+            font-weight: 300;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            color: #00d4ff;
+            font-weight: 400;
+        }
+
+        p,
+        li {
+            font-size: 1.3em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: #aaa;
+            margin-bottom: 60px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 1.1em;
+        }
+
+        th {
+            background: #00d4ff;
+            color: #1a1a2e;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #333;
+        }
+
+        tr:hover {
+            background: rgba(0, 212, 255, 0.05);
+        }
+
+        .highlight {
+            color: #00d4ff;
+            font-weight: 600;
+        }
+
+        .problem-box {
+            background: rgba(255, 100, 100, 0.1);
+            border-left: 5px solid #ff6464;
+            padding: 25px;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+
+        .solution-box {
+            background: rgba(0, 212, 255, 0.1);
+            border-left: 5px solid #00d4ff;
+            padding: 25px;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 30px 0;
+        }
+
+        .kennisbasis-quote {
+            background: rgba(0, 212, 255, 0.05);
+            border-left: 4px solid #00d4ff;
+            padding: 20px;
+            margin: 25px 0;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+
+        .decision-point {
+            background: rgba(255, 200, 0, 0.1);
+            border-left: 5px solid #ffc800;
+            padding: 20px;
+            margin: 15px 0;
+            font-size: 1.15em;
+        }
+
+        ul {
+            list-style-position: inside;
+            margin-left: 20px;
+        }
+
+        .slide-number {
+            position: absolute;
+            bottom: 30px;
+            right: 40px;
+            color: #555;
+            font-size: 1.2em;
+        }
+
+        .small-text {
+            font-size: 0.9em;
+            color: #aaa;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .card {
+            background: rgba(0, 212, 255, 0.05);
+            border: 1px solid #00d4ff;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .card h4 {
+            color: #00d4ff;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .arrow {
+            text-align: center;
+            font-size: 2em;
+            color: #00d4ff;
+            margin: 20px 0;
+        }
+
+        .comparison-table {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 30px 0;
+        }
+
+        .comparison-table>div {
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .old-system {
+            background: rgba(255, 100, 100, 0.1);
+            border: 2px solid #ff6464;
+        }
+
+        .new-system {
+            background: rgba(0, 212, 255, 0.1);
+            border: 2px solid #00d4ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SLIDE 1: TITLE -->
+    <div class="slide-container active" data-slide="1">
+        <h1>Writing Courses Redesign</h1>
+        <p class="subtitle">Assessment Structure Overhaul | 2026-2027</p>
+        <div class="slide-number">1 / 15</div>
+    </div>
+
+    <!-- SLIDE 2: CURRENT STATE -->
+    <div class="slide-container" data-slide="2">
+        <h2>Current State (2025-2026)</h2>
+        <table>
+            <tr>
+                <th>Course</th>
+                <th>Assessment</th>
+                <th>Level</th>
+                <th>Format</th>
+            </tr>
+            <tr>
+                <td><strong>Writing 1</strong></td>
+                <td>Expository essay (individual)</td>
+                <td>B1/B2</td>
+                <td>Take-home (Lane 2)</td>
+            </tr>
+            <tr>
+                <td><strong>Writing 2</strong></td>
+                <td>Creative mimicry + Argumentative essay<br><span class="small-text">Grammar footnotes</span></td>
+                <td>B2/C1</td>
+                <td>Take-home (Lane 2)</td>
+            </tr>
+            <tr>
+                <td><strong>Writing 3</strong></td>
+                <td>Proposal + Choice (Mystery/Personal Essay)</td>
+                <td>C1/C2</td>
+                <td>Take-home (Lane 2)</td>
+            </tr>
+        </table>
+        <p class="problem-box"><strong>Issue:</strong> Grammar footnotes not valid anymore • All Lane 2 (unsupervised) •
+            Can't validate authorship</p>
+        <div class="slide-number">2 / 15</div>
+    </div>
+
+    <!-- SLIDE 3: PROBLEM ANALYSIS -->
+    <div class="slide-container" data-slide="3">
+        <h2>The Problem: Three Broken Assumptions</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h4>Product = Learning</h4>
+                <p>Tools can produce output without learning occurring</p>
+            </div>
+            <div class="card">
+                <h4>Product = Ability</h4>
+                <p>AI can generate C2 text ≠ student can write at C2</p>
+            </div>
+            <div class="card">
+                <h4>Student = Author</h4>
+                <p>No mechanism to validate who actually wrote it</p>
+            </div>
+        </div>
+        <div class="arrow">↓</div>
+        <div class="problem-box">
+            <strong>"Spaghetti on the Wall" Effect:</strong><br>
+            Students throw content hoping it sticks. No (good) way to check for authorship or process.
+        </div>
+        <div class="slide-number">3 / 15</div>
+    </div>
+
+    <!-- SLIDE 4: KENNISBASIS TRIGGER -->
+    <div class="slide-container" data-slide="4">
+        <h2>Trigger for Change: Kennisbasis 2025/2026</h2>
+
+        <div class="kennisbasis-quote">
+            <strong>2.2 Productieve vaardigheden (productie)</strong><br><br>
+            <strong>Kernconcept:</strong> De startbekwame leraar produceert uiteenlopende vormen van taaluitingen in de
+            doeltaal op <span class="highlight">een gemiddeld C2 niveau</span> van het ERK.
+            <br><br>
+            <strong>Core concept:</strong> The novice teacher produces various forms of language output in the target
+            language at <span class="highlight">an average C2 level</span> of the CEFR.
+        </div>
+
+        <div class="two-column">
+            <div>
+                <h3>2.2.1</h3>
+                <p><strong>NL:</strong> Het helder en samenhangend spreken en schrijven in de doeltaal passend bij het
+                    <span class="highlight">communicatieve doel, de doelgroep en de context</span></p>
+                <p><strong>EN:</strong> Clear and coherent speaking and writing in the target language appropriate to
+                    the <span class="highlight">communicative purpose, target audience, and context</span></p>
+            </div>
+            <div>
+                <h3>2.2.2</h3>
+                <p><strong>NL:</strong> Het spreken en schrijven over <span class="highlight">vertrouwde en
+                        niet-vertrouwde onderwerpen</span> • Het inzetten van passende <span
+                        class="highlight">schrijfstrategieën</span> • Het inzetten van <span
+                        class="highlight">conventies passend bij een betreffend genre</span></p>
+                <p><strong>EN:</strong> Speaking and writing about <span class="highlight">familiar and unfamiliar
+                        topics</span> • Using appropriate <span class="highlight">writing strategies</span> • Using
+                    <span class="highlight">conventions appropriate to a given genre</span></p>
+            </div>
+        </div>
+
+        <div class="slide-number">4 / 15</div>
+    </div>
+
+    <!-- SLIDE 5: KENNISBASIS → OUTCOMES MAPPING -->
+    <div class="slide-container" data-slide="5">
+        <h2>New Learning Outcomes (All Courses)</h2>
+
+        <table>
+            <tr>
+                <th style="width: 10%">#</th>
+                <th style="width: 45%">Learning Outcome</th>
+                <th style="width: 20%">Kennisbasis Link</th>
+                <th style="width: 25%">Progression</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Can <strong>author</strong> texts on familiar and unfamiliar topics considering communicative
+                    purpose, audience, and genre conventions</td>
+                <td>2.2.1 + 2.2.2</td>
+                <td><span class="highlight">reflect</span> → <span class="highlight">deliberate</span> → <span
+                        class="highlight">strategic</span></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Can <strong>integrate sources using APA</strong> referencing</td>
+                <td>2.2.1 (genre convention) + HBO expectation</td>
+                <td>W1 & W3 only</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Can <strong>apply and justify</strong> writing strategies appropriate to the text</td>
+                <td>2.2.2 (strategies)</td>
+                <td><span class="highlight">apply</span> → <span class="highlight">consciously</span> → <span
+                        class="highlight">strategically</span></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Can write at <strong>CEFR level</strong></td>
+                <td>2.2 (C2 productive)</td>
+                <td>B1/B2 → B2/C1 → C1/C2</td>
+            </tr>
+        </table>
+
+        <div class="solution-box">
+            <strong>Key design choice:</strong> "Author" as verb captures ownership, intentionality, ability to explain
+            — exactly what Kennisbasis requires and what AI cannot fake.
+        </div>
+
+        <div class="slide-number">5 / 15</div>
+    </div>
+
+    <!-- SLIDE 6: LANE 1 vs LANE 2 -->
+    <div class="slide-container" data-slide="6">
+        <h2>Lane 1 vs Lane 2: Theoretical Framework</h2>
+
+        <div class="comparison-table">
+            <div class="old-system">
+                <h3>Lane 2 (Open)</h3>
+                <ul>
+                    <li>Unsupervised assessment</li>
+                    <li>Allows AI use for learning</li>
+                    <li>Cannot validate authorship</li>
+                    <li>Not suitable for summative in AI era</li>
+                </ul>
+            </div>
+            <div class="new-system">
+                <h3>Lane 1 (Secured)</h3>
+                <ul>
+                    <li>Supervised assessment</li>
+                    <li>Validates individual achievement</li>
+                    <li>AI-resistant</li>
+                    <li>Required for summative validity</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide-number">6 / 15</div>
+    </div>
+
+    <!-- SLIDE 7: ASSESSMENT OVERVIEW -->
+    <div class="slide-container" data-slide="7">
+        <h2>Assessment Structure Overview</h2>
+
+        <table>
+            <tr>
+                <th>Course</th>
+                <th>Timed Test (Lane 1)</th>
+                <th>Take-Home (Lane 2)</th>
+                <th>P+Q&A (Lane 1)</th>
+            </tr>
+            <tr>
+                <td><strong>W1</strong></td>
+                <td>60 min<br>2 parts (familiar + unfamiliar)</td>
+                <td>Article for informal teacher journal</td>
+                <td>30 min</td>
+            </tr>
+            <tr>
+                <td><strong>W2</strong></td>
+                <td>Creative mimicry only</td>
+                <td>35 min<br><span class="small-text">More comprehensive as it replaces contrastive essay</span></td>
+            </tr>
+            <tr>
+                <td><strong>W3</strong></td>
+                <td>90 min<br>3 paragraphs, 3 sources</td>
+                <td><strong>CHOICE:</strong> Proposal OR Creative</td>
+                <td>30 min</td>
+            </tr>
+        </table>
+
+        <div class="slide-number">7 / 15</div>
+    </div>
+
+    <!-- SLIDE 8: OUTCOMES → COMPONENTS MAPPING -->
+    <div class="slide-container" data-slide="8">
+        <h2>What Each Component Validates</h2>
+
+        <table>
+            <tr>
+                <th>Component</th>
+                <th>Validates</th>
+                <th>Does NOT Validate</th>
+            </tr>
+            <tr>
+                <td><strong>Timed Test</strong><br>(W1 & W3)</td>
+                <td>
+                    <span class="highlight">Outcome 2:</span> Source integration (APA)<br>
+                    <span class="highlight">Outcome 4:</span> CEFR level (language control)
+                </td>
+                <td>Authorship<br>Strategy awareness<br>Process thinking</td>
+            </tr>
+            <tr>
+                <td><strong>P+Q&A</strong><br>(All courses)</td>
+                <td>
+                    <span class="highlight">Outcome 1:</span> Authorship via genre/audience/purpose articulation<br>
+                    <span class="highlight">Outcome 3:</span> Strategy awareness via process explanation
+                </td>
+                <td>Final product quality<br>Language accuracy<br>Grammar control</td>
+            </tr>
+            <tr>
+                <td><strong>Take-Home</strong><br>(All courses)</td>
+                <td>(Lane 2)<br>Demonstrates strategy use in practice</td>
+                <td><strong>Nothing directly graded for validity</strong><br>Product used as basis for P+Q&A
+                    interrogation</td>
+            </tr>
+        </table>
+
+        <div class="slide-number">8 / 15</div>
+    </div>
+
+    <!-- SLIDE 9: W1 TIMED TEST DETAIL -->
+    <div class="slide-container" data-slide="9">
+        <h2>W1 Timed Test (60 min) — Detailed</h2>
+
+        <div class="two-column">
+            <div>
+                <h3>Part A: Familiar (15-20 min)</h3>
+                <p><strong>No sources needed</strong></p>
+                <p class="small-text">Example prompts:</p>
+                <ul style="font-size: 1.1em;">
+                    <li>"Write formal email to Team Leader about scheduling conflict"</li>
+                    <li>"Reply to parent asking about failed test"</li>
+                    <li>"Memo to colleague about missed meeting"</li>
+                </ul>
+                <p style="margin-top: 20px;"><strong>Tests:</strong> Professional writing, audience awareness, formal
+                    register</p>
+            </div>
+            <div>
+                <h3>Part B: Unfamiliar (40 min)</h3>
+                <p><strong>With sources provided</strong></p>
+                <p class="small-text">Example:</p>
+                <p style="font-size: 1.05em;">"Write summary paragraph on 'Screen Time and Deep Reading' for parent
+                    newsletter"</p>
+                <ul style="font-size: 1.1em;">
+                    <li>Given 1-2 sources (~300 words)</li>
+                    <li>Must include: 1 quote, 1 paraphrase</li>
+                    <li>APA in-text citations required</li>
+                </ul>
+                <p style="margin-top: 20px;"><strong>Tests:</strong> Reading comprehension, integration, neutral tone,
+                    citation mechanics</p>
+            </div>
+        </div>
+
+        <h3 style="margin-top: 40px;">Rubric (3 Criteria)</h3>
+        <table style="font-size: 1em;">
+            <tr>
+                <th>Criterion</th>
+                <th>At Level</th>
+            </tr>
+            <tr>
+                <td>Source Integration</td>
+                <td>Quotes grammatically integrated • Paraphrases accurate • APA mostly correct</td>
+            </tr>
+            <tr>
+                <td>Communicative Effectiveness</td>
+                <td>Achieves purpose • Appropriate for audience • Clear structure</td>
+            </tr>
+            <tr>
+                <td>Language Level (B1/B2)</td>
+                <td>Vocabulary & grammar at level • Errors don't impede understanding</td>
+            </tr>
+        </table>
+
+        <div class="slide-number">9 / 15</div>
+    </div>
+
+    <!-- SLIDE 10: W1 TAKE-HOME & GO/NO-GO -->
+    <div class="slide-container" data-slide="10">
+        <h2>W1 Take-Home: Article for Informal Teacher Journal</h2>
+
+        <div class="solution-box">
+            <strong>Why this genre?</strong><br>
+            Clear audience (teachers) • Allows opinion about teaching • More accessible than abstract expository essay
+            distinction
+        </div>
+
+        <h3 style="margin-top: 40px;">GO/NO-GO Check (Asynchronous: 3-5 days before P+Q&A)</h3>
+        <p style="font-size: 1.2em; margin-bottom: 20px;"><strong>Time investment:</strong> ~3-5 min per student</p>
+
+        <table>
+            <tr>
+                <th style="width: 30%">Criterion</th>
+                <th>Pass Requirements</th>
+            </tr>
+            <tr>
+                <td>Formatting</td>
+                <td>Basic document formatting (title, paragraphs, spacing)</td>
+            </tr>
+            <tr>
+                <td>Language Level</td>
+                <td>Text contains no/minimal errors in spelling & basic grammar (B2 threshold)</td>
+            </tr>
+            <tr>
+                <td>APA Reference List</td>
+                <td>Included, complete, and properly formatted</td>
+            </tr>
+        </table>
+
+        <div class="problem-box" style="margin-top: 30px;">
+            <strong>NO-GO?</strong> → Student doesn't use assessment opportunity (resubmission required)
+        </div>
+
+        <div class="slide-number">10 / 15</div>
+    </div>
+
+    <!-- SLIDE 11: W1 P+Q&A DETAIL -->
+    <div class="slide-container" data-slide="11">
+        <h2>W1 Presentation + Q&A (30 min)</h2>
+
+        <div class="two-column">
+            <div>
+                <h3>Presentation (12.5 min)</h3>
+                <p style="font-size: 1.1em;"><strong>Student addresses:</strong></p>
+                <ol style="font-size: 1.05em; line-height: 1.9;">
+                    <li>Communicative purpose (what, why, who)</li>
+                    <li>Writing process (high-level approach, tools)</li>
+                    <li>Genre conventions — Content (source selection/rejection)</li>
+                    <li>Genre conventions — Structure (topic sentences, organization)</li>
+                    <li>Detailed strategies (with terminology & examples)</li>
+                </ol>
+            </div>
+            <div>
+                <h3>Q&A (12.5 min)</h3>
+                <p style="font-size: 1.1em;"><strong>Teacher interrogates:</strong></p>
+                <ul style="font-size: 1.05em; line-height: 1.9;">
+                    <li>Claims made in presentation</li>
+                    <li>Elements not yet covered</li>
+                    <li>Alternatives considered</li>
+                    <li>Decision rationales</li>
+                </ul>
+                <p style="margin-top: 20px; font-size: 1.05em;"><strong>Examples:</strong> "You selected [source X].
+                    What made it suitable?" • "Walk me through this paragraph's connection to your purpose"</p>
+            </div>
+        </div>
+
+        <h3 style="margin-top: 35px;">Rubric (2 Criteria)</h3>
+        <table style="font-size: 1em;">
+            <tr>
+                <th>Criterion</th>
+                <th>At Level</th>
+            </tr>
+            <tr>
+                <td>Genre Awareness</td>
+                <td>Can explain communicative purpose • Demonstrates audience awareness • Explains genre conventions
+                    applied</td>
+            </tr>
+            <tr>
+                <td>Strategy Application</td>
+                <td>Articulates methods used (high-level + detailed) • Uses terminology appropriately • Gives examples
+                    from text</td>
+            </tr>
+        </table>
+
+        <p style="margin-top: 25px; font-size: 1.1em;"><strong>Grading:</strong> Both criteria "At Level" + GO/NO-GO
+            pass → Pass • One "Not Yet" → Resubmission • Both "Not Yet" OR NO-GO fail → Resubmission</p>
+
+        <div class="slide-number">11 / 15</div>
+    </div>
+
+    <!-- SLIDE 12: W1 FULL SYSTEM -->
+    <div class="slide-container" data-slide="12">
+        <h2>W1: The Full System Working Together</h2>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; margin: 40px 0;">
+            <div class="card" style="flex: 1;">
+                <h4>Timed Test</h4>
+                <p>Validates what timed tests can validate</p>
+                <p class="highlight">→ Language level<br>→ Source integration</p>
+            </div>
+            <div class="arrow" style="flex: 0;">+</div>
+            <div class="card" style="flex: 1;">
+                <h4>GO/NO-GO</h4>
+                <p>Threshold check for oral defense</p>
+                <p class="highlight">→ Basic formatting<br>→ B2 threshold<br>→ APA completeness</p>
+            </div>
+            <div class="arrow" style="flex: 0;">+</div>
+            <div class="card" style="flex: 1;">
+                <h4>P+Q&A</h4>
+                <p>Validates what oral defense can validate</p>
+                <p class="highlight">→ Authorship<br>→ Strategy awareness<br>→ Genre understanding</p>
+            </div>
+        </div>
+
+        <div class="arrow">↓</div>
+
+        <div class="solution-box" style="font-size: 1.3em;">
+            <strong>Complete validity:</strong> Each component has clear purpose. Timed test proves language control.
+            P+Q&A proves authorship and strategy awareness. Take-home is the vehicle that makes both possible.
+        </div>
+
+        <p style="margin-top: 40px; font-size: 1.15em; color: #aaa;"><em>W2 and W3 follow same logic with variations (no
+                timed test in W2; higher complexity in W3; choice in W3 take-home)</em></p>
+
+        <div class="slide-number">12 / 15</div>
+    </div>
+
+    <!-- SLIDE 13: PT LOGISTICS -->
+    <div class="slide-container" data-slide="13">
+        <h2>Part-Time Logistics Solution</h2>
+
+        <div class="problem-box">
+            <strong>Challenge:</strong> PT students have 2 hrs/week vs FT 4 hrs/week, but same assessment requirements
+        </div>
+
+        <div class="arrow">↓</div>
+
+        <div class="solution-box">
+            <h3>Cross-Grading Solution</h3>
+            <ul style="font-size: 1.2em;">
+                <li><strong>FT teachers</strong> assess PT students</li>
+                <li><strong>PT teachers</strong> assess FT students</li>
+                <li>Distributes P+Q&A load evenly</li>
+                <li>Enables parallel sessions (4 teachers = 4 simultaneous P+Q&As)</li>
+            </ul>
+        </div>
+
+        <h3 style="margin-top: 40px;">Grading Load Comparison</h3>
+        <div class="comparison-table">
+            <div class="old-system">
+                <h4>Current System</h4>
+                <ul>
+                    <li>30-45 min marking essay</li>
+                    <li>15-30+ min follow-up (variable)</li>
+                    <li>Unlimited extra meetings</li>
+                    <li><strong>Total: 45-75+ min (unpredictable)</strong></li>
+                </ul>
+            </div>
+            <div class="new-system">
+                <h4>Proposed System</h4>
+                <ul>
+                    <li>15-20 min timed test grading</li>
+                    <li>3-5 min GO/NO-GO check</li>
+                    <li>30 min P+Q&A (scheduled)</li>
+                    <li>5 min admin</li>
+                    <li><strong>Total: 50-55 min (fixed, predictable)</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <p style="margin-top: 30px; font-size: 1.2em;"><strong>Mental load reduced:</strong> Verbal feedback in
+            scheduled slots vs async written feedback spiral</p>
+
+        <div class="slide-number">13 / 15</div>
+    </div>
+
+    <!-- SLIDE 14: DECISION POINTS -->
+    <div class="slide-container" data-slide="14">
+        <h2>Decision Points & Input Needed</h2>
+
+        <div class="decision-point">
+            <strong>1. W3 Take-Home Genre:</strong> Proposal only vs Creative only vs CHOICE (current proposal: choice)
+        </div>
+
+        <div class="decision-point">
+            <strong>2. Grammar Integration:</strong> Simple TestVision test (more valid) OR added component of W3 timed
+            test OR eliminate entirely?
+        </div>
+
+        <div class="decision-point">
+            <strong>3. Timed Test Word Counts:</strong> Specify exact counts or ranges?
+        </div>
+
+        <div class="decision-point">
+            <strong>4. P+Q&A Recording:</strong> All sessions, borderline only, or none?
+        </div>
+
+        <div class="decision-point">
+            <strong>5. Student Presentation Aids:</strong> Notes allowed? Slides? Fully from memory?
+        </div>
+
+        <div class="decision-point">
+            <strong>6. Strategy Terminology:</strong> Standardized list provided vs course-specific development?
+        </div>
+
+        <div class="decision-point">
+            <strong>7. Pilot Approach:</strong> Small group pilot before full rollout? Which students/teachers?
+        </div>
+
+        <div class="decision-point">
+            <strong>8. Concentric Role:</strong> Thoughts on Writing 2 no longer being concentric? W3 still grants
+            exemptions for W1 & W2?
+        </div>
+
+        <div class="slide-number">14 / 15</div>
+    </div>
+
+    <!-- SLIDE 15: CLOSING -->
+    <div class="slide-container" data-slide="15">
+        <h2>What Are We Missing?</h2>
+
+        <div style="margin: 60px 0;">
+            <p style="font-size: 1.5em; margin-bottom: 40px;">We're not asking for approval.</p>
+            <p style="font-size: 1.5em; margin-bottom: 40px;">We're asking:</p>
+            <ul style="font-size: 1.8em; line-height: 2.2;">
+                <li><strong>What blind spots do you see?</strong></li>
+                <li><strong>What pitfalls are we missing?</strong></li>
+                <li><strong>What would you change?</strong></li>
+            </ul>
+        </div>
+
+        <div class="arrow">↓</div>
+
+        <div class="solution-box" style="font-size: 1.3em; margin-top: 40px;">
+            <strong>Timeline:</strong> Full rollout 2025-2026 for all three courses simultaneously?<br>
+            OR phased: W1 first (2025-2026), then W2, then W3?
+        </div>
+
+        <div class="slide-number">15 / 15</div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 15;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide-container');
+            slides.forEach(slide => slide.classList.remove('active'));
+
+            if (n > totalSlides) currentSlide = 1;
+            if (n < 1) currentSlide = totalSlides;
+
+            slides[currentSlide - 1].classList.add('active');
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                currentSlide++;
+                showSlide(currentSlide);
+            } else if (e.key === 'ArrowLeft') {
+                currentSlide--;
+                showSlide(currentSlide);
+            } else if (e.key === 'Home') {
+                currentSlide = 1;
+                showSlide(currentSlide);
+            } else if (e.key === 'End') {
+                currentSlide = totalSlides;
+                showSlide(currentSlide);
+            }
+        });
+
+        // Click to advance (optional)
+        document.addEventListener('click', (e) => {
+            if (e.target.tagName !== 'A') {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

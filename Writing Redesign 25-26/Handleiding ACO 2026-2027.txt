@@ -1,0 +1,813 @@
+   
+ 
+   
+ 
+Talo 
+Instituut Archimedes  
+INVULINSTRUCTIE 
+ACO 2026 -2027  
+  
+   
+ 
+Invulinstructie ACO IA 202 6-2027 Februari 2026 Pagina 1 van 18 
+  
+ 
+Inhoud  
+Highlights 2026 -2027............................................................................................................................... 2 
+Inleiding ................................................................................................................................................... 3 
+Hoe benader je de cursuscode in ACO?  .............................................................................................. 4 
+Fase 1  ....................................................................................................................................................... 5 
+ Tabblad 1: Cursus  ............................................................................................................................... 5 
+Tabblad 2: Werkvormen  ...................................................................................................................... 6 
+Tabblad 3: Toetsen  .............................................................................................................................. 9 
+Fase 2  ..................................................................................................................................................... 11 
+Tabblad 4: Materiaal  ......................................................................................................................... 11 
+Tabblad 5: Beschrijvende velden (inhoud en cursusdoel)  ................................................................ 11 
+Tabblad 6: Goedkeuren  ..................................................................................................................... 14 
+Bijlage 1: Aanvragen CANVAS -pagina  .................................................................................................... 15 
+Bijlage 2: Boven niveau, op niveau en niet op niveau  ........................................................................... 17 
+Bijlage 3: Richtlijnen voor Engelse naam in ACO  ................................................................................... 18 
+ 
+  
+  
+   
+ 
+Invulinstructie ACO IA 202 6-2027 Februari 2026 Pagina 2 van 18 
+ Highlights 2026 -2027  
+ 
+- De opties voor de Canvasvelden zijn gewijzigd. Naast een Canvaspagina per blok, per jaar of binnen het 
+instituut is er nu ook de mogelijkheid om een pagina over instituten heen aan te maken. Z ie de Bijlage 1 
+(pagina 15) voor meer informatie.  
+ 
+- In het update document is een stuk opgenomen over het gebruik van AI bij toetsen. Belangrijk hierbij is 
+dat als AI niet is toegestaan bij een bepaalde toets, je dit in ACO aan kunt geven bij de ‘beschrijvende 
+velden’ onder het kopje ‘inhoud’.  
+ 
+- Digitale toetsen worden nu automatisch afgenomen in de vorm van BYOD . Mocht dit echt niet mogelijk 
+zijn voor jouw toets dan kun je dit aangeven in de ‘Aantekening intern bij toetsen’ bij tabblad toetsen.  
+ 
+- Bij het toevoegen van de werkvorm kan ook gekozen worden voor de werkvorm ‘Toetsinzage’. De 
+werkvorm TOETSINZAGE draagt zorg voor een soepele roostering van een inzage. Let op: het 
+aanvragen van surveillanten (indien nodig) verloopt via toetscentrum@hu.nl.  De organisatie van inzages 
+blijft in handen van het onderwijs.  
+ 
+- Veel toetsen worden in Gradework gekoppeld zonder uiteindelijk geactiveerd te worden, wat leidt tot onnodige vervuiling. Let er daarom goed op of het echt nodig is om Gradework aan je toets te koppelen.  
+ 
+- Talo Proces heeft  bij de bestaande cursussen de les weken  en toetsweken volgens het 
+Onderwijsjaarrooster 2026-2027 en Onderwijsaanbod aangevink t. Controleer dit  en pas dit aan indien 
+je afwijkende lesweken hebt (bijvoorbeeld bij een alternerende cursus) . 
+ 
+- Na goedkeuren van de cursus verspringt deze niet meer automatisch naar de volgende cursus. 
+Voorheen ging je na het goedkeuren van een cursus automatisch door naar de volgende cursus in de lijst. Dit gebeurde echter zo onopvallend, dat het niet duidelijk was dat je al in een volgende cursus was. 
+Hierdoor werden er soms aanpassing en in een verkeerde cursus gedaan. Vanaf nu wordt er na het 
+goedkeuren van een cursus een pop-up getoond, met daarin twee keuzes: Ga door naar volgende 
+cursus of Ga terug naar lijst.  
+ 
+- Hanteer de instructies van bijlage 2  als je Engelse namen formuleert . 
+ 
+- Let op! Zodra je de aantal minuten toegevoegd in ACO let dan op dat dit de minuten per werkvorm  zijn. 
+Niet de totale duur. Voorbeeld: Een les duurt 2 uur. Dat is 120 minuten. De les is twee keer per week , dit 
+blijft dan 120 minuten per werkvorm/les .  
+ 
+- Voor de TED cursussen wordt bij de cursusinhoud en cursusdoelen twee  verschillende talen genoteerd. 
+Bij de Standaard tekst moet dit Nederlandse tekst zijn en bij de Engelse tekst moet dit Engelse tekst zijn. Let op dat beiden ingevuld zijn met de juiste taal . 
+  
+   
+ 
+Invulinstructie ACO IA 202 6-202 7 Februari 2026 Pagina 3 van 18  
+ Inleiding 
+ 
+Middels  deze instructie vul  je de cursusgegevens in ACO in  voor het nieuwe studiejaar  2026-2027.  
+ Er zijn drie  soorten cursussen: bezemcursussen, bestaande cursussen en nieuwe cursussen. In de tabel 
+hieronder staat aangegeven welke wijzigingen er nodig zijn voor elk van de drie cursussen:  
+ Cursusinformatie  Werkvorm(en)  Toetsen  
+1. Bezemcursus * controleren en 
+eventueel aanpassen  meestal worden er geen 
+lessen verzorgd maar het 
+kan wel  aanpassen aanvangsblokken 
+en toetsen  
+2. Bestaande cursus  controleren en 
+eventueel aanpassen  controleren en eventueel 
+aanpassen  aanpassen aanvangsblokken 
+en toetsen  
+3. Nieuwe cursus  
+ invoeren  invoeren  invoeren  
+*Let op ! Cursussen die worden gebezemd dienen in de conversietabel te  staan. Dit is uitgevraagd middels  het 
+ACO -uitvraagbestand. Echter, dit geldt alleen voor cursussen die in het examenprogramma voorkomen.  
+Voor  keuzecursussen en m inors  is er geen conversie benodig d. In de conversietabel geef je ook aan vanaf welk 
+studiejaar de conversie dient plaats te vinden.  
+Het invullen van ACO gaat in twee fases  maar wordt  gelijktijdig  gestart : Daarna controleert TALO op veelgemaakte 
+fouten. Vervolgens controleert de CV’er de tabbladen keurt de 1e fase goed.  
+• In de 2e fase vult de CC’er  de tabbladen 4 en 5 in. Dit betreft het materiaal  en beschrijvende velden 
+(inhoud en cursusdoel) .  
+Gelijktijdig zal TALO en de CV’er dit controleren. De CV’er keurt de cursus vervolgens definitief goed.  
+  
+   
+ 
+Invulinstructie ACO IA 202 6-2027 Februari 2026 Pagina 4 van 18 
+  
+Hoe benader  je de cursus code  in ACO?  
+ 
+• Log in op https://osiris.hu.nl  via browser Firefox , Edge  of Chrome  (download via Software center) en 
+log in via: Ik wil cursusgegevens aanleveren . 
+• Selecteer linksboven bij Toon:  Totaaloverzicht . 
+• Klik op het filter icoontje  en zet het collegejaar op 2026 . 
+• Plaats naar wens  de filters op: cursuscode, naam en/of categorie.  
+• Het % teken kan gebruikt worden als ‘wildcard’ . Daarmee zoek  je op een deel van de naam of code 
+bijvoorbeeld OAR -S% of vakd %. 
+• Je opent iedere cursus door dubbel  te klikken op een regel . Het formulier opent standaard in ‘Overzicht  
+cursusinformatie’ . 
+• Let op!  Ga naar het vorige scherm met de knop ‘ Terug’ . De browserknoppen werken niet goed.  
+• Door te klikken op D etails (zie afbeelding hieronder)  open je het scherm waarin je de c ursusgegevens 
+aanpast : 
+ 
+ 
+ 
+• Hier vind je de tabbladen w aarin je aanpassingen kunt doen:  
+  
+
+   
+ 
+Invulinstructie ACO IA 202 6-202 7 Februari 2026 Pagina 5 van 18  
+ Fase 1 
+ 
+Het invullen van ACO gaat in twee verschillende fases. Hieronder vind je een overzicht van  wat er in F ase 1 moet 
+gebeuren. 
+ 
+Wie Wat Begindatum en d eadline  
+TALO  Weken aanvinken  23-2-2026 – 25-2-2026  
+CC ACO fase 1 en 2 invullen  23-2-2026 – 13-3-2026  
+CV Uitvraag  OEPSEN  23-3-2026 – 2-4-2026  
+TALO  TALO controleert  16-3-2026 – 20-3-2026  
+CV ACO fase 1 en 2 goedkeuren  16-3-2026 – 2-4-2026  
+ 
+ 
+ 
+ Tabblad 1: Cursus   
+ 
+ 
+ Bestaande cursus  Bezem cursus  Nieuwe cursus   Tabblad Cursusinformatie  Cursuscode  Niet te wijzigen   
+Cursustype  Niet te wijzigen  Let op!  Als jouw cursus 
+onderdeel is van de 
+afstudeereenheid of 
+exemplarisch vak dan kun 
+je mailen naar 
+taloproces@hu.nl  om de 
+cursustype te wijzigen 
+naar Afstudeerwerk. Het 
+werk wordt dan in 
+Gradework gearchiveerd.  
+Collegejaar  Niet te wijzigen   
+Korte naam  Niet te wijzigen   
+Lange naam  De officiële naam van de cursus (voor Osiris en de 
+cursusbeschrijving)   
+Lange naam 
+(Engels)  Engel se vertaling van de lange naam voor Osiris:  deze 
+naam komt op het Engelstalige Internationale Diploma 
+Supplement (IDS) dat bij het bachelor diploma uitgereikt 
+wordt. Belangrijk dus dat deze naam goed ingevoerd is . Let op!  Afgelopen jaar zijn 
+er veel fouten gemaakt in de 
+Engelstalige naam. 
+Maximaal 40 tekens en het & teken kan je NIET  gebruiken.  
+Zie bijlage 6 voor verdere 
+instructies!  
+Contactpersoon  Cursuscoördinator  van de cursus   
+Minimum/ 
+maximum punten  Standaard 5 EC of meervoud daarvan , maar kan afwijken.   
+Categorie  P (Propedeuse ) / H1 / H2 / H3 (Hoofdfase)  / M1 / M2 
+(Master)   
+Voerta len Nederlands  (of andere voertaal als de les bijvoorbeeld in 
+het Engels wordt gegeven)   
+Lintcursus  Alleen op JA zetten als een werkvorm van de cursus over 
+twee  of meer  blokken d oorloopt vanaf het aanvangsblok .  
+Voltijd/deeltijd  Staat al juist aangevinkt . Vink voor een nieuwe  cursus  de 
+juiste variant aan   
+Aanvangsblokken  Vink aan in welk blok de cursus begint. Als de cursus 2 keer 
+per jaar wordt aangeboden vink je de 2 blokken aan waarin 
+de cursus start . Let op!  Kies hier NOOIT 
+voor jaar.   Aanvraag  
+canvaspag ina Zie Bijlage 1  (pagina  15) voor een uitgebreide uitleg .  
+
+   
+ 
+Invulinstructie ACO IA 202 6-202 7 Februari 2026 Pagina 6 van 18  
+ 
+  
+ 
+ 
+ 
+Tabblad  2: Werkvormen  
+ 
+Werkvormen zijn alle activiteiten die bij een cursus horen. Het kan gaan om alle cursus  gerel ateerde activiteiten 
+(wel of niet geroosterd) die van belang zijn voor student en voor de taaktoedeling aan docenten in Xedule.  Dus 
+ook een excursie , gastspreker, leerplein en/of practic um. 
+ Indien je voor een nieuwe cursus een werkvorm wilt toevoegen (of voor een bestaande cursus een extra 
+werkvorm wilt toevoegen of wijzigen) kan je kiezen uit een aantal mogelijkheden . 
+ 
+ 
+Overzicht van de meest voorkomende activiteiten/werkvormen bij Archimedes :  
+• Werkcollege  
+• Practicum  
+• Leerplein  
+• Diverse werkvormen  
+• Hoorcolleg e* 
+• Excursie  
+• L eerteam  
+• Diverse:  Vaardighedenlab  
+• Toetsinzage  
+ 
+ 
+* Let op!  Kies alleen deze werkvorm als er daadwerkelijk  een hoorcollegezaal voor je gereserveerd moet worden. 
+Wil je je hoorcollege in een normaal lokaal geven kies dan werkvorm ‘overig ’ en zet bij de omschrijving 
+‘hoorcollege’ . Bij twijfel, overleg even met TALO . 
+  
+Let op! Elke werkvorm is één rooster activiteit  in de roosterprogramma’s . Xedule is de planningsprogramma en 
+Syllabus is het roosterprogramma. Bi j elke afwijking in deze activiteit dien je een tweede werkvorm aan te maken
+. 
+Wil je een werkvorm niet roosteren, dan zet je het veld Opnemen in rooster  op NEE.  
+ 
+Voorbeeld van een activiteit waarvoor meerdere werkvormen aangemaakt moeten worden:  
+De cursus heeft een theorieles van 1,5 uur en een practicum van 2 uur. Alleen in lesweek 5 duurt het 
+practicum 3 uur en dit wordt afgesnoept van de theorieles.  In dit geval hebben we dus 4 werkvormen:  
+1. Theorieles van 1,5 uur voor alle weken behalve lesweek 5  
+2. Practicum van 2 uur voor alle weken behalve lesweek 5  
+3. Theorieles van 0,5 uur voor lesweek 5  
+4. Practicum van 3 uur voor lesweek 5  
+    
+ 
+   
+
+   
+ 
+Invulinstructie ACO IA 202 6-202 7 Februari 2026 Pagina 7 van 18  
+  
+ 
+ Bestaande cursus  Bezem 
+cursus  Nieuwe cursus   Werkvorm  Niet te wijzigen.  Indien onjuist, 
+verwijder werkvorm en voeg 
+een nieuwe werkvorm toe  n.v.t.  Voeg werkvorm toe  
+Voltijd/deeltijd  Niet te wijzigen  n.v.t.  Let op! Indien VT en DT wordt 
+aangeboden, moet je zowel een voltijd 
+als een deeltijd werkvorm aanmaken.  
+Omschrijving  Zo nodig aanpassen  n.v.t.  Omschrijving toevoegen  
+Aanwezigheidsp
+licht Zo nodig aanpassen  n.v.t.  Meestal NEE, soms JA (bv. excursie ).  
+Let op! Aanwezigheidsplicht houdt niet 
+in dat een student VERPLICHT  is om 
+aanwezig te zijn. Maar dat het wel 
+handig is vanwege cursussen die 
+nadien volgen.  
+Aantal 
+bijeenkomsten1) Zo nodig aanpassen. Aantal 
+bijeenkomsten alleen per 
+week  opgeven1 n.v.t.  Aantal bijeenkomsten alleen per week  
+opgeven1) 
+Contactduur  
+Is de roostertijd  
+opgegeven in 
+eenheden van 
+30 minuten  Aanpassen indien nodig  Let 
+op! Dit gaat om de duur per 
+bijeenkomst (niet bij elkaar optellen)  n.v.t.  Instellen op juiste tijd . Is de roostertijd  
+opgegeven in eenheden van 30 
+minuten. 
+Aanvangsblok  Zo nodig aanpassen  n.v.t.  Vink het juiste blok aan.  
+Gewenste 
+lesweken  
+ Lesweken aanvinken .  
+Zie bijlage 
+Onderwijsjaarrooster  2025-
+2026 voor de lesweken.  Let 
+op! De weken die nu zijn 
+aangevinkt, is door Talo 
+Proces verwerkt.  n.v.t.  Lesweke n controleren en afwijkingen in 
+weken uitvinken. Zi e bijlage 
+Onderwijsjaarrooster 2025-2026 voor 
+de lesweken.   
+Rooster mag 
+van deze weekindeling 
+afwijken  Zo nodig aanpassen  n.v.t.  JA of NEE (staat sinds dit jaar 
+standaard op nee)  
+Opnemen in 
+rooster*  Zo nodig aanpassen  n.v.t.  JA of NEE 
+Moet samen 
+worden geroosterd met werkvorm van 
+cursus  Zo nodig aanpassen  n.v.t.  Alleen indien van toepassing, anders 
+leeglaten. Bijvoorbeeld VT en DT samen, in één klaslokaal laten roosteren. Vermeld de bijbehorende 
+cursuscode.  
+Gewenst soort 
+lokaal*  Kies: THEORIE , Leerplein  of 
+voor praktijklokaal P- n.v.t.  Kies: THEORIE , Leerplein of P-.  
+Let op ! kies je P - Geef dan specifiek 
+aan welk praktijklokaal je wilt:  
+Er zijn 4 practicumzalen:  
+1) 9.009: grootste practicumzaal nat  
+2) 9.011: practicumzaal nat  
+3) 9.015: practicumzaal droog, vaak 
+gebruikt door bio  
+4) 8.003: practicumzaal techniek  
+ 
+Ook ONLINE is aan de mogelijkheden 
+toegevoegd  
+Maximale 
+groepsgrootte*  Zo nodig aanpassen   n.v.t.  Vu hier 25 of minder in. Leeglaten mag 
+ook.  
+Volgordelijkheid  Zo nodig aanpassen  n.v.t.  Alleen van  toepassing als er een 
+volgorde in de werkvormen geroosterd moet worden. Bijvoorbeeld hoorcollege moet altijd voor het practicum 
+plaatsvinden. Dan is Hoorcollege 1 en 
+practicum 2. Maakt de volgorde niet uit, 
+vul dan niets in.  
+Opmerking 
+werkvorm  Aanpassen indien nodig  n.v.t.  Alleen een opmerking invullen als dit 
+van invloed is op het rooster. Doe dit zo 
+   
+ 
+Invulinstructie ACO IA 202 6-202 7 Februari 2026 Pagina 8 van 18  
+ duidelijk mogelijk, want op basis 
+hiervan houdt P&R rekening met je 
+opmerking.  
+1)  Aantal 
+bijeenkomsten 
+voorbeelden  
+ 1 bijeenkomst in blok : geef 
+aan 1 bijeenkomst per week en vink de juiste week aan bij gewenste lesweken. Indien de week mag afwijken geef dan 
+bij Rooster mag van deze 
+weekindeling afwijken
+ aan Ja.  
+9 vaardigheden in 6 weken : 
+maak 2 werkvormen  aan.  
+Geef bij de eerste werkvorm 
+aan 1 bijeenkomst per week en vink de juiste 6 weken aan
+ 
+Geef bij de tweede werkvorm 
+(kopieer werkvorm) aan 1 
+bijeenkomst per week en vink alternerend 3 weken aan. Geef bij Rooster mag van deze 
+weekindeling afwijken aan Ja. 
+ 
+   
+*verplicht  
+ Aanvullende functionaliteiten op dit scherm:  
+• Je kunt in dit scherm sorteren op code werkvorm of omschrijving werkvorm of voltijd/deeltijd 
+• De werkvormen worden ingeklapt getoond en kunnen met het vinkje voor de werkvorm uitgeklapt worden.  
+• Kopieer werkvorm: kan gebruikt worden om de werkvormen te kopiëren, om daarmee veel invulwerk te besparen.  
+  
+   
+ 
+Invulinstructie ACO IA 202 6-202 7 Februari 2026 Pagina 9 van 18  
+ Tabblad  3: Toetsen  
+ 
+ 
+ Bestaande cursus en  
+Bezem cursus  Nieuwe cursus  Tabblad Toets(en)  Toets  Niet te wijzigen  
+ Voeg toets toe (maximaal 2 toetsen per 5 
+EC) 
+Voltijd/deeltijd  Niet te wijzigen  Indien een cursus in voltijd en deeltijd 
+bestaat, moet je zowel een voltijd als een 
+deeltijd toets aanmaken  
+Omschrijving  Niet te wijzigen  
+ Omschrijf toets (deze omschrijving ziet de 
+student tijdens het inschrijven). Kies een 
+zorgvuldige omschrijving. Zeker indien er 2 toetsen bestaan. Maak hier ook duidelijk 
+onderscheid tussen schriftelijke toets of 
+computer tentamen.  
+Toetsvorm  Niet te wijzigen  
+ Kies de v orm van de toets. Bijv. Digitale 
+toets  (indien je gebruik wilt maken van de 
+digitale toetsruimte),  
+Schriftelijk tentamen (bij schriftelijke toets),  
+MC-tentamen  (bij meerkeuze), dossier , etc.  
+Weging  Niet te wijzigen  
+ Weging is 100 en mag niet 1 zijn. Bij 
+deeltoetsen: v oer percentage in waarvoor 
+de toets meetelt in de cursus  
+Punten  Niet te wijzigen  Aantal EC x weging  
+Minimum cijfer  Niet te wijzigen  Niet te wijzigen = 5,5  
+Resultaatschaal 
+voor 
+toetsresultaten  Niet te wijzigen  
+ Keuze uit opties:  
+1.NVD_VD = niet voldaan - voldaan  
+2.NUM -1-decimaal  =  
+tienpuntschaal 1,0 - 10,0 
+3.NUM -10-PUNTSCH =  tienpuntschaal 1 – 
+10 
+4.Alfanumerieke schaa l IA is ook 
+toegestaan. 
+5. Boven niveau, op niveau en niet op 
+niveau . Zie voor meer informatie Bijlage 2  
+Toetsduur in 
+minuten (dit is de  
+werkelijke 
+toetsduur)  In eenheden van 30 minuten. 
+Controleren en eventueel updaten.  In eenheden van 30 minuten. Alleen van 
+toepassing voor schriftelijke tentamens.  
+Duur zónder extra tijd wordt hier bedoeld.  
+Aanvangsblok * 
+ Geef voor het weergegeven 
+aanvangsblok aan in welk blok de 
+toets en in welk blok de herkansing 
+is.  
+ JAAR kan in sommige situaties  
+gebruikt worden. Bijvoorbeeld om 
+opdrachten te laten inleveren zonder 
+beperkingen van inschrijftermijnen 
+of toetsweken. Wat wel belangrijk is 
+is dat de herkansing ook op JAAR 
+staat
+ 
+ Geef voor het weergegeven aanvangsblok 
+aan in welk blok de toets en in welk blok de 
+herkansing is.  
+ 
+Let op ! Wil je meerdere keren per jaar 
+toetsen, kies dan meerdere aanvangsblokken.  
+ 
+Let op!  Als je JAAR kiest overleg dan altijd 
+even met TALO. Samen bekijken we dan of dit de beste oplossing is. Het kiezen van 
+JAAR kan in andere processen namelijk 
+voor problemen zorgen. Bijvoorbeeld dat je geen ondersteuning krijgt van de 
+Toetsorganisatie  
+Gewenste 
+lesweken  Vink de juiste toetsweek van de toets en de herkansing aan. Let op!  Laat de 
+tweede herkansing leeg.  
+Toetsen  
+Opnemen in rooster?
+1) Kies NEE bij opdrachten, verslagen of als je de toets zelf organiseert (bijv. in de 
+les). Er komt geen vervolgvraag meer.  
+ 
+Kies JA indien het een tentamen  betreft.  
+ Wil je 
+ondersteuning van de 
+Toetsorganisatie?  Kies JA als de toetsvorm TENTAMEN; MC TENTAMEN, COMPUTER of 
+ASSESSMENT heeft en je ondersteuning wilt met surveillanten en presentielijsten in een toetslokaal. 
+ 
+Bij andere toetsvormen worden de vervolgvragen NIET getoond, behalve de vraag 
+
+   
+ 
+Invulinstructie ACO IA 202 6-202 7 Februari 2026 Pagina 10 van 18 
+ of je gebruik wilt maken van Gradework.  
+Vervolgvraag is dan ‘Hoe moet de toets georganiseerd worden?’  
+ 
+Kies NEE indien de afname van de toets door het eigen instituut verzorgd wordt.  
+Vervolgvraag is dan ‘Wil je gebruik maken van een digitale inleverbox -
+GradeWork?’  
+  Hoe moet de 
+toets 
+georganiseerd worden?  Deze vraag wordt alleen getoond als de toetsvorm: MC -TENTAMEN, TENTAMEN, 
+COMPUTER of ASSESSMENT is.  
+Bij deze vraag worden op basis van de toetsvorm, voor gedefinieerde antwoorden getoond waaruit je kunt kiezen.   Aantekening 
+intern  (gaat niet 
+mee in de keten)  Geef hier als je je digitale toets niet in BOYD vorm wilt toetsen.  
+Aan welke toetsen tegelijkertijd of juist niet tegelijkertijd geroosterd moeten worden of Voltijd deeltijd tegelijkertijd of bezem cursussen tegelijkertijd. De informatie die 
+je hier plaatst is enkel bedoeld als interne opmerking voor de opleiding en gaat niet mee in de keten naar Planning en Roostering of het Toetscentrum.  TALO gebruikt 
+dit wel bij de roosteraanvraag . 
+ 1)Als de toets digitaal wordt afgenomen (dus met gebruik van een computer) is er wel de mogelijkheid 
+om nog een papieren bijlage of toets te uploaden via Toetsmonitor of Testvision. Afhankelijk van de 
+antwoorden op deze vraag kun je benaderd worden door een medewerker Toetsorganisatie over de 
+verdere invulling van de ondersteuning.  Indien voor je een digitale toets kiest is het automatisch een 
+BYOD toe ts. Mocht je willen dat de toets wordt afgenomen in een speciaal computerlokaal vermeldt dit 
+dan in de opmerking . Let op! Hier is erg weinig plek dus geeft rooster beperkingen . 
+*verplicht  
+ Fase 1 is afgerond.  
+Ga naar tabblad 6 om goed te keuren.  
+ Goedkeuren  
+Als je alles hebt ingevuld, k lik je op het laatste tabblad van de detailweergave rechtsboven op Controleren . Als je 
+een of meerdere foutmeldingen krijgt, corrigeer dan of vul ontbrekende gegevens aan. Klik vervolgens op 
+Huidige stap goedkeuren . Als er geen foutmeldingen meer gegeven worden, kan je nu niets meer wijzigen. De 
+curriculumverantwoordelijke dient nu de volgende processtap goed te keuren.  
+ 
+ 
+ 
+   
+ 
+   
+  
+  
+   
+ 
+Invulinstructie ACO IA 202 6-2027 Februari 2026 Pagina 11 van 18 
+ Fase 2  
+ 
+Na goedkeuring door de curriculumverantwoordelijke volgt fase 2: het aanleveren van Materiaal (stap 5) en het 
+aanleveren van Beschrijvende velden van Inhoud en Cursusdoel  (stap 6).  
+ 
+ Tabblad 4: Materia al 
+ Voeg de benodigde studiematerialen toe, z oals cursusboek, dictaat, diversen.  Werk alle materialen zo volledig 
+mogelijk bij. Het  veld “kosten ” is een geïntegreerd onderdeel van materiaal geworden.  
+ 
+Let op!  Noteer en check bij boeken altijd het ISBN -nummer . Zonder ISBN -nummer  kan er geen correcte  
+boekenlijst samengesteld worden. Het heeft consequenties in een later stadium voor de student. Indien er geen 
+ISBN -nummer is ingevuld, dan zal Talo Proces de cursus afkeuren.  
+Als er een verouderd ISBN -nummer staat en er is een nieuwere versie beschikbaar dan wordt deze op de 
+boekenlijst gezet.  
+ 
+Tip! Controleer het ISBN -nummer via Google. Hierop vind je de meest recente versie van het nummer.  
+ 
+Tabblad  5: Beschrijvende velden ( inhoud en cursusd oel) 
+ Cursusbeschrijvingen : de nadruk ligt dit jaar op het optimaliseren van de cursusbeschrijvingen. 
+ 
+Er zijn twee velden  die samen de Cursusbeschrijving in de studiegids vormen:  de velden I nhoud en 
+Cursusdoelen. Geregeld komt het voor dat er alleen tekst staat in het veld inhoud. De doelen zijn dan in di e tekst 
+opgenomen. Dat is prima maar vul dan wel in het veld “Doelen” de tekst ; 
+“zie hierboven” in. Als in dit veld nikst staat verschijnt er in de gids alleen een kopje zonder verdere tekst.   
+Vergeet niet te vermelden als cursussen onderdeel zijn van een concentrische leerlijn.  
+ 
+Let op: De cursusbeschrijvingen moeten in JIJ -vorm worden geschreven.  
+ 
+Voor bestaande en bezemcursussen vind je hier de ingevoerde beschrijvingen van het vorig cursusjaar. Voor 
+nieuwe cursussen noteer je hier de nieuwe beschrijvingen.   
+ 
+Let op! Corrigeer spelfouten en actualiseer de tekst  van de bestaande en bezemcursussen. Kijk ook naar de 
+Opmaak in deze velden. Indien je gaat kopiëren  en plakken, gebruik dan Plakken Speciaal . Om de teksten straks 
+ordelijk  in de cursusbeschrijving te krijgen is het aan te raden zo min mogelijk witregels te gebruiken. Zie verderop 
+wat de richtlijnen zijn. Je kunt geen tabellen gebruiken. Deze komen niet goed zichtbaar in de Studiegids bijlage.  
+ 
+ 
+
+   
+ 
+Invulinstructie ACO IA 202 6-2027 Februari 2026 Pagina 12 van 18 
+ Klik op het tabblad ‘Beschrijvende velden’ .  
+  
+Vul/muteer alle informatie in de velden door bij het aanwezige beschrijvende veld op ‘Wijzig’ te klikken of voeg 
+een nieuw veld toe door op ‘Voeg beschrijvende veld toe’ .  
+  
+Als de knop Wijzig niet aanwezig is, dan heb je geen rechten om deze gegevens te wijzigen.  
+  
+De velden ‘ Cursusdoelen’ en ‘Inhoud’ worden beiden getoond in de cursusbeschrijvingen. Als er een 
+Engelstalige cursusbeschrijving  wordt uitgedraaid, dan wordt de inhoud onder de Engelse velden getoond.  
+ Let op!  Bij Standaard staat NL-tekst  en bij Engels hoort UK tekst te staan. Ga bij Standaard na of hier nog UK 
+tekst staat vermeld. Zo ja, dan verwijderen en plaatsen bij Engels.  
+Let op!  Er staan soms ingangseisen genoemd in de cursusbeschrijving die verder niet staan  geregistreerd in 
+ACO.  
+ 
+Veld Cursusdoelen mag niet leeg zijn. Je kan er bijvoorbeeld neerzetten “zie hierboven”.  
+ 
+In het mutatiescherm ‘Wijzigen beschrijvende velden’ kun je tekst plakken vanuit een Word document. Dit kan 
+vreemde en verborgen opmaak opleveren. Gebruik de knop ‘Opschonen’ om de opmaak te herstellen.  
+ 
+ 
+ 
+  
+
+   
+ 
+Invulinstructie ACO IA 202 6-2027 Februari 2026 Pagina 13 van 18 
+ Opmaak instructies m.b.t. tekst voor bestaande en nieuwe cursussen:  
+• 50 woorden per alinea  
+• JIJ-vorm  
+• Kop- en tussenteksten  
+• Bullets bij opsommingen  
+• Lettertype Arial 9pt  
+• Verwijder witregels (interlinea 12pt)  
+• Niet meer dan 2 pagina’s   
+• Geen tabellen  
+1. Zet passieve formuleringen om in actieve  
+2. Hak lange zinnen in stukken  
+3. Schrap hulpwerkwoorden (bijv. willen, kunnen, zullen)  
+4. Schrap zinnen waar geen inhoud in zit  
+5. Verwijder tekst dat niet meer relevant  is 
+6. Verwijder dubbele c.q. overbodige tekst en. De informatie kan namelijk al in de Studiegids staan.  
+ 
+Richtlijnen m.b.t. tekst in het veld “Inhoud ” 
+Hanteer  de volgende kopteksten:  
+Cursusinhoud  
+Leeractiviteiten  
+Leerdoelen  (indien van toepassing)  
+Toetsing  
+Kennisbasis  (indien van toepassing)  
+Leeruitkomsten   
+Artificial Intelligence (AI)  indicatoren  
+ 
+Voor VH en PH en voor nieuwe cursussen vakinhoudelijk bekwaam worden de volgende kopteksten gehanteerd:  
+Omschrijving van de module  
+Leeruitkomsten  
+Kennisbasis  
+Voorbeelden van leer - en beroepstaken  
+Werkvormen / leeromgevingen  
+Toetsing  
+Flexibilisering  
+ Richtlijnen m.b.t. het veld “Cursusdoel”  
+Noteer hier: Zie hierboven.  
+Let op!  Reeds geplaatste tekst verplaatsen naar “Inhoud”  
+ 
+ 
+<Koptekst> Cursusinhoud¹  
+Geef een korte omschrijving van de inhoud van de cursus. Maximaal 100 woorden. In vogelvlucht geef je aan wat 
+de bedoeling is van deze cursus (betekenis van een beeld). Noteer datgene wat je aan de student wilt vertellen.  
+<Koptekst> Leeractiviteiten²  
+ 
+ 
+ 
+Heb je naast de W erkvormen die je eerder in ACO hebt ingevoerd nog andere aanvullingen zoals voor  een 
+‘Excursie’  of een ‘Projectdag’  (zie voorbeeld printscreen hierboven) , vermeld dit dan onder deze kop . Noteer kort 
+en bondig wat je aan de student wilt vertellen.  
+ <Koptekst> Leerdoelen³  
+Noteer een opsomming van beoogde opbrengst (kennis, vaardigheden en houding).  
+Bijvoorbeeld:  
+Je kunt:  
+•
+ … 
+• … 
+
+   
+ 
+Invulinstructie ACO IA 202 6-2027 Februari 2026 Pagina 14 van 18 
+ • … 
+ 
+Let op!  Wees consequent in de opsomming en pas indien nodig aan. Verplaatst de leerdoelen die in het veld 
+“Cursusdoelen” staan  naar “Inhoud” .  
+ <Koptekst> Toetsing ⁴ 
+ 
+Heb je andere aanvullingen op bijvoorbeeld een ‘Verslag’, vermeld dit dan onder dit kopje. Noteer hier 
+aanvullende informatie over de toetsing d at relevant is voor de student om te weten.  
+ 
+<Koptekst> Kennisbasis ⁵  
+In de studiegids is algemene informatie over kennisbasis opgenomen, maar niet specifiek de juiste verwijzing naar het kennisbasisdomein. Noteer hier de juiste verwijzing en datgene wat relevant is voor de student.  
+ 
+<Koptekst> Leeruitkomsten ⁶ (indien aan de orde ) 
+Noteer de volgende zin: In deze cursus wordt gewerkt aan leeruitkomst (en) <nr(’s)>. 
+ 
+<Koptekst> Artificial Intelligence (AI)  indicatoren   
+Bij het invullen van ACO in het onderdeel Beschrijvende velden, wordt voor elke cursus een kopje AI toegevoegd 
+met hoe AI tijdens de toetsing gebruik mag worden.  Op de Canvaspagina vind je de instructies voor de 
+verwerking van AI in ACO .  
+ 
+ Fase 2 is afgerond.  
+Ga naar tabblad 7 om goed te keuren.  
+ 
+Tabblad  6: Goedkeuren  
+Als je alles hebt ingevuld, kun je op het laatste tabblad van de detailweergave rechtsboven  op Controleren  
+klikken. Als je een of meerdere foutmeldingen krijgt, corrigeer dan of vul ontbrekende gegevens aan. Klik 
+vervolgens op Huidige stap goedkeuren . Als er geen foutmeldingen meer gegeven worden, kan je nu niets 
+meer wijzigen. De curriculumverantwoordelijke dient nu de volgende processtap goed te keuren.   
+ Let op!  Afhankelijk van de selectie of filtering op het overzichtsscherm en de lijst met cursussen, zal direct na het 
+goedkeuren van de stap, de volgende cursus in de lijst worden getoond.  
+ 
+  
+
+   
+ 
+Invulinstructie ACO IA 202 6-2027 Februari 2026 Pagina 15 van 18 
+ Bijlage 1 : Aanvragen CANVAS -pagina  
+ 
+Bij het invullen van ACO kun je bij het tabblad ‘Cursus’ kiezen of je een Canvaspagina voor de cursus wilt of niet, 
+ook kun je aangeven wat voor soort canvaspagina je wilt, een aparte of een samengevoegde pagina.  
+Nieuw:  Vanaf 2026- 2027 is er een wijziging in de aanvraag van samengevoegde pagina’s. Er is nu de keuze 
+tussen ‘Instituut’ en ‘Overstijgend’. Bij de keuze ‘Instituut’ wordt  de pagina in het subaccount van de opleiding 
+geplaatst. Bij ‘Overstijgend’ wordt de pagina in het HU -brede subaccount (OVK) geplaatst ). De keuze 
+‘Overstijgend’ is alleen nodig als er cursussen van verschillende instituten moeten worden samengevoegd.  Dat 
+zal zelden het geval zijn.  
+ 
+Figuur 1 De o pties bij het veld:  Hoe wil je de sites samenvoegen?  
+Wanneer je voor een canvaspagina heb t gekozen dan wordt er (een) nieuwe lege CANVAS -pagina(‘s) 
+aangemaakt voor het nieuwe studiejaar. Via een koppeling met Osiris worden dan automatisch de Ontwerpen en 
+de ingeschreven studenten (in Osiris) aan de cursuspagina gekoppeld.  
+Zie de onderstaande tabel hoe je de velden invult en wat er dan precies wordt klaargezet in CANVAS:  
+Veld: Wil je een 
+canvaspagina?  Veld: Kies naam 
+samengevoegde canvaspagina  Resultaat  
+Niet n.v.t.  Er wordt geen canvas -pagina klaargezet  
+Ja n.v.t.  Je krijgt een canvas -pagina voor:  
+• Elk blok dat de cursus gegeven wordt  
+• Voltijd en deeltijd apart  
+Samengevoegd : keuze: Jaar n.v.t.  Je krijgt een canvas -pagina voor:  
+• Het hele jaar samengevoegd (JAAR)  
+• Voltijd en deeltijd samengevoegd  
+Samengevoegd : keuze: 
+Instituut  Naam ingevuld bij meerdere 
+cursuscodes  van hetzelfde 
+instituut  Je krijgt een canvas -pagina voor:  
+• Het hele jaar samengevoegd (JAAR)  
+• Voltijd en deeltijd samengevoegd  
+• Meerdere cursuscodes samengevoegd  
+Samengevoegd : keuze: 
+Overstijgend*  Naam ingevuld bij meerdere 
+cursuscodes  van verschillende 
+instituten  Je krijgt een canvas -pagina voor:  
+• Het hele jaar samengevoegd (JAAR)  
+• Voltijd en deeltijd samengevoegd  
+• Meerdere cursuscodes samengevoegd  
+* Er is g een koppeling met opleiding-specifieke applicaties mogelijk . 
+Wanneer je een canvaspagina hebt aangevraagd door ‘Ja’ in te vullen, dan  wordt de naam automatisch 
+aangemaakt en die is  op een vaste manier opgebouwd:  
+ 2026 _{CURSUSCODE }_{periode} _{variant} .  
+Dus als voorvoegsel het studiejaar (2026 ) en als achtervoegsel de periode (Blok 1,2,3,4,5 of JAAR) en variant (V, 
+D of SAMENGEVOEGD). Een voorbeeld is 202 6_OAGS -H1NLKON-17_4_V . 
+Hieronder volgen enkele voorbeelden van hoe je ACO moet invullen:  
+
+   
+ 
+Invulinstructie ACO IA 202 6-2027 Februari 2026 Pagina 16 van 18 
+ Voorbeeld 1  
+Ik wil voor volgend jaar een CANVAS -cursuspagina voor voltijd en deeltijd apart:  
+Kies  ‘Ja’ bij het eerste veld en laat het veld ‘Url cursussite’ leeg. Dit veld is namelijk alleen bedoeld voor eventuele 
+niet-CANVAS -pagina‘s.  
+Studenten worden op basis van hun inschrijving toegevoegd aan de bijbehorende Canvassite. Wanneer je een voltijd-  
+en deeltijdvariant hebt wordt er voor beide een CANVAS -pagina aangemaakt. Verder wordt er voor elke periode dat de 
+cursus gegeven wordt een pagina aangemaakt. Dus heb je een voltijd- en deeltijdvariant en wordt de cursus in periode 
+A en C aangeboden dan krijg je vier  aparte CANVAS-pagina’s. Wil je dit niet, kies dan voor een samengevoegde 
+pagina.  
+ 
+ 
+ Voorbeeld 2 
+Ik wil voor volgend jaar overkoepelende CANVAS -cursuspagina voor meerder cursuscodes (bijvoorbeeld 
+voor een minor of een bepaald leertraject):  
+Kies ‘ Samengevoegd’  en kies  voor ‘Instituut ’ wanneer de cursussen binnen IA vallen. Wanneer je ook cursuscodes 
+wilt samenvoegen van buiten IA dan kies je voor ‘Overstijgend (dit komt zelden voor) .  
+Vul vervolgens de naam van de samengevoegde cursus  in. B. Een naam kan bijvoorbeeld zijn: OA -MINCODE -
+20_NAAM_MINOR  
+1. Let op:  Kies een niet te algemene naam. Een naam als ‘Practicum’ kan door meerdere mensen gebruikt 
+worden, wat verwarrend werkt en ook niet overzichtelijk is voor de student. Voeg bijvoorbeeld de cursuscode 
+toe: ‘OA -MINWO_Minor_Art_of_writing’.  
+2. Let op : Vul de exact dezelfde naam in voor alle cursussen die je toegevoegd wilt hebben.  
+3. Let op: Gebruik van accent -, diakritische- en leestekens (incl. spatie) is niet toegestaan. Het streepje [  -   ] 
+en onderliggend streepje [  _  ] mogen wel worden gebruikt.  
+Laat verder het veld ‘Url cursussite’ leeg.  
+Bij een samengevoegde cursus wordt altijd een Canvassite gemaakt voor het hele jaar. Dus stel dat de cursus in 
+periode A en C wordt gegeven, dan worden die samengevoegd tot: JAAR (in tegenstelling tot Voorbeeld 1).  
+ 
+ 
+ 
+ 
+  
+
+   
+ 
+Invulinstructie ACO IA 202 6-2027 Februari 2026 Pagina 17 van 18 
+ Bijlage 2 : Boven niveau, op niveau en niet op niveau  
+ 
+Beoordeling van de toets  
+Alleen een examinator mag de toets beoordelen en het resultaat vaststellen.  
+De examencommissie wijst elke examinator aan. Meestal is dat een docent van je opleiding.  
+(Deel)toetsen van de afstudeereenheid worden altijd door twee examinatoren beoordeeld.  
+Je toets kan als volgt worden beoordeeld, afhankelijk van de in Osiris opgenomen beoordelingsschaal:  
+ 
+• Met een cijferbeoordeling van 1 tot en met 10, zonder decimalen.  
+Een 6 of hoger is een voldoende, een 5 of lager een onvoldoende.  
+• Met een cijferbeoordeling van 1 tot en met 10, met één decimaal.  
+Een 5,5 of hoger vóór afronding is een voldoende. Lager dan een 5,5 is een onvoldoende.  
+• Met een voldaan (VD) of niet voldaan (NVD).  
+• Met een boven niveau, op niveau of niet op niveau.1 
+ 
+Een behaalde toets kan in principe niet worden herkanst, tenzij in de studiegids anders staat beschreven.  
+Als je je wel voor de toets hebt ingeschreven maar daar niet aan deelneemt, krijg je een Niet Aanwezig resultaat 
+(NA).  
+Zijn er onregelmatigheden als bedoeld in 4.12 geconstateerd en heb je een sanctie opgelegd gekregen, dan krijg je een Niet Geldig resultaat (NG).    
+Voor toetsen die uit meer dan één deeltoets bestaan, berekenen we het eindresultaat op basis van de onderlinge 
+weging zoals opgenomen in Osiris. Hierbij telt een Voldaan niet mee. In Osiris staat ook of er voor de deeltoetsen 
+een verplicht minimumcijfer ge ldt.  
+ 
+De examencommissie kan een toets als Niet Geldig (NG) registreren als er sprake is van een onregelmatigheid 
+door de student (zie hierna onder 4.12). Als er sprake is van een fout aan de zijde van de hogeschool, waardoor de examencommissie niet kan instaan voor de kwaliteit van de toets, kan de examencommissie ook een 
+maatregel treffen. Zo kan de examencommissie besluiten om de betreffende toetsresultaten ongeldig te 
+verklaren. In dat geval wordt de gedupeerde studenten wel een extra toetsgelegenheid aangeboden.  
+ 
+Cum laude of met genoegen bij gebruik van uitsluitend de beoordelingsschalen VD/NVD en/of niet op 
+niveau / op niveau / boven niveau  
+Om Cum laude of met genoegen af te studeren voor je opleiding die uitsluitend de beoordelingsschalen VD/ NVD 
+en/of nog niet op niveau/ op niveau of boven niveau gebruiken, dien je een aanvraag te doen bij de judiciumcommissie van jouw opleiding. De judiciu mcommissie beoordeelt de aanvraag op basis van een dossier 
+aan de hand van vooraf vastgestelde criteria die in de studiegids van jouw opleiding zijn vastgesteld en kan cum laude of met genoegen toekennen.  
+ 
+Daarnaast moet je aan de volgende eisen voldoen : 
+1. Minimaal 80% van al je beoordelingen voor de opleiding is beoordeeld met een VD of boven niveau.  
+2. De eindbeoordeling voor alle cursussen die tot de afstudeereenheid of de afstudeeropdracht 
+behoren is een VD of boven niveau.
+2 
+3. Bij een bacheloropleiding heb je niet meer dan 90 studiepunten door middel van vrijstellingen 
+behaald. Bij masteropleiding of associate degree opleiding heb je minder dan de helft van de studiepunten door middel van vrijstellingen behaald.  
+4. Je bent afgestudeerd binnen de nominale studieduur die voor je opleiding staat. Als je langer over 
+de opleiding doet door persoonlijke omstandigheden als genoemd in artikel 5.4, kun je de 
+examencommissie verzoeken om toch cum laude of met genoegen toe te k ennen.  
+ 
+  
+ 
+1 Een beoordeling met deze beoordelingsschaal is uitsluitend mogelijk voor het Instituut Archimedes, Instituut voor  
+Communicatie, Instituut voor Associate Degrees en Institute  for Information & Communication Technology . 
+2 Bij een beoordeling met een voldaan zijn er voor alle cursussen die tot de afstudeereenheid of afstudeeropdracht behoren 
+nader e criteria in de studiegids opgenomen waar de eindbeoordeling verder aan moet voldoen.   
+   
+ 
+Invulinstructie ACO IA 202 6-202 7 Februari 2026 Pagina 18 van 18 
+ Bijlage 3 : Richtlijnen voor Engelse naam in ACO  
+ 
+Richtlijnen invoer Engelse naam in ACO:  
+ 
+• De woorden in de cursusnamen dienen te beginnen met een hoofdletter, behalve de voorzetsels en 
+voegwoorden, deze zijn in kleine letter  
+Bijvoorbeeld:  
+-Digital and Analog Signal Processing  
+-Introduction to Industrial Measurement  
+ 
+2.  Afkortingen moeten voluit geschreven worden  
+ 
+3. Er mag geen & of + teken in de naam staan. Dit moet dan ‘and’ worden  
+ 
+4. Het diploma is in het Brits Engels. Gebruik van Amerikaans Engels is daarom niet  gewenst  
+   
+Bijvoorbeeld:  
+Organization/Organizational wordt Organisation/Organisational  
+Specialization wordt Specialisation  
+Analyze wordt Analys e 
+ 

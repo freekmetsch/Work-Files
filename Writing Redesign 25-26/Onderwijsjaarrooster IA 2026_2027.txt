@@ -1,0 +1,64 @@
+Onderwijsjaarrooster IA 2026-2027
+
+PERIODE A
+Kw 36  A1   31-aug-26   Lesweek 1
+Kw 37  A2   7-sep-26    Lesweek 2
+Kw 38  A3   14-sep-26   Lesweek 3
+Kw 39  A4   21-sep-26   Lesweek 4
+Kw 40  A5   28-sep-26   Lesweek 5
+Kw 41  A6   5-okt-26    Lesweek 6
+Kw 42  A7   12-okt-26   Lesweek 7
+Kw 43  A8   19-okt-26   Herfstvakantie / Studieweek
+Kw 44  A9   26-okt-26   Toetsweek
+Kw 45  A10  2-nov-26    Studieweek
+
+PERIODE B
+Kw 46  B1   9-nov-26    Lesweek 1
+Kw 47  B2   16-nov-26   Lesweek 2
+Kw 48  B3   23-nov-26   Lesweek 3
+Kw 49  B4   30-nov-26   Studieweek
+Kw 50  B5   7-dec-26    Lesweek 4
+Kw 51  B6   14-dec-26   Lesweek 5
+Kw 52  B7   21-dec-26   Kerstvakantie
+Kw 53  B8   28-dec-26   Kerstvakantie
+Kw 1   B9   4-jan-27    Lesweek 6
+Kw 2   B10  11-jan-27   Lesweek 7
+Kw 3   B11  18-jan-27   Toetsweek
+Kw 4   B12  25-jan-27   Hertoetsweek
+
+PERIODE C
+Kw 5   C1   1-feb-27    Lesweek 1
+Kw 6   C2   8-feb-27    Lesweek 2
+Kw 7   C3   15-feb-27   Lesweek 3
+Kw 8   C4   22-feb-27   Voorjaarsvakantie / Studieweek
+Kw 9   C5   1-mrt-27    Lesweek 4
+Kw 10  C6   8-mrt-27    Lesweek 5
+Kw 11  C7   15-mrt-27   Lesweek 6
+Kw 12  C8   22-mrt-27   Lesweek 7 (vr Goede Vrijdag)
+Kw 13  C9   29-mrt-27   Toetsweek (ma Pasen)
+Kw 14  C10  5-apr-27    Hertoetsweek
+
+PERIODE D
+Kw 15  D1   12-apr-27   Lesweek 1
+Kw 16  D2   19-apr-27   Lesweek 2
+Kw 17  D3   26-apr-27   Studieweek (di Koningsdag)
+Kw 18  D4   3-mei-27    Lesweek 3 (wo Bevrijdingsdag, do Hemelvaart)
+Kw 19  D5   10-mei-27   Lesweek 4
+Kw 20  D6   17-mei-27   Lesweek 5 (ma Pinksteren)
+Kw 21  D7   24-mei-27   Lesweek 6
+Kw 22  D8   31-mei-27   Lesweek 7
+Kw 23  D9   7-jun-27    Lesweek 8
+Kw 24  D10  14-jun-27   Toetsweek
+Kw 25  D11  21-jun-27   Hertoetsweek
+
+PERIODE E
+Kw 26  E1   28-jun-27   Hertoetsweek (Propedeuse)
+Kw 27  E2   5-jul-27    Assessmentweek
+Kw 28  E3   12-jul-27   (geen regulier onderwijs)
+Kw 29  E4   19-jul-27   Zomervakantie
+Kw 30  E5   26-jul-27   Zomervakantie
+Kw 31  E6   2-aug-27    Zomervakantie
+Kw 32  E7   9-aug-27    Zomervakantie
+Kw 33  E8   16-aug-27   Zomervakantie
+Kw 34  E9   23-aug-27   Hertoetsweek (Hoofdfase)
+Kw 35  E10  30-aug-27   Introductieweek

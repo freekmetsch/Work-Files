@@ -1,0 +1,288 @@
+AI Indicatoren
+[For English, see below]
+
+(Video uitleg onderaan de pagina)
+
+Waarom zijn er indicatoren?
+
+De AI-indicatoren zijn ontwikkeld om helderheid en consistentie te bieden in het gebruik van AI binnen ons onderwijs. Door duidelijke afspraken te maken, voorkomen we verwarring en waarborgen we gelijke kansen voor alle studenten.
+
+De HU afspraak is: Het gebruik van AI-tools is toegestaan in een niet gecontroleerde omgeving, tenzij anders vermeld in de cursusbeschrijving in de studiegids1.
+
+De indicatoren zijn een tool om docenten en studenten helpen te begrijpen wat wel en niet is toegestaan omtrent AI. Er zijn indicatoren voor zowel het leerproces als de toetsing. Communiceren over de toetsing is verplicht als je afwijkt van de HU-afspraak, communiceren over het leerproces dient ter extra verduidelijking voor de student. Dit bevordert eerlijkheid en vergemakkelijkt het behalen van de educatieve doelen, zonder afhankelijk te worden van AI in ongewenste situaties. Op deze manier blijven de leerdoelen centraal staan, terwijl studenten verantwoord leren omgaan met AI-hulpmiddelen.
+
+ 
+
+Waar moeten de indicatoren geplaatst worden?
+
+Op de Canvas-pagina van de cursus worden de indicatoren geplaatst. Het is het meest overzichtelijk om deze zowel onderaan de startpagina als op de pagina waar de toetsing wordt uitgelegd te vermelden, bijvoorbeeld bij de sectie waar de rubriek te vinden is.
+
+ 
+
+Welke indicatoren zijn er?
+
+ Indicator Leren 
+
+Indicator Toets 
+
+Ondersteunend toegestaan Leren.png
+
+Ondersteunend toegestaan: 
+
+AI is onderdeel van de cursus. 
+
+n.v.t. 
+
+Toegestaan Leren.png
+
+Volledig toegestaan: 
+
+AI mag gebruikt worden in de cursus. 
+
+Toegestaan Toets.png
+
+Volledig toegestaan: 
+
+AI mag gebruikt worden in de toetsing. 
+
+Gelimiteerd toegestaan Leren.png
+
+Toegestaan met randvoorwaarden: 
+
+AI mag gebruikt worden met randvoorwaarden vanuit de cursus. 
+
+Gelimiteerd toegestaan Toets.png
+
+Toegestaan met randvoorwaarden: 
+
+AI mag gebruikt worden met randvoorwaarden vanuit de toetsing. 
+
+Niet toegestaan Leren.png
+
+Niet toegestaan 
+
+AI is op geen enkele manier toegestaan 
+
+Niet toegestaan Toets.png
+
+Niet toegestaan 
+
+AI Is op geen enkele manier toegestaan
+
+Disclaimer: 
+
+Elk AI-gebruik moet op een verantwoorde manier. Zie daarvoor de HU-richtlijnen Download HU-richtlijnen: 
+Bronvermelding zoals aangegeven bij de APA-regelsLinks to an external site. 
+Gebruik van AI volgens de handreiking van generatieve AI en Toetsing
+ 
+
+Voorbeelden van indicatoren op de canvaspagina
+
+Voorbeeld 1: Cursus Fysische informatica 
+
+Ondersteunend toegestaan Leren.png
+
+Ondersteunden toegestaan
+
+Bij deze cursus wordt tijdens de bijeenkomst gebruik gemaakt van AI voor het vinden van programmeercode en hoe je bepaalde functies kan gebruiken. De student is vrij om AI verder te gebruiken in het leerproces. 
+Gelimiteerd toegestaan Toets.png
+
+Toegestaan met randvoorwaarden: 
+
+Bij de toetsing van deze cursus wordt de code ingeleverd. Deze mag met AI zijn gemaakt op de comments in de code na. Daarnaast Is een presentatie van je didactische product waar je de code en je werkvorm uitlegt.  
+ 
+
+Voorbeeld 2: Pedagogisch Handelen A
+
+Ondersteunend toegestaan Leren.png
+
+Ondersteunden toegestaan
+
+Bij deze cursus wordt tijdens de bijeenkomst uitleg gegeven over wat AI is, hoe je het kan gebruiken en hoe je AI kan gebruiken wanneer je zelf voor de klas staat. 
+Gelimiteerd toegestaan Toets.png
+
+Toegestaan met randvoorwaarden
+
+Voor de datapunten die je verzameld bij PHA mag je AI gebruiken. De feedback krijg je van de begeleider en dus niet van AI. 
+
+De kennisscan wordt op locatie uitgevoerd en is geen AI toegestaan. 
+
+ 
+
+Voorbeeld 3: Wiskunde 2
+
+Toegestaan Leren.png
+
+Volledig toegestaan
+
+Bij het leren kan AI gebruikt worden om samenvattingen en uitleg te genereren. 
+Niet toegestaan Toets.png
+
+Niet toegestaan
+
+
+
+De cursus wordt met een theorietoets op de HU afgerond. 
+
+Documenten en Links 
+
+Indicatoren afbeeldingen downloadenDownload Indicatoren afbeeldingen downloaden
+FAQ
+Video uitleg
+
+
+
+Contact
+
+Marcel Heunks 
+
+Patrick Dooyeweerd
+
+Digitale Geletterdheid en Digitale Didactiek (DGDD) 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Why are there indicators?
+
+The AI indicators have been developed to provide clarity and consistency in the use of AI within our education. By making clear agreements, we prevent confusion and ensure equal opportunities for all students.
+
+The HU agreement is as follows: the use of AI tools is permitted in an uncontrolled environment, unless otherwise stated in the course description in the study guide.¹
+
+The indicators are a tool to help teachers and students understand what is and is not permitted with regard to AI. There are indicators for both the learning process and assessment. Communication about assessment is mandatory if you deviate from the HU agreement; communication about the learning process serves to provide additional clarification for the student. This promotes fairness and facilitates the achievement of educational objectives, without becoming dependent on AI in undesirable situations. In this way, the learning objectives remain central, while students learn to use AI tools responsibly.
+
+ 
+
+Where should the indicators be placed?
+
+The indicators should be placed on the Canvas page of the course. For clarity, it is recommended to include them both at the bottom of the start page and on the page where assessment is explained, for example in the section where the rubric can be found.
+
+ 
+
+What indicators are there?
+
+ Indicator Learning 
+
+Indicator Test 
+
+Learning with support.png
+
+With support allowed 
+
+AI is part of the course
+
+ 
+
+N.A. 
+
+Learning fully permitted.png
+
+Fully permitted:
+
+AI may be used in the course.
+
+Test fully permitted.png
+
+Fully permitted:
+
+AI may be used in testing.
+
+ 
+
+Learning allowed with boundary conditions.png
+
+Allowed with boundary conditions:
+
+AI may be used with boundary conditions from the course. 
+
+Test allowed with boundary conditions.png
+
+Allowed with boundary conditions:
+
+AI may be used with preconditions from the test. 
+
+Learning not allowed.png
+
+Not permitted
+
+AI is not allowed in any way.
+
+Test not allowed.png
+
+Not permitted
+
+AI is not allowed in any way.
+
+Disclaimer:
+
+Any AI use must be done responsibly. Please refer to the HU guidelines Download HU guidelines:
+Source citation as indicated by the APA rulesLinks to an external site.
+Use of AI according to the handbook of generative AI and Review
+ 
+
+Examples of indicators on the canvas page
+
+Example 1: Physical computing course
+
+Learning with support.png
+
+With support allowed
+
+This course uses AI during the lessons to find programming code and how to use certain functions. The student is free to use AI further in the learning process.
+
+Test allowed with boundary conditions.png
+
+Allowed with boundary conditions:
+
+When testing this course, the code will be handed in. This may be made with AI except for the comments in the code that explains the meaning of the code. In addition, there is a presentation of your didactic product where you explain the code and your working form.
+
+ 
+
+Example 2: Pedagogical action A
+
+Learning with support.png
+
+With support allowed
+
+At this course, the meeting explains what AI is, how to use it and how to use AI when you are in front of the classroom yourself.
+
+Test allowed with boundary conditions.png
+
+Allowed with boundary conditions:
+
+For the data points you collect from PHA, you may use AI. You will get the feedback from the supervisor and therefore not AI.
+
+The knowledge scan is conducted on site and no AI is allowed.
+
+ 
+
+Voorbeeld 3: Wiskunde 2
+
+Learning fully permitted.png
+
+Fully permitted:
+
+In learning, AI can be used to generate summaries and explanations.
+
+Test not allowed.png
+
+Not permitted
+
+
+
+The course is completed with a theory test at HU.
+
+ 
+
+Documenten en Links 
+
+Download indicator images
+FAQ
+ 
+
+Contact
+
+Marcel Heunks 
+
+Patrick Dooyeweerd
+
+Digitale Geletterdheid en Digitale Didactiek (DGDD) 
