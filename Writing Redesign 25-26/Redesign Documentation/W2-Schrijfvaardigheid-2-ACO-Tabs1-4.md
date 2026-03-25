@@ -36,7 +36,7 @@
 | **Aantal bijeenkomsten** | 2 per week |
 | **Contactduur** | 120 min |
 | **Aanvangsblok** | Blok B |
-| **Gewenste lesweken** | kw 46, 47, 48, 51, 1, 2 (6 lesweken; excl. kw 49 studieweek, kw 50 lesvrij voor docentfeedback, kw 52-53 kerstvakantie) |
+| **Gewenste lesweken** | kw 46, 47, 48, 50, 1, 2 (6 lesweken; excl. kw 49 studieweek, kw 51 lesvrij voor docentfeedback, kw 52-53 kerstvakantie) |
 | **Rooster mag afwijken** | NEE |
 | **Opnemen in rooster** | JA |
 | **Gewenst soort lokaal** | THEORIE |
@@ -54,7 +54,7 @@
 | **Aantal bijeenkomsten** | 1 per week |
 | **Contactduur** | 120 min |
 | **Aanvangsblok** | Blok C |
-| **Gewenste lesweken** | kw 5, 6, 7, 10, 11, 12 (6 lesweken; excl. kw 8 voorjaarsvakantie, kw 9 lesvrij voor docentfeedback) |
+| **Gewenste lesweken** | kw 5, 6, 7, 9, 11, 12 (6 lesweken; excl. kw 8 voorjaarsvakantie, kw 10 lesvrij voor docentfeedback) |
 | **Rooster mag afwijken** | NEE |
 | **Opnemen in rooster** | JA |
 | **Gewenst soort lokaal** | THEORIE |

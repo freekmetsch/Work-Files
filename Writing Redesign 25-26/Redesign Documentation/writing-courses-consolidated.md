@@ -121,8 +121,8 @@ The assessment format is the AI policy:
 ### Schedule
 | Track | Starting Block | Werkvormen |
 |-------|---------------|------------|
-| VT (REG + TE) | Period B (Nov) | Werkcollege, 4 uur/week, 6 weken (+ 1 lesvrije week voor docentfeedback) |
-| DT (REG + TE) | Period C (Feb) | Werkcollege, 2 uur/week, 6 weken (+ 1 lesvrije week voor docentfeedback) |
+| VT (REG + TE) | Period B (Nov) | Werkcollege, 4 uur/week, 6 weken (+ lesweek 5 lesvrij voor docentfeedback) |
+| DT (REG + TE) | Period C (Feb) | Werkcollege, 2 uur/week, 6 weken (+ lesweek 5 lesvrij voor docentfeedback) |
 
 **Assessment opportunities:** 3 total — Block B (VT first sit), Block C (DT first sit), Block D (resit for both)
 

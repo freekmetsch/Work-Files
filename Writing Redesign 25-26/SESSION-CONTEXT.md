@@ -50,7 +50,7 @@ Redesign three English writing courses (Schrijfvaardigheid 1, 2, 3) for HU's Tea
 - BYOD confirmed ✅: Schoolyear + TestVision = beveiligde omgeving (internet blocked, fullscreen). Aantekening intern on all 4 timed tests ensures roosteraars schedule correctly. Specify "beveiligde omgeving" in Toetsmonitor. (Confirmed by Nicky/Toetscentrum + Lars/TALO, 2026-03-12)
 - **Assessmentweken vs. toetsweken:** De "Assessmentweken" in het jaarrooster zijn NIET bedoeld voor de W2/W3 presentatie-toetsen (P+Q&A). Alle schrijfvaardigheidstoetsen (zowel digitale toetsen als presentaties) worden ingeroosterd in de reguliere toetsweken en hertoetsweken. Assessmentweken zijn voor andere typen assessments.
 - **Opmerking werkvorm:** Bij VT-werkvormen (2x per week) is opgemerkt dat sessies niet op dezelfde dag mogen vallen — studenten hebben tussentijd nodig om thuis te werken.
-- **W2 lesweken 7→6:** Writing 2 gereduceerd van 7 naar 6 lesweken. De vrijgekomen week (kw 50 VT / kw 9 DT) is lesvrij zodat de docent alle studentwerk kan lezen en individuele feedback kan geven mid-course.
+- **W2 lesweken 7→6:** Writing 2 gereduceerd van 7 naar 6 lesweken. De vrijgekomen week (kw 51 VT / kw 10 DT) is lesvrij zodat de docent alle studentwerk kan lezen en individuele feedback kan geven mid-course.
 - **Hertoetsweken jaarrooster 2026-2027:** Blok A→kw 4, Blok B→kw 14, Blok C→kw 25, Blok D→kw 34 (hoofdfase) / kw 26 (propedeuse)
 
 ### 3. Cursusinhoud for ACO Tabblad 5
