@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worksheet — Pedagogisch Handelen B — Open Huis</title>
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+    <style>
+        @page {
+            size: A4;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .worksheet {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .print-button { display: none; }
+
+            .section,
+            .header,
+            .needs-grid,
+            .response-box,
+            table {
+                break-inside: avoid;
+            }
+
+            .section-title,
+            .framing-text,
+            .step-instruction {
+                break-after: avoid;
+            }
+        }
+
+        @media screen {
+            body {
+                background: #f0f0f0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                margin: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .worksheet {
+                background: white;
+                width: 210mm;
+                padding: 12mm;
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+                box-sizing: border-box;
+                position: relative;
+                margin-bottom: 20px;
+            }
+            .print-button {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #333;
+                color: white;
+                padding: 10px 24px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: bold;
+                z-index: 100;
+            }
+            .print-button:hover {
+                background: #000;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.4;
+            color: #000;
+            font-size: 11px;
+        }
+
+        /* Header */
+        .header {
+            border-bottom: 3px solid #333;
+            padding-bottom: 6px;
+            margin-bottom: 16px;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        .subtitle {
+            font-style: italic;
+            color: #555;
+            font-size: 11px;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 16px;
+            border-left: 4px solid #333;
+            padding-left: 10px;
+        }
+        .section-title {
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .section-title i[class*="ph-bold"] {
+            font-size: 16px;
+            color: #000;
+        }
+
+        /* Framing text */
+        .framing-text {
+            font-size: 10px;
+            font-style: italic;
+            color: #444;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        /* Step instructions (think/share) */
+        .step-instruction {
+            font-size: 10px;
+            color: #333;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .step-instruction i[class*="ph-bold"] {
+            font-size: 13px;
+            color: #555;
+        }
+
+        /* Mindmap box */
+        .mindmap-box {
+            border: 1.5px solid #999;
+            border-radius: 4px;
+            height: 180px;
+            margin-bottom: 4px;
+        }
+
+        /* Numbered brainstorm — spacious */
+        .brainstorm-columns {
+            display: flex;
+            gap: 24px;
+        }
+        .brainstorm-col {
+            flex: 1;
+        }
+        .brainstorm-item {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+            margin-bottom: 8px;
+        }
+        .brainstorm-num {
+            font-weight: bold;
+            font-size: 11px;
+            flex-shrink: 0;
+            width: 16px;
+            color: #333;
+        }
+        .brainstorm-line {
+            border-bottom: 1px solid #888;
+            flex: 1;
+            height: 1px;
+            margin-bottom: -3px;
+        }
+
+        /* 4x4 needs grid — labelled with letters */
+        .needs-grid {
+            margin-bottom: 14px;
+        }
+        .needs-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10px;
+        }
+        .needs-table td {
+            border: 1px solid #bbb;
+            padding: 8px 10px;
+            vertical-align: middle;
+            width: 25%;
+        }
+        .needs-cell {
+            display: flex;
+            align-items: flex-start;
+            gap: 7px;
+        }
+        .needs-letter {
+            font-weight: bold;
+            font-size: 11px;
+            color: #333;
+            flex-shrink: 0;
+            width: 16px;
+        }
+        .needs-icon {
+            font-size: 15px;
+            color: #555;
+            flex-shrink: 0;
+            margin-top: 0px;
+        }
+        .needs-label {
+            font-size: 10px;
+            line-height: 1.4;
+            color: #222;
+        }
+
+        /* Response box */
+        .response-box {
+            border: 1.5px solid #333;
+            border-radius: 4px;
+            padding: 10px 12px;
+        }
+        .response-box .section-title {
+            margin-bottom: 4px;
+        }
+        .response-prompt {
+            font-size: 10px;
+            color: #444;
+            margin-bottom: 8px;
+        }
+        .response-item {
+            margin-bottom: 10px;
+        }
+        .response-letter-line {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+            margin-bottom: 4px;
+        }
+        .response-letter-label {
+            font-weight: bold;
+            font-size: 10px;
+            white-space: nowrap;
+            flex-shrink: 0;
+            color: #333;
+        }
+        .response-line {
+            border-bottom: 1px solid #999;
+            flex: 1;
+            height: 1px;
+            margin-bottom: -3px;
+        }
+        .response-continuation {
+            border-bottom: 1px solid #ccc;
+            height: 20px;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<button class="print-button" onclick="window.print()"><i class="ph-bold ph-printer"></i> Print</button>
+
+<div class="worksheet">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="title">Bevorderen van een veilig schoolklimaat</div>
+        <div class="subtitle">Pedagogisch Handelen B &mdash; Open Huis taster session</div>
+    </div>
+
+    <!-- SECTION A: WARM-UP — mindmap box -->
+    <div class="section">
+        <div class="section-title">
+            <i class="ph-bold ph-chat-circle-dots"></i>
+            <span>Jouw favoriete docent</span>
+        </div>
+        <div class="framing-text">Wie is jouw favoriete docent? Wat maakt die lessen zo goed? Welke regels of afspraken heeft die docent?</div>
+        <div class="step-instruction"><i class="ph-bold ph-clock"></i> Maak een mindmap (2 min). Bespreek daarna met de persoon naast je.</div>
+        <div class="mindmap-box"></div>
+    </div>
+
+    <!-- SECTION B: BRAINSTORM — numbered, spacious -->
+    <div class="section">
+        <div class="section-title">
+            <i class="ph-bold ph-lightbulb"></i>
+            <span>Wat zijn eisen voor goede regels?</span>
+        </div>
+        <div class="framing-text">Bedenk samen met de persoon naast je: waar moet een goede regel aan voldoen?</div>
+        <div class="brainstorm-columns">
+            <div class="brainstorm-col">
+                <div class="brainstorm-item"><span class="brainstorm-num">1.</span><span class="brainstorm-line"></span></div>
+                <div class="brainstorm-item"><span class="brainstorm-num">2.</span><span class="brainstorm-line"></span></div>
+                <div class="brainstorm-item"><span class="brainstorm-num">3.</span><span class="brainstorm-line"></span></div>
+                <div class="brainstorm-item"><span class="brainstorm-num">4.</span><span class="brainstorm-line"></span></div>
+            </div>
+            <div class="brainstorm-col">
+                <div class="brainstorm-item"><span class="brainstorm-num">5.</span><span class="brainstorm-line"></span></div>
+                <div class="brainstorm-item"><span class="brainstorm-num">6.</span><span class="brainstorm-line"></span></div>
+                <div class="brainstorm-item"><span class="brainstorm-num">7.</span><span class="brainstorm-line"></span></div>
+                <div class="brainstorm-item"><span class="brainstorm-num">8.</span><span class="brainstorm-line"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION D: NEEDS GRID — letter-labelled -->
+    <div class="section">
+        <div class="section-title">
+            <i class="ph-bold ph-brain"></i>
+            <span>Wat is belangrijk voor een leerling?</span>
+        </div>
+        <div class="framing-text">Omcirkel welke uitspraken belangrijk zijn voor een leerling.</div>
+    </div>
+
+    <div class="needs-grid">
+        <table class="needs-table">
+            <tbody>
+                <tr>
+                    <td><div class="needs-cell"><span class="needs-letter">A</span><i class="ph-bold ph-hand-waving needs-icon"></i><span class="needs-label">Welkom voelen in de klas</span></div></td>
+                    <td><div class="needs-cell"><span class="needs-letter">B</span><i class="ph-bold ph-identification-card needs-icon"></i><span class="needs-label">Docent weet wie ik ben</span></div></td>
+                    <td><div class="needs-cell"><span class="needs-letter">C</span><i class="ph-bold ph-armchair needs-icon"></i><span class="needs-label">Zelf kiezen waar ik zit</span></div></td>
+                    <td><div class="needs-cell"><span class="needs-letter">D</span><i class="ph-bold ph-smiley needs-icon"></i><span class="needs-label">Les moet leuk zijn</span></div></td>
+                </tr>
+                <tr>
+                    <td><div class="needs-cell"><span class="needs-letter">E</span><i class="ph-bold ph-hand-heart needs-icon"></i><span class="needs-label">Niemand wordt buitengesloten</span></div></td>
+                    <td><div class="needs-cell"><span class="needs-letter">F</span><i class="ph-bold ph-megaphone needs-icon"></i><span class="needs-label">Serieus genomen worden</span></div></td>
+                    <td><div class="needs-cell"><span class="needs-letter">G</span><i class="ph-bold ph-mask-happy needs-icon"></i><span class="needs-label">Docent is grappig</span></div></td>
+                    <td><div class="needs-cell"><span class="needs-letter">H</span><i class="ph-bold ph-books needs-icon"></i><span class="needs-label">Niet te veel huiswerk</span></div></td>
+                </tr>
+                <tr>
+                    <td><div class="needs-cell"><span class="needs-letter">I</span><i class="ph-bold ph-lightbulb needs-icon"></i><span class="needs-label">Meedenken over hoe de les gaat</span></div></td>
+                    <td><div class="needs-cell"><span class="needs-letter">J</span><i class="ph-bold ph-users-three needs-icon"></i><span class="needs-label">Vrienden in mijn klas</span></div></td>
+                    <td><div class="needs-cell"><span class="needs-letter">K</span><i class="ph-bold ph-sun needs-icon"></i><span class="needs-label">Goede sfeer in de groep</span></div></td>
+                    <td><div class="needs-cell"><span class="needs-letter">L</span><i class="ph-bold ph-heart needs-icon"></i><span class="needs-label">Docent vindt mij aardig</span></div></td>
+                </tr>
+                <tr>
+                    <td><div class="needs-cell"><span class="needs-letter">M</span><i class="ph-bold ph-chat-circle-dots needs-icon"></i><span class="needs-label">Persoonlijk gesprek met mijn docent</span></div></td>
+                    <td><div class="needs-cell"><span class="needs-letter">N</span><i class="ph-bold ph-signpost needs-icon"></i><span class="needs-label">Zelf keuzes maken in hoe ik leer</span></div></td>
+                    <td><div class="needs-cell"><span class="needs-letter">O</span><i class="ph-bold ph-scales needs-icon"></i><span class="needs-label">Eerlijke uitleg als iets niet mag</span></div></td>
+                    <td><div class="needs-cell"><span class="needs-letter">P</span><i class="ph-bold ph-eye needs-icon"></i><span class="needs-label">Docent merkt als het niet goed gaat</span></div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- EXCHANGE STEP -->
+    <div class="section">
+        <div class="step-instruction"><i class="ph-bold ph-users-three"></i> Vergelijk je antwoorden met de mensen om je heen. Waar zijn jullie het over eens?</div>
+    </div>
+
+    <!-- RESPONSE — styled with letter references -->
+    <div class="response-box">
+        <div class="section-title">
+            <i class="ph-bold ph-pencil-simple"></i>
+            <span>Wat betekent dit voor een docent?</span>
+        </div>
+        <div class="response-prompt">Kies twee uitspraken die je hebt omcirkeld. Noteer de letter en leg uit wat dit betekent voor een docent.</div>
+
+        <div class="response-item">
+            <div class="response-letter-line">
+                <span class="response-letter-label">Letter: ___</span>
+                <span class="response-line"></span>
+            </div>
+            <div class="response-continuation"></div>
+            <div class="response-continuation"></div>
+        </div>
+
+        <div class="response-item">
+            <div class="response-letter-line">
+                <span class="response-letter-label">Letter: ___</span>
+                <span class="response-line"></span>
+            </div>
+            <div class="response-continuation"></div>
+            <div class="response-continuation"></div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
