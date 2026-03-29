@@ -1,5 +1,5 @@
 # Writing Courses — Consolidated Design Document
-**Status:** DRAFT v5 | **Date:** 2026-03-06 | **Purpose:** Single source of truth for ACO entry
+**Status:** DRAFT v6 | **Date:** 2026-03-26 | **Purpose:** Single source of truth for ACO entry
 
 ---
 
@@ -227,9 +227,8 @@ The assessment format is the AI policy:
 
 **AI:** Not available (controlled environment)
 
-**Component 2: Take-Home (STUDENT CHOICE) — Lane 2 (input for P+Q&A)**
-- **Option A: Proposal** — formal, argumentative, professional audience
-- **Option B: Creative piece** — Murderless Mystery or Personal Essay (1500 words)
+**Component 2: Take-Home Proposal — Lane 2 (input for P+Q&A)**
+- **Genre:** Proposal — formal, argumentative, professional audience (e.g., addressed to a school board or section head at the student's internship school)
 - **Not a separate toets** — bundled with the P+Q&A
 - **Quality declaration form** required upon submission in Gradework (1 week before P+Q&A)
 
@@ -246,7 +245,7 @@ The assessment format is the AI policy:
 | **Duration breakdown** | 15 min (presentation + Q&A) + 5 min buffer |
 | **Test week logistics** | 3-hour blocks: 8 students x 20 min + 20 min break halfway |
 
-**Rubric:** 4 criteria (Authorship, Strategy, Decision-Making, Genre) — general enough to apply to both proposal and creative options
+**Rubric:** 4 criteria (Authorship, Strategy, Decision-Making, Genre) — tailored to the proposal format
 
 ### ⚠️ Open for W3
 - [ ] _(No major open questions remaining)_
@@ -281,6 +280,8 @@ The assessment format is the AI policy:
 | **"Author" verb dropped for W1** | No P+Q&A means no authorship validation format | Timed test inherently proves authorship |
 | **AI policy = assessment format** | Timed tests: AI not available. Take-home: AI allowed. P+Q&A validates authorship. | Dual-lane design makes AI policy self-evident |
 | **P+Q&A reduced to 20 min** | Was 30 min, now 15 + 5 buffer | Streamlined |
+| **W3 take-home: proposal only** | Creative option (Murderless Mystery / Personal Essay) removed; W3 take-home is now exclusively the Proposal | Simplifies rubric design; aligns with W3's professional/argumentative focus at C1/C2 |
+| **W2 reduced to 6 lesweken** | Was 7, now 6 (+ 1 lesvrije week for teacher feedback mid-course) | Frees a week for individual teacher feedback on student work |
 
 ---
 
